@@ -17,3 +17,20 @@ C    Press       : Pressure
 
 C    Rcut        : N-D array of cutoff radii between atom type pairs
 C    Ecut        : N-D array of cutoff energies between atom type pairs
+
+     Integer Maxatom, MaxNumtypes
+
+     Parameter (Maxatom = 100000)
+     Parameter (MaxNumtypes = 10)
+
+     Double Precision Fx(Maxatom),Fy(Maxatom),Xx(Maxatom),Yy(Maxatom)
+    $		      Xp(Maxatom),Yp(Maxatom),Vx(Maxatom),Vy(Maxatom)
+    $		      Rcut(MaxNumtypes, MaxNumtypes)
+    $		      Ecut(MaxNumtypes, MaxNumtypes)
+    $		      Box, Press, Temp, Utot, Upot, Ukin
+    
+    Integer Natom, Nstep, dT
+    
+    Common /Syss/    Fx, Fy, Xx, Yy, Xp, Yp, Vx, Vy,
+   &                 Box, Press, Temp, Utot, Upot, Ukin
+   &                 Natom, Nstep, dT
