@@ -6,8 +6,8 @@
       Include 'globals.inc'
 
       Integer:: I,J,Type1, Type2
-      Double Precision:: Dx,Dy,Ff,R_square,R_square_i,R_six_i,Rcut, Rcutsq
-      DOUBLE PRECISION::  K_bond, Rcut_bond,Rcutsq_bond 
+      Double Precision:: Dx,Dy,Ff,R_square,R_square_i,R_six_i,Rcut, Rcutsq_soft
+      DOUBLE PRECISION::  K_bond, Rcut_bond,Rcutsq_soft_bond 
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
  
       DO I = 1,Natom
@@ -31,28 +31,20 @@
             Dx = Dx - Box*nint(Dx/Box)
             Dy = Dy - Box*nint(Dy/Box)
  
-            R_square = Dx*Dx + Dy*Dy  
+            R_square = Dx*Dx + Dy*Dy
+            Rr = sqrt(R_square)  
 ! Determine the Lennard-Jones parameters dependent on the two atom types             
              Type1 = atom_type(I)   !Array list of atom type
              Type2 = atom_type(J)  
             
-             ! Type 1 and 2 will be 1-4 integer of atom type
-             Rcut = R_cut_matrix(Type1,Type2)
-             Rcutsq = Rcut**2.0
-             sigma = sigma_matrix(Type1,Type2)
-             eps = epsilon_matrix(Type1,Type2)
-
 ! Check If The Distance Is Within The Cutoff Radius for Lennard-Jones Potential
 ! If it is calculate Force and update total force on atom I & J 
-            IF (R_square .Lt. Rcutsq) THEN
-               R_square_i = 1.0/R_square
-               sigma_square = sigma**2.0
-               R_six_i = (R_square_i*sigma_square)**3.0
-               
-               Upot  = Upot + 4.00*eps*R_six_i*(R_six_i - 1.00) - Ecut
-               Ff    = 48.0*eps*R_square_i*R_six_i*(R_six_i - 0.5)
+            IF (Rr .Lt. Rcut_soft) THEN
+               Part1 = (A_soft*pi)*(Rcut_soft*Rr)
+               Part2 = (sin(pi*Rr/Rcut_soft))
+               Ff    = (Part1*Part2) 
+               Upot  = Upot + A_soft*(1.0+cos(pi*Rr/Rcut_soft))  ! Potential at Rcut_soft = 0
                Press = Press + Ff
-               Ff    = Ff*R_square_i
 !  Update the total force on atoms
                Fx(I) = Fx(I) + Ff*Dx
                Fy(I) = Fy(I) + Ff*Dy
@@ -73,7 +65,7 @@
               IF (R_square .Lt. Rcutsq_bond) THEN
                 sqR_square = sqrt(R_square)
                 Ff = -K_bond*(2.0-(Rcut_bond/sqR_square)
-                Upot = Upot + K_bond*((sqR_square - Rcut_bond)**2.0)  !The bond potential at Rcut = 0 
+                Upot = Upot + K_bond*((sqR_square - Rcut_bond)**2.0)   
                 Press = Press + Ff
                 Fx(I) = Fx(I) + Ff*Dx
                 Fy(I) = Fy(I) + Ff*Dy

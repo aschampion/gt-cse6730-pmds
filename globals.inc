@@ -18,6 +18,8 @@ C    Press       : Pressure
 C    Rcut        : N-D array of cutoff radii between atom type pairs
 C    Ecut        : N-D array of cutoff energies between atom type pairs
 
+C    Pi          : Set the value to 3.14159265
+
      Integer Maxatom, MaxNumtypes
 
      Parameter (Maxatom = 100000)
@@ -27,10 +29,12 @@ C    Ecut        : N-D array of cutoff energies between atom type pairs
     $		      Xp(Maxatom),Yp(Maxatom),Vx(Maxatom),Vy(Maxatom)
     $		      Rcut(MaxNumtypes, MaxNumtypes)
     $		      Ecut(MaxNumtypes, MaxNumtypes)
-    $		      Box, Press, Temp, Utot, Upot, Ukin
+    $		      Box, Press, Temp, Utot, Upot, Ukin,Pi 
     
     Integer Natom, Nstep, dT
     
     Common /Syss/    Fx, Fy, Xx, Yy, Xp, Yp, Vx, Vy,
    &                 Box, Press, Temp, Utot, Upot, Ukin
    &                 Natom, Nstep, dT
+
+   Pi = 3.14159265
