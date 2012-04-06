@@ -5,9 +5,9 @@
        
       Include 'globals.inc'
       !Double Precision:: f(Maxatom), Upot
-      Integer:: I,J,K,Type1, Type2,atom1,atom2
-      Double Precision:: Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcut, Rcutsq,&
-			 sigma_square, K_bond, Rcut_bond,&
+      Integer:: I,J,K,Type1, Type2
+      Double Precision:: atom1, atom2, Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcutsq,&
+			 sigma_square, &
 			 Rcutsq_bond, eps, sigma, sqR_square    
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
  
@@ -38,7 +38,7 @@
              Type2 = AT(J)  
             
              ! Type 1 and 2 will be 1-4 integer of atom type
-             Rcut = R_cut_matrix(Type1,Type2)
+             Rcut = R_cut(Type1,Type2)
              Rcutsq = Rcut**2.0
              sigma = sigma_matrix(Type1,Type2)
              eps = epsilon_matrix(Type1,Type2)
@@ -74,6 +74,18 @@
       DO k = 1, MaxBonds
               atom1 = BondList(1,k)
               atom2   BondList(2,k)
+ 
+              ! Calculate the distance between the two atoms
+               Dx = Xx(atom1) - Xx(atom2)
+               Dy = Yy(atom1) - Yy(atom2)
+ 
+              ! Apply the periodic boundary conditions
+               Dx = Dx - Box*nint(Dx/Box)
+               Dy = Dy - Box*nint(Dy/Box)
+ 
+
+                R_square = Dx*Dx + Dy*Dy  
+
                 sqR_square = sqrt(R_square)
                 Ff = -K_bond*(2.0-(Rcut_bond/sqR_square))
                 Upot = Upot + K_bond*((sqR_square - Rcut_bond)**2.0)  !The bond potential at Rcut = 0 
