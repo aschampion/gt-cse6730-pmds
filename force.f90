@@ -1,11 +1,11 @@
-      Subroutine Force(f) 
+      Subroutine Force() 
       Implicit None
  
 !     Calculate The Forces And Potential Energy
        
       Include 'globals.inc'
-      Double Precision:: f(Maxatom)
-      Integer:: I,J,Type1, Type2
+      !Double Precision:: f(Maxatom), Upot
+      Integer:: I,J,K,Type1, Type2,atom1,atom2
       Double Precision:: Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcut, Rcutsq,&
 			 sigma_square, K_bond, Rcut_bond,&
 			 Rcutsq_bond, eps, sigma, sqR_square    
@@ -64,33 +64,26 @@
  
             END IF
 
+     END DO  !END J
+   END DO    !END I
 
+!*************** Harmonic Bonds ************************************************
 ! ROUGH DRAFT OF USING BONDS!
-                ! HEAD          TAIL1         TAIL2
-            IF (Type1==2 .AND. Type2==3 .OR. Type2==4) THEN
-             !A bond calculation required
-!QUESTION: should Energy_bond be Global?? Or, We can specify it here
-! DONG: The Bonds I still don't quite understand but Energy_bond, bond_Rcut 
-! should be global and defined from the read in of the data file. We 
-! probably don't need to reassign them to K-bond, etc as I did here. 
-! This is a rough draft. 
-              K_bond = Energy_bond
-              Rcut_bond = bond_Rcut
-              Rcutsq_bond = Rcut_bond**2.0
-              IF (R_square .Lt. Rcutsq_bond) THEN
+!Harmonic Bonds             
+          !Run through the bond list and grab the interacting atoms
+      DO k = 1, MaxBonds
+              atom1 = BondList(1,k)
+              atom2   BondList(2,k)
                 sqR_square = sqrt(R_square)
                 Ff = -K_bond*(2.0-(Rcut_bond/sqR_square))
                 Upot = Upot + K_bond*((sqR_square - Rcut_bond)**2.0)  !The bond potential at Rcut = 0 
                 Press = Press + Ff
-                Fx(I) = Fx(I) + Ff*Dx
-                Fy(I) = Fy(I) + Ff*Dy
+                Fx(atom1) = Fx(atom1) + Ff*Dx
+                Fy(atom1) = Fy(atom1) + Ff*Dy
  
-                Fx(J) = Fx(J) - Ff*Dx
-                Fy(J) = Fy(J) - Ff*Dy
-             END IF
-            END IF
+                Fx(atom2) = Fx(atom2) - Ff*Dx
+                Fy(atom2) = Fy(atom2) - Ff*Dy
 
-         END DO
       END DO
  
 !    Scale The Pressure
@@ -99,3 +92,4 @@
  
       Return
       END SUBROUTINE
+
