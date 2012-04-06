@@ -29,8 +29,13 @@ subroutine input_parser(filename)
         ! Type ID 1, Type ID 2, P1, P2, Radius Cutoff
         read(args, *) i1, i2, v1, v2, v3
         Rcut(i1, i2) = v3
+        sigma_matrix(i1, i2) = v2
+        epsilon_matrix(i1, i2) = v1
       case ('read_data')
         call data_parser(args)
+      case ('run')
+        ! Timesteps
+        read(args, *) i1
       case ('#')  
       case ('')
       case default
@@ -73,6 +78,8 @@ subroutine data_parser(filename)
           case ('Bonds')
             ! Bond ID, Bond Type, Atom ID 1, Atom ID 2
             read(20, *) i1, i2, i3, i4
+            bondlist(1, i1) = i3
+            bondlist(2, i1) = i4
           case ('')
         end select
     end select

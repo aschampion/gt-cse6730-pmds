@@ -6,7 +6,7 @@
 !    At          : Atom types
 
 !    dT          : Timestep
-C	 EStep		 : No. of timesteps after which to rescale velocity to given given temp.
+!	 EStep		 : No. of timesteps after which to rescale velocity to given given temp.
 
 !    Nstep       : Timestep iteration count
 !    Natom       : Number of atoms
@@ -17,8 +17,10 @@ C	 EStep		 : No. of timesteps after which to rescale velocity to given given tem
 !    Temp        : Temperature
 !    Press       : Pressure
 
-!    Rcut        : N-D array of cutoff radii between atom type pairs
-!    Ecut        : N-D array of cutoff energies between atom type pairs
+!    Rcut        : matrix of cutoff radii between atom type pairs
+!    Ecut        : matrix array of cutoff energies between atom type pairs
+!    sigma_matrix: matrix of potential sigmas between atom type pairs
+!    epsilon_matrix: matrix of potential epsilons between atom type pairs
 
 !	 LL			 : Linked list for binned atoms
 !    hoc		 : Head of linked list for each cell
@@ -28,10 +30,11 @@ C	 EStep		 : No. of timesteps after which to rescale velocity to given given tem
 
 !    Pi          : Set the value to 3.14159265
 
-     Integer Maxatom, MaxNumtypes
+     Integer Maxatom, MaxNumtypes, MaxBonds
 
      Parameter (Maxatom = 100000)
      Parameter (MaxNumtypes = 10)
+     Parameter (MaxBonds = 1000)
      Parameter (Maxcell = 1500)
      Parameter (Maxneigh = 50)
 
@@ -39,10 +42,13 @@ C	 EStep		 : No. of timesteps after which to rescale velocity to given given tem
      		      Xp(Maxatom),Yp(Maxatom),Vx(Maxatom),Vy(Maxatom),&
      		      Rcut(MaxNumtypes, MaxNumtypes),&
      		      Ecut(MaxNumtypes, MaxNumtypes),&
+                      sigma_matrix(MaxNumtypes, MaxNumtypes),&
+                      epsilon_matrix(MaxNumtypes, MaxNumtypes),&
      		      Box, Press, Temp, Utot, Upot, Ukin, Pi,Rskin
     
     Integer At(Maxatom), Natom, Nstep, dT,&
-    		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh)
+    		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
+                bondlist(2, MaxBonds)
     
     Common /Syss/    Fx, Fy, Xx, Yy, Xp, Yp, Vx, Vy,&
                      Box, Press, Temp, Utot, Upot, Ukin,&
