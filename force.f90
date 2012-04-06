@@ -5,8 +5,8 @@
        
       Include 'globals.inc'
       !Double Precision:: f(Maxatom), Upot
-      Integer:: I,J,K,Type1, Type2
-      Double Precision:: atom1, atom2, Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcutsq,&
+      Integer:: I,J,K,Type1, Type2, atom1, atom2
+      Double Precision:: Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcutsq,&
 			 sigma_square, &
 			 Rcutsq_bond, eps, sigma, sqR_square    
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
@@ -73,7 +73,7 @@
           !Run through the bond list and grab the interacting atoms
       DO k = 1, MaxBonds
               atom1 = BondList(1,k)
-              atom2   BondList(2,k)
+              atom2 = BondList(2,k)
  
               ! Calculate the distance between the two atoms
                Dx = Xx(atom1) - Xx(atom2)
