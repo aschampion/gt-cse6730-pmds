@@ -5,9 +5,9 @@
        
       Include 'globals.inc'
 
-      Integer:: I,J,Type1, Type2, atom1, atom2
-      Double Precision:: Dx,Dy,Ff,R_square,Rr,sqR_square
-      DOUBLE PRECISION:: Part1, Part2,Press, Upot
+      Integer:: I,J,k, Type1, Type2, atom1, atom2
+      Double Precision:: Dx, Dy, Ff, R_square, Rr, sqR_square,&
+			 Part1, Part2
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
  
       DO I = 1,Natom
@@ -64,7 +64,7 @@
           !Run through the bond list and grab the interacting atoms
       DO k = 1, MaxBonds
               atom1 = BondList(1,k)
-              atom2   BondList(2,k)
+              atom2 = BondList(2,k)
                 sqR_square = sqrt(R_square)
                 Ff = -K_bond*(2.0-(Rcut_bond/sqR_square))
                 Upot = Upot + K_bond*((sqR_square - Rcut_bond)**2.0)  !The bond potential at Rcut = 0 

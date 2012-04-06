@@ -2,7 +2,7 @@
 FC = gfortran
 FFLAGS = -O
 
-OBJS   = initial.o force.o force_soft.o parser.o
+OBJS   = initial.o force_soft.o force.o parser.o
 
 initial.o : initial.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
