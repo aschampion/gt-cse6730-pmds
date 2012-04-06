@@ -6,7 +6,6 @@
 !    At          : Atom types
 
 !    dT          : Timestep
-!	 EStep		 : No. of timesteps after which to rescale velocity to given given temp.
 
 !    Nstep       : Timestep iteration count
 !    Natom       : Number of atoms
@@ -17,41 +16,31 @@
 !    Temp        : Temperature
 !    Press       : Pressure
 
-!    Rcut        : matrix of cutoff radii between atom type pairs
-!    Ecut        : matrix array of cutoff energies between atom type pairs
-!    sigma_matrix: matrix of potential sigmas between atom type pairs
-!    epsilon_matrix: matrix of potential epsilons between atom type pairs
-
-!	 LL			 : Linked list for binned atoms
-!    hoc		 : Head of linked list for each cell
-!	 nlist		 : No. of neighbour atoms in each verlet list
-!	 list		 : Verlet list for each atom
-!	 Rskin		 : Skin radius for limiting Verlet list radius
+!    R_cut_matrix        : N-D array of cutoff radii between atom type pairs
+!    Ecut        : N-D array of cutoff energies between atom type pairs
 
 !    Pi          : Set the value to 3.14159265
 
-     Integer Maxatom, MaxNumtypes, MaxBonds
+     Integer Maxatom, MaxNumtypes
 
      Parameter (Maxatom = 100000)
      Parameter (MaxNumtypes = 10)
-     Parameter (MaxBonds = 1000)
-     Parameter (Maxcell = 1500)
-     Parameter (Maxneigh = 50)
 
      Double Precision Fx(Maxatom),Fy(Maxatom),Xx(Maxatom),Yy(Maxatom),&
      		      Xp(Maxatom),Yp(Maxatom),Vx(Maxatom),Vy(Maxatom),&
-     		      Rcut(MaxNumtypes, MaxNumtypes),&
-     		      Ecut(MaxNumtypes, MaxNumtypes),&
-                      sigma_matrix(MaxNumtypes, MaxNumtypes),&
-                      epsilon_matrix(MaxNumtypes, MaxNumtypes),&
-     		      Box, Press, Temp, Utot, Upot, Ukin, Pi,Rskin
+     		      R_cut_matrix(MaxNumtypes, MaxNumtypes),&
+     		      E_cut_matrix(MaxNumtypes, MaxNumtypes),&
+		      sigma_matrix(MaxNumtypes, MaxNumtypes),&
+		      epsilon_matrix(MaxNumtypes, MaxNumtypes),&
+     		      Box, Press, Temp, Utot, Upot, Ukin, Pi, Ecut,&
+		      Energy_bond, bond_Rcut
     
-    Integer At(Maxatom), Natom, Nstep, dT,&
-    		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
-                bondlist(2, MaxBonds)
+    Integer At(Maxatom), Natom, Nstep, dT
     
     Common /Syss/    Fx, Fy, Xx, Yy, Xp, Yp, Vx, Vy,&
                      Box, Press, Temp, Utot, Upot, Ukin,&
+		     R_cut_matrix, E_cut_matrix,&
+		     sigma_matrix, epsilon_matrix,&
                      Natom, Nstep, dT
 
     Parameter (Pi = 3.14159265)

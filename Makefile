@@ -1,4 +1,5 @@
-FC     = gfortran-mp-4.8
+# FC     = gfortran-mp-4.8
+FC = gfortran
 FFLAGS = -O
 
 OBJS   = force.o force_soft.o initial.o parser.o
