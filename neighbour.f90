@@ -7,7 +7,7 @@
 		DOUBLE PRECISION:: Lc,xr,yr,rr
 		
 		!Bin the atoms in the cells
-		Lc = MAX(Rcut)+Rskin
+		Lc = MAXVAL(Rcut)+Rskin
 		Lc = Box/INT(Box/Lc)
 		numcell = Box/Lc
 		DO i=1,numcell**2
@@ -57,7 +57,7 @@
 								yr = yr+Box
 							ENDIF
 							rr = SQRT(xr**2+yr**2)
-							IF(rr .LT. (MAX(Rcut)+Rskin))
+							IF(rr < (MAXVAL(Rcut) + Rskin)) THEN
 								nlist(i) = nlist(i)+1
 								nlist(LL(j)) = nlist(LL(j))+1
 								list(i,nlist(i)) = LL(j)

@@ -21,6 +21,9 @@ neighbour.o : neighbour.f90
 
 parser.o : parser.f95
 	$(FC) $(FFLAGS) -o $@ -c $<
+	
+integrate.o : integrate.f95
+	$(FC) $(FFLAGS) -o $@ -c $<
 
 pmds : pmds.f95 $(OBJS)
 	$(FC) $(FFLAGS) -o $@ $^
