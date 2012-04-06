@@ -4,7 +4,7 @@ subroutine input_parser(filename)
   include 'globals.inc'
 
   character(len=1024) :: line, instr, args
-  character(len=256) :: s1
+  character(len=256) :: s1, s2, pair_style
   integer :: i1, i2
   double precision :: v1, v2, v3
 
@@ -25,12 +25,27 @@ subroutine input_parser(filename)
     args = adjustl(trim(line(instr_end:len(line))))
 
     select case (instr)
+      case ('bond_coeff')
+        ! Bond Type ID, K_bond, Rcut_bond
+        read(args, *) i1, v1, v2
+        K_bond = v1
+        Rcut_bond = v2
       case ('pair_coeff')
-        ! Type ID 1, Type ID 2, P1, P2, Radius Cutoff
-        read(args, *) i1, i2, v1, v2, v3
-        Rcut(i1, i2) = v3
-        sigma_matrix(i1, i2) = v2
-        epsilon_matrix(i1, i2) = v1
+        select case (pair_style)
+          case ('lj/cut')
+            ! Type ID 1, Type ID 2, P1, P2, Radius Cutoff
+            read(args, *) i1, i2, v1, v2, v3
+            Rcut(i1, i2) = v3
+            sigma_matrix(i1, i2) = v2
+            epsilon_matrix(i1, i2) = v1
+          case ('soft')
+            ! Type ID 1, Type ID 2, A, Radius Cutoff
+            read(args, *) s1, s2, v1, v2
+            A_soft = v1
+            Rcut_soft = v2
+        end select
+      case ('pair_style')
+        read(args, *) pair_style
       case ('read_data')
         call data_parser(args)
       case ('run')

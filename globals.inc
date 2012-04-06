@@ -21,6 +21,8 @@
 !    Ecut        : matrix array of cutoff energies between atom type pairs
 !    sigma_matrix: matrix of potential sigmas between atom type pairs
 !    epsilon_matrix: matrix of potential epsilons between atom type pairs
+!    A_soft      : A parameter for soft potential
+!    Rcut_soft   : radius cutoff for soft potential
 !    K_bond      :
 !    Rcut_bond      : radius cutoff for bonds
 
@@ -47,7 +49,7 @@
                       sigma_matrix(MaxNumtypes, MaxNumtypes),&
                       epsilon_matrix(MaxNumtypes, MaxNumtypes),&
      		      Box, Press, Temp, Utot, Upot, Ukin, Pi,Rskin,&
-                      K_bond, Rcut_bond
+                      K_bond, Rcut_bond, A_soft, Rcut_soft
     
     Integer At(Maxatom), Natom, Nstep, dT,&
     		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
