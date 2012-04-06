@@ -11,14 +11,17 @@ subroutine run_simulation(num_timesteps, pair_style)
   integer :: num_timesteps
   character(*), intent(in) :: pair_style
 
-  select case (pair_style)
-    case ('soft')
-      call force_soft()
-    case ('lj/cut')
-      call force()
-  end select
+  do while(Nstep.lt.num_timesteps)
+    select case (pair_style)
+      case ('soft')
+        A_soft = 19.0*(Nstep/num_timesteps) + 1.0
+        call force_soft()
+      case ('lj/cut')
+        call force()
+    end select
 
-  call integrate()
+    call integrate()
 
-  Nstep = Nstep + 1
+    Nstep = Nstep + 1
+  end do
 end subroutine
