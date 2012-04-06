@@ -8,8 +8,8 @@
       Double Precision:: f(Maxatom)
       Integer:: I,J,Type1, Type2
       Double Precision:: Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcut, Rcutsq,&
-			 sigma_square, K_bond, Rcut_bond,Part1, Part2, A_soft&
-			 Rcutsq_bond, eps, sigma, sqR_square 
+			 sigma_square, K_bond, Rcut_bond,Part1, Part2, A_soft,&
+			 Rcutsq_bond, eps, sigma, sqR_square, Rcut_soft, rr 
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
  
       DO I = 1,Natom
