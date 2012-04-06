@@ -55,6 +55,8 @@ Include 'globals.inc'
     Yp(I) = Vy(I) - dT*Vy(I)
   Enddo
 
+  Call Neighbour
+
 Return
 End
 

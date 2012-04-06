@@ -35,7 +35,7 @@
 
 !    Pi          : Set the value to 3.14159265
 
-     Integer Maxatom, MaxNumtypes, MaxBonds
+     Integer Maxatom, MaxNumtypes, MaxBonds, Maxcell, Maxneigh
 
      Parameter (Maxatom = 100000)
      Parameter (MaxNumtypes = 10)
