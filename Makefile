@@ -2,7 +2,7 @@
 FC = gfortran
 FFLAGS = -O
 
-OBJS   = initial.o force_soft.o force.o parser.o
+OBJS   = initial.o force_soft.o neighbour.o force.o parser.o
 
 initial.o : initial.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
@@ -13,7 +13,7 @@ force.o : force.f90
 force_soft.o : force_soft.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
 
-neighbor.o : neighbor.f90
+neighbour.o : neighbour.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
 
 parser.o : parser.f95

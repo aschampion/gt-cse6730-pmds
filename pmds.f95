@@ -8,6 +8,8 @@ end program pmds
 subroutine run_simulation(num_timesteps, pair_style)
   implicit none
 
+  include 'globals.inc'
+
   integer :: num_timesteps
   character(*), intent(in) :: pair_style
 

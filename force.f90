@@ -7,7 +7,7 @@
       !Double Precision:: f(Maxatom), Upot
       Integer:: I,J,K,Type1, Type2, atom1, atom2
       Double Precision:: Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcutsq,&
-			 sigma_square, &
+			 sigma_square, R_cut,&
 			 Rcutsq_bond, eps, sigma, sqR_square    
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
  
@@ -38,8 +38,8 @@
              Type2 = AT(J)  
             
              ! Type 1 and 2 will be 1-4 integer of atom type
-             Rcut = R_cut(Type1,Type2)
-             Rcutsq = Rcut**2.0
+             R_cut = Rcut(Type1,Type2)
+             Rcutsq = R_cut**2.0
              sigma = sigma_matrix(Type1,Type2)
              eps = epsilon_matrix(Type1,Type2)
 
@@ -50,7 +50,7 @@
                sigma_square = sigma**2.0
                R_six_i = (R_square_i*sigma_square)**3.0
           
-               Upot  = Upot + 4.00*eps*R_six_i*(R_six_i - 1.00) - Ecut
+               ! Upot  = Upot + 4.00*eps*R_six_i*(R_six_i - 1.00) - Ecut
                Ff    = 48.0*eps*R_square_i*R_six_i*(R_six_i - 0.5)
 
                Press = Press + Ff
