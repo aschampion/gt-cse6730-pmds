@@ -1,7 +1,7 @@
 Subroutine Initial
 Implicit None
 
-Include 'paramter.inc'
+Include 'globals.inc'
 
 C paramters that will be used
 
