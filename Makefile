@@ -13,6 +13,9 @@ force.o : force.f90
 force_soft.o : force_soft.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
 
+neighbor.o : neighbor.f90
+	$(FC) $(FFLAGS) -o $@ -c $<
+
 parser.o : parser.f95
 	$(FC) $(FFLAGS) -o $@ -c $<
 
