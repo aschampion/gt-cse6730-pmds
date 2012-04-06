@@ -52,6 +52,9 @@ subroutine input_parser(filename)
         ! Timesteps
         read(args, *) i1
         call run_simulation(i1, pair_style)
+      case ('velocity')
+        read(args, *) s1, s2, v1, i1
+        Temp_target = v1
       case ('#')  
       case ('')
       case default

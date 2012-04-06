@@ -50,7 +50,7 @@
                       sigma_matrix(MaxNumtypes, MaxNumtypes),&
                       epsilon_matrix(MaxNumtypes, MaxNumtypes),&
      		      Box, Press, Temp, Utot, Upot, Ukin, Pi,Rskin,&
-                      K_bond, Rcut_bond, A_soft, Rcut_soft
+                      K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target
     
     Integer At(Maxatom), Natom, Nstep, dT,&
     		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
