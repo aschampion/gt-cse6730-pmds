@@ -10,6 +10,7 @@
 
 !    Nstep       : Timestep iteration count
 !    Natom       : Number of atoms
+!    Nbond       : Number of bonds
 
 !    Ukin        : Kinetic energy
 !    Upot        : Potential energy

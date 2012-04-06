@@ -51,6 +51,7 @@ subroutine input_parser(filename)
       case ('run')
         ! Timesteps
         read(args, *) i1
+        call run_simulation(i1, pair_style)
       case ('#')  
       case ('')
       case default
@@ -90,11 +91,13 @@ subroutine data_parser(filename)
             At(i1) = i3
             Xx(i1) = v1
             Yy(i1) = v2
+            if (i1.gt.Natom) Natom = i1
           case ('Bonds')
             ! Bond ID, Bond Type, Atom ID 1, Atom ID 2
             read(20, *) i1, i2, i3, i4
             bondlist(1, i1) = i3
             bondlist(2, i1) = i4
+            if (i1.gt.Nbond) Nbond = i1
           case ('')
         end select
     end select
