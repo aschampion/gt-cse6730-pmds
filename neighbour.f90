@@ -24,8 +24,6 @@
 		!Construction of Verlet List
 		DO i=1,Natom
 			nlist(i) = 0
-		END DO
-		DO i=1,Natom
 			celli = INT(Xx(i)/Lc)
 			cellj = INT(Yy(i)/Lc)
 			DO oi=-1,1
