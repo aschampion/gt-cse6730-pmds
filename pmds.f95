@@ -14,6 +14,7 @@ subroutine run_simulation(num_timesteps, pair_style)
   character(*), intent(in) :: pair_style
 
   do while(Nstep.lt.num_timesteps)
+    if (mod(Nstep, 1000).eq.0) write(*,'(A I4)') 'Running timestep: ', Nstep
     select case (pair_style)
       case ('soft')
         A_soft = 19.0*(Nstep/num_timesteps) + 1.0
