@@ -13,6 +13,7 @@ Include 'globals.inc'
   Accx = 0.0d0
   Accy = 0.0d0
   Ukin = 0.0d0
+  dT = 0.005D0
 
   Call itime(seed)
 
@@ -21,15 +22,16 @@ Include 'globals.inc'
 !    Generate Velocities From A Gaussian; Set Impulse To Zero
 
   Do I = 1, Natom
-    Vx(I) = rand() - 0.5
-    Vy(I) = rand() - 0.5
+    Vx(I) = rand(0) - 0.5
+    Vy(I) = rand(0) - 0.5
     Accx = Accx + Vx(I)
     Accy = Accy + Vy(I)
-  Enddo
+ Enddo
 
   Accx = Accx/Dble(Natom)
   Accy = Accy/Dble(Natom)
 
+!	Shift velocity to get zero momentum
 !     Calculate The Kinetic Energy Ukin
 
   Do I = 1, Natom
@@ -41,7 +43,7 @@ Include 'globals.inc'
 
 !     Scale All Velocities To The Correct Temperature
 
-  Adjust = Dsqrt(Temp*Dble(2*Natom-2)/(2.0d0*Ukin))
+  Adjust = Dsqrt(Temp_target*Dble(2*Natom-2)/(2.0d0*Ukin))
   
   Do I = 1,Natom
     Vx(I) = Adjust*Vx(I)
@@ -51,11 +53,12 @@ Include 'globals.inc'
 !     Calculate Previous Position Using The Generated Velocity
 
   Do I = 1,Natom
-    Xp(I) = Vx(I) - dT*Vx(I)
-    Yp(I) = Vy(I) - dT*Vy(I)
+    Xp(I) = Xx(I) - dT*Vx(I)
+    Yp(I) = Yy(I) - dT*Vy(I)           
+    !WRITE (*,*) i,Xx(i),Yy(i),dT*Vx(i),dT*Vy(i)    
   Enddo
 
-  Call Neighbour
+  !Call Neighbour
 
 Return
 End

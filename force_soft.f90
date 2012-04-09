@@ -20,23 +20,25 @@
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
  
 ! **** START LOOP THROUGH ALL ATOM INTERACTIONS ******************************** 
+	!DO i=1,natom
+	!	WRITE (*,*) i,Xx(i),Yy(i)
+	!END DO
       DO I = 1,Natom - 1
          DO J = I + 1,Natom
  
 ! Calculate the distance between the two atoms
             Dx = Xx(I) - Xx(J)
             Dy = Yy(I) - Yy(J)
- 
+            
+!            WRITE (*,*) I,J,Xx(I),Xx(J),Dx,Yy(I),Yy(J),Dy
+                        
 ! Apply the periodic boundary conditions
             Dx = Dx - Box*nint(Dx/Box)
             Dy = Dy - Box*nint(Dy/Box)
  
             R_square = Dx*Dx + Dy*Dy
             Rr = sqrt(R_square)  
-! Determine the Lennard-Jones parameters dependent on the two atom types             
-             Type1 = AT(I)   !Array list of atom type
-             Type2 = AT(J)  
-            
+          
 ! Check If The Distance Is Within The Cutoff Radius for Lennard-Jones Potential
 ! If it is calculate Force and update total force on atom I & J 
             IF (Rr .Lt. Rcut_soft) THEN
@@ -51,12 +53,15 @@
  
                Fx(J) = Fx(J) - Ff*Dx
                Fy(J) = Fy(J) - Ff*Dy
- 
+               
             END IF
 
 
      END DO  !END J
+!	WRITE(*,*) i,Fx(i),Fy(i)
    END DO    !END I
+   
+!   WRITE (*,*) Natom,Nbond
 
 !*************** Harmonic Bonds ************************************************
 ! ROUGH DRAFT OF USING BONDS!
@@ -64,7 +69,7 @@
           !Run through the bond list and grab the interacting atoms
 !Harmonic Bonds             
           !Run through the bond list and grab the interacting atoms
-      DO k = 1, MaxBonds
+      DO k = 1, NBond      	         
               atom1 = BondList(1,k)
               atom2 = BondList(2,k)
 
@@ -90,9 +95,11 @@
                 Fy(atom2) = Fy(atom2) - Ff*Dy
 
       END DO
-!    Scale The Pressure
+      !    Scale The Pressure
  
       Press = Press/(3.0d0*Box*Box*Box)
+      
+!      write(*,*) K_bond,Rcut_bond
  
       Return
       END SUBROUTINE
