@@ -1,4 +1,4 @@
-      Subroutine Force_soft()
+      Subroutine Force_soft_neighbor()
       Implicit None
  
 !     Calculate The Forces And Potential Energy
@@ -18,24 +18,28 @@
       Upot = 0.0
       Press = 0.0
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
- 
+
+
 ! **** START LOOP THROUGH ALL ATOM INTERACTIONS ******************************** 
-      DO I = 1,Natom - 1
-         DO J = I + 1,Natom
- 
+
+      DO I = 1,Natom
+         DO J = 1,nlist(I)
+
 ! Calculate the distance between the two atoms
-            Dx = Xx(I) - Xx(J)
-            Dy = Yy(I) - Yy(J)
- 
+            Dx = Xx(I) - Xx(list(I,J))
+            Dy = Yy(I) - Yy(list(I,J))
+
 ! Apply the periodic boundary conditions
+! MOHAN: Do we need to apply the periodic boundary conditions?
+
             Dx = Dx - Box*nint(Dx/Box)
             Dy = Dy - Box*nint(Dy/Box)
- 
+
             R_square = Dx*Dx + Dy*Dy
             Rr = sqrt(R_square)  
 ! Determine the Lennard-Jones parameters dependent on the two atom types             
              Type1 = AT(I)   !Array list of atom type
-             Type2 = AT(J)  
+             Type2 = AT(list(I,J))  
             
 ! Check If The Distance Is Within The Cutoff Radius for Lennard-Jones Potential
 ! If it is calculate Force and update total force on atom I & J 
