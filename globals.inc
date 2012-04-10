@@ -55,12 +55,12 @@
     
     Integer  At(Maxatom), Natom, Nbond, Nstep,&
     		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
-                bondlist(2, MaxBonds)
+                bondlist(2, MaxBonds),Estep
                     
     Common /Syss/    Fx, Fy, Xx, Yy, Xp, Yp, Vx, Vy,&
                      Rcut, Ecut, sigma_matrix, epsilon_matrix,&
                      Box, Press, Temp, Utot, Upot, Ukin, Rskin,&
                      K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target,&
-                     At, Natom, Nbond, Nstep, LL, hoc, nlist, list, bondlist, dt
+                     At, Natom, Nbond, Nstep, LL, hoc, nlist, list, bondlist, dt,Estep
 
     Parameter (Pi = 3.14159265)

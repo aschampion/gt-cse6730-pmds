@@ -14,6 +14,8 @@ Include 'globals.inc'
   Accy = 0.0d0
   Ukin = 0.0d0
   dT = 0.005D0
+  Estep = 1
+  Box = 35.85686D0
 
   Call itime(seed)
 

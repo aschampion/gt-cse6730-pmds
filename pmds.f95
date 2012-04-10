@@ -12,21 +12,26 @@ subroutine run_simulation(num_timesteps, pair_style)
 
   integer :: num_timesteps, i
   character(*), intent(in) :: pair_style
+  REAL(KIND=8) :: Xo(Natom),Yo(Natom)
 
-  open(99, file='out.dump')
+  !#open(99, file='out.dump')
   
   Nstep = 0
+  
+  DO i=1,Natom
+  	Xo(i) = Xx(i)
+  END DO
     
   do while(Nstep.lt.num_timesteps)
     if (mod(Nstep, 100).eq.0) write(*,'(A I8)') 'Running timestep: ', Nstep+1
     if (mod(Nstep, 10000).eq.0) then
-      write(99, '(I5)') Natom
-      write(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
-      flush(99)
+!      #write(99, '(I5)') Natom
+ !     #write(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
+  !    #flush(99)
     endif
     select case (pair_style)
       case ('soft')
-        A_soft = 19.0*(Nstep/num_timesteps) + 1.0
+        A_soft = 19.0*Nstep/num_timesteps + 1.0
         call force_soft()
         if (mod(Nstep, 100).eq.0) write(*,'(A I4)') 'Calculating soft force'
       case ('lj')
@@ -40,7 +45,9 @@ subroutine run_simulation(num_timesteps, pair_style)
     Nstep = Nstep + 1
   end do
   
-! dump the final information
+  DO i=1,Natom
+  	IF(Xx(i) .LT. 0.0D0) WRITE (*,*) Xx(i),Xo(i)
+  END DO
 
-  close(99)
+ ! #close(99)
 end subroutine

@@ -5,7 +5,7 @@
  
 !     Integrate The Equations Of Motion And calculate The Total Impulse
  
-      	INTEGER	:: I, estep, step
+      	INTEGER	:: I
       	DOUBLE PRECISION :: Xxn(Natom),Yyn(Natom),Zzn(Natom),scale
 
 !cccccccccccccccccccccccccccccccccccccccccccccccccc 
@@ -37,11 +37,13 @@
 !     Recalculated !!!!                                                         !
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
-		IF(MOD(Step,Estep) .EQ. 0) THEN
-			scale = DSQRT(Temp_target*DBLE(2*Natom-2)/(2.0D0*Ukin))
+		IF(MOD(Nstep,Estep) .EQ. 0) THEN
+			scale = DSQRT(Temp_Target*DBLE(2*Natom-2)/(2.0D0*Ukin))
 		ELSE
          	scale = 1.0D0
         ENDIF
+        
+        !WRITE (*,*) scale
  
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 !     Scale Velocities And Put Particles Back In The Box      !
@@ -49,8 +51,6 @@
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 		Ukin = 0.0D0
-
-		write(*,*) "scale ", scale
 
 		DO i=1,natom
 			Vx(i) = scale*Vx(i)
@@ -72,8 +72,8 @@
 				Xx(i) = Xx(i) - Box
 				Xp(i) = Xp(i) - Box
 			ELSE IF (Xx(i) .LT. 0.0D0) THEN
-				Xx(i) = Xx(i) + Box
-				Yy(i) = Yy(i) + Box
+				Xx(i) = Xx(i) + Box				
+				Xp(i) = Xp(i) + Box
 			END IF
 			
 			IF (Yy(i) .GT. Box) THEN
@@ -83,11 +83,12 @@
 				Yy(i) = Yy(i) + Box
 				Yp(i) = Yp(i) + Box
 			END IF
-
-			if (i == 10) then	
-			  write(*,*) "position x, y", Xx(i),Yy(i)
-			end if
 			
 		END DO
 		
+		!WRITE (*,*) dT
+		!DO i=1,Natom
+		!	WRITE (*,*) Xp(i),Xx(i),Yp(i),Yy(i)
+		!END DO
+	
 	END SUBROUTINE Integrate

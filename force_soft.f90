@@ -22,6 +22,8 @@
  
       Upot = 0.0
       Press = 0.0
+      
+      !WRITE (*,*) A_soft
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
  
 ! **** START LOOP THROUGH ALL ATOM INTERACTIONS ******************************** 
