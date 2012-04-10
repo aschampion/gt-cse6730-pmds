@@ -46,18 +46,20 @@
      Double Precision Fx(Maxatom),Fy(Maxatom),Xx(Maxatom),Yy(Maxatom),&
      		      Xp(Maxatom),Yp(Maxatom),Vx(Maxatom),Vy(Maxatom),&
      		      Rcut(MaxNumtypes, MaxNumtypes),&
-     		      Ecut(MaxNumtypes, MaxNumtypes),dT,&
+     		      Ecut(MaxNumtypes, MaxNumtypes),&
                       sigma_matrix(MaxNumtypes, MaxNumtypes),&
                       epsilon_matrix(MaxNumtypes, MaxNumtypes),&
      		      Box, Press, Temp, Utot, Upot, Ukin, Pi,Rskin,&
                       K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target
     
-    Integer At(Maxatom), Natom, Nbond, Nstep,&
+    Integer  At(Maxatom), Natom, Nbond, Nstep,&
     		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
-                bondlist(2, MaxBonds)
+                bondlist(2, MaxBonds), dT
     
     Common /Syss/    Fx, Fy, Xx, Yy, Xp, Yp, Vx, Vy,&
-                     Box, Press, Temp, Utot, Upot, Ukin,&
-                     Natom, Nbond,Nstep,dT,Temp_target,Rcut_soft
+                     Rcut, Ecut, sigma_matrix, epsilon_matrix,&
+                     Box, Press, Temp, Utot, Upot, Ukin, Rskin,&
+                     K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target,&
+                     At, Natom, Nbond, Nstep, LL, hoc, nlist, list, bondlist, dt
 
     Parameter (Pi = 3.14159265)
