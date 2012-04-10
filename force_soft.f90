@@ -10,6 +10,11 @@
 			 Part1, Part2
 !**********Initialize the Forces, Potential Energy and Pressure to 0************
  
+! test 
+!do I = 1, Nbond
+!  WRITE (*,*) "force soft bondlist(1, i) , bondlist(2, i) ",bondlist(1, i),bondlist(2, i)
+!end do
+
       DO I = 1,Natom
          Fx(I) = 0.0
          Fy(I) = 0.0
@@ -23,6 +28,7 @@
 	!DO i=1,natom
 	!	WRITE (*,*) i,Xx(i),Yy(i)
 	!END DO
+!WRITE (*,*) "i am here 11111111111111111111111"
       DO I = 1,Natom - 1
          DO J = I + 1,Natom
  
@@ -55,7 +61,7 @@
                Fy(J) = Fy(J) - Ff*Dy
                
             END IF
-
+!WRITE (*,*) "i am here 222222222222222"
 
      END DO  !END J
 !	WRITE(*,*) i,Fx(i),Fy(i)
@@ -69,10 +75,12 @@
           !Run through the bond list and grab the interacting atoms
 !Harmonic Bonds             
           !Run through the bond list and grab the interacting atoms
+
+!WRITE (*,*) " NBond: ",NBond
       DO k = 1, NBond      	         
               atom1 = BondList(1,k)
               atom2 = BondList(2,k)
-
+!WRITE (*,*) "atom1 , atom2 , k",atom1,atom2,k
               ! Calculate the distance between the two atoms
                Dx = Xx(atom1) - Xx(atom2)
                Dy = Yy(atom1) - Yy(atom2)
@@ -96,10 +104,10 @@
 
       END DO
       !    Scale The Pressure
- 
+
       Press = Press/(3.0d0*Box*Box*Box)
       
-!      write(*,*) K_bond,Rcut_bond
+      !write(*,*) K_bond,Rcut_bond
  
       Return
       END SUBROUTINE

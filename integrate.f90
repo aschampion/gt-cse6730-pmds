@@ -38,7 +38,7 @@
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 		IF(MOD(Step,Estep) .EQ. 0) THEN
-			scale = DSQRT(Temp*DBLE(2*Natom-2)/(2.0D0*Ukin))
+			scale = DSQRT(Temp_target*DBLE(2*Natom-2)/(2.0D0*Ukin))
 		ELSE
          	scale = 1.0D0
         ENDIF
@@ -49,6 +49,8 @@
 !cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 		Ukin = 0.0D0
+
+		write(*,*) "scale ", scale
 
 		DO i=1,natom
 			Vx(i) = scale*Vx(i)
@@ -81,12 +83,11 @@
 				Yy(i) = Yy(i) + Box
 				Yp(i) = Yp(i) + Box
 			END IF
+
+			if (i == 10) then	
+			  write(*,*) "position x, y", Xx(i),Yy(i)
+			end if
 			
 		END DO
 		
-		!WRITE (*,*) dT
-		!DO i=1,Natom
-		!	WRITE (*,*) Xp(i),Xx(i),Yp(i),Yy(i)
-		!END DO
-	
 	END SUBROUTINE Integrate

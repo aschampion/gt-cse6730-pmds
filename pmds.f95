@@ -13,16 +13,16 @@ subroutine run_simulation(num_timesteps, pair_style)
   integer :: num_timesteps, i
   character(*), intent(in) :: pair_style
 
-  #open(99, file='out.dump')
+  open(99, file='out.dump')
   
   Nstep = 0
     
   do while(Nstep.lt.num_timesteps)
     if (mod(Nstep, 100).eq.0) write(*,'(A I8)') 'Running timestep: ', Nstep+1
     if (mod(Nstep, 10000).eq.0) then
-      #write(99, '(I5)') Natom
-      #write(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
-      #flush(99)
+      write(99, '(I5)') Natom
+      write(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
+      flush(99)
     endif
     select case (pair_style)
       case ('soft')
@@ -39,6 +39,8 @@ subroutine run_simulation(num_timesteps, pair_style)
 
     Nstep = Nstep + 1
   end do
+  
+! dump the final information
 
-  #close(99)
+  close(99)
 end subroutine

@@ -114,6 +114,7 @@ subroutine data_parser(filename)
             read(line, *) i1, i2, i3, i4
             bondlist(1, i1) = i3
             bondlist(2, i1) = i4
+!WRITE (*,*) "parser bondlist(1, i1) , bondlist(2, i1) ",bondlist(1, i1),bondlist(2, i1)
             if (i1.gt.Nbond) Nbond = i1
           case ('')
         end select

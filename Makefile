@@ -13,7 +13,7 @@ force_soft.o : force_soft.f90
 initial.o : initial.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
 
-integrate.o : integrate.f90
+integrate.o : integrate.f95
 	$(FC) $(FFLAGS) -o $@ -c $<
 
 neighbour.o : neighbour.f90
