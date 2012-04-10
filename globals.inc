@@ -50,12 +50,13 @@
                       sigma_matrix(MaxNumtypes, MaxNumtypes),&
                       epsilon_matrix(MaxNumtypes, MaxNumtypes),&
      		      Box, Press, Temp, Utot, Upot, Ukin, Pi,Rskin,&
-                      K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target
+                      K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target, dT
+
     
     Integer  At(Maxatom), Natom, Nbond, Nstep,&
     		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
-                bondlist(2, MaxBonds), dT
-    
+                bondlist(2, MaxBonds)
+                    
     Common /Syss/    Fx, Fy, Xx, Yy, Xp, Yp, Vx, Vy,&
                      Rcut, Ecut, sigma_matrix, epsilon_matrix,&
                      Box, Press, Temp, Utot, Upot, Ukin, Rskin,&

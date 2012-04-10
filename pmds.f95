@@ -16,7 +16,7 @@ subroutine run_simulation(num_timesteps, pair_style)
   #open(99, file='out.dump')
   
   Nstep = 0
-
+    
   do while(Nstep.lt.num_timesteps)
     if (mod(Nstep, 100).eq.0) write(*,'(A I8)') 'Running timestep: ', Nstep+1
     if (mod(Nstep, 10000).eq.0) then
@@ -33,7 +33,7 @@ subroutine run_simulation(num_timesteps, pair_style)
         call force()
         if (mod(Nstep, 100).eq.0) write(*,'(A I4)') 'Calculating LJ force'
     end select
-
+    
     call integrate()
     if (mod(Nstep, 100).eq.0) write(*,'(A I4)') 'Integrating'
 

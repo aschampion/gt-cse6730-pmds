@@ -84,4 +84,9 @@
 			
 		END DO
 		
+		!WRITE (*,*) dT
+		!DO i=1,Natom
+		!	WRITE (*,*) Xp(i),Xx(i),Yp(i),Yy(i)
+		!END DO
+	
 	END SUBROUTINE Integrate
