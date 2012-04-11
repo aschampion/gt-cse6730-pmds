@@ -1,67 +1,40 @@
-Subroutine Initial
-Implicit None
+	SUBROUTINE Initial
+		
+		IMPLICIT NONE
+		INCLUDE 'globals.inc'
 
+		! paramters that will be used
 
+  		INTEGER:: I, seed(3)
+  		REAL(KIND=8):: Accx, Accy, Adjust
 
-Include 'globals.inc'
+  		Accx = 0.0d0
+  		Accy = 0.0d0
+  		Ukin = 0.0d0
+  		dT = 0.005D0
+  		Estep = 1
+  		Box = 35.85686D0
 
-! paramters that will be used
+  		CALL ITIME(seed)
 
-  Integer:: I, seed(3)
-  Double Precision:: Accx, Accy, Adjust
+  		CALL SRAND(seed(3))
 
-  Accx = 0.0d0
-  Accy = 0.0d0
-  Ukin = 0.0d0
-  dT = 0.005D0
-  Estep = 1
-  Box = 35.85686D0
+		
+		!Generate velocity based on uniform distribution
+  		DO I = 1, Natom
+    		Vx(I) = RAND(0) - 0.5
+    		Vy(I) = RAND(0) - 0.5
+  		END DO
+  		
+  		CALL Normalize_Velocity()
 
-  Call itime(seed)
-
-  Call srand(seed(3))
-
-!    Generate Velocities From A Gaussian; Set Impulse To Zero
-
-  Do I = 1, Natom
-    Vx(I) = rand(0) - 0.5
-    Vy(I) = rand(0) - 0.5
-    Accx = Accx + Vx(I)
-    Accy = Accy + Vy(I)
- Enddo
-
-  Accx = Accx/Dble(Natom)
-  Accy = Accy/Dble(Natom)
-
-!	Shift velocity to get zero momentum
-!     Calculate The Kinetic Energy Ukin
-
-  Do I = 1, Natom
-    Vx(I) = Vx(I) - Accx
-    Vy(I) = Vy(I) - Accy
-
-    Ukin = Ukin + Vx(I)*Vx(I) + Vy(I)*Vy(I)
-  Enddo
-
-!     Scale All Velocities To The Correct Temperature
-
-  Adjust = Dsqrt(Temp_target*Dble(2*Natom-2)/(2.0d0*Ukin))
-  
-  Do I = 1,Natom
-    Vx(I) = Adjust*Vx(I)
-    Vy(I) = Adjust*Vy(I)
-  Enddo
-
-!     Calculate Previous Position Using The Generated Velocity
-
-  Do I = 1,Natom
-    Xp(I) = Xx(I) - dT*Vx(I)
-    Yp(I) = Yy(I) - dT*Vy(I)           
-    !WRITE (*,*) i,Xx(i),Yy(i),dT*Vx(i),dT*Vy(i)    
-  Enddo
+		!Calculate Previous Position Using The Generated Velocity
+  		DO I = 1,Natom
+    		Xp(I) = Xx(I) - dT*Vx(I)
+    		Yp(I) = Yy(I) - dT*Vy(I)           
+    		!WRITE (*,*) i,Xx(i),Yy(i),dT*Vx(i),dT*Vy(i)    
+		END DO
 
   !Call Neighbour
 
-Return
-End
-
+	END SUBROUTINE Initial

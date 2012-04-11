@@ -46,6 +46,6 @@ subroutine run_simulation(num_timesteps, pair_style)
   end do
   
   DO i=1,Natom
-  	IF(Xx(i) .LT. 0.0D0) WRITE (*,*) Xx(i),Xo(i)
+	WRITE (*,*) Xx(i),Xo(i)
   END DO
 end subroutine

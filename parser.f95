@@ -1,128 +1,129 @@
-subroutine input_parser(filename)
-  character(*), intent(in) :: filename
+	SUBROUTINE input_parser(filename)
+  		
+  		CHARACTER(*), INTENT(IN) :: filename
 
-  include 'globals.inc'
+  		INCLUDE 'globals.inc'
 
-  character(len=1024) :: line, instr, args
-  character(len=256) :: s1, s2, pair_style
-  integer :: i1, i2
-  double precision :: v1, v2, v3
+  		CHARACTER(LEN=1024) :: line, instr, args
+  		CHARACTER(LEN=256) :: s1, s2, pair_style
+  		INTEGER :: i1, i2
+  		REAL(KIND=8) :: v1, v2, v3
 
-  open(10, file='in.micelle', access='SEQUENTIAL')
+  		OPEN(UNIT=10, FILE='in.micelle')
 
-  do while(.true.)
-    read(10, '(A)', end=99) line
+  		DO WHILE(.TRUE.)
+    		READ(10, '(A)',END=99) line		
     
-    instr_end = 2
-    do while (line(instr_end:instr_end).ne.char(9))
-      instr_end = instr_end + 1
-    end do
+    		instr_end = 2
+    		DO WHILE (line(instr_end:instr_end) .NE. char(9))
+      			instr_end = instr_end + 1
+    		END DO
 
-    instr = line(1:(instr_end - 1))
-    do while(line(instr_end:instr_end).eq.char(9))
-      instr_end = instr_end + 1
-    end do
-    args = adjustl(trim(line(instr_end:len(line))))
+    		instr = line(1:(instr_end - 1))
+    		DO WHILE(line(instr_end:instr_end) .EQ. char(9))
+      			instr_end = instr_end + 1
+    		END DO
+    		args = ADJUSTL(TRIM(line(instr_end:LEN(line))))
 
-    select case (instr)
-      case ('bond_coeff')
-        ! Bond Type ID, K_bond, Rcut_bond
-        read(args, *) i1, v1, v2
-        K_bond = v1
-        Rcut_bond = v2
-        WRITE (*,*) "Reading harmonic bond data"
-      case ('pair_coeff')
-        select case (pair_style)
-          case ('lj/cut')
-            ! Type ID 1, Type ID 2, P1, P2, Radius Cutoff
-            read(args, *) i1, i2, v1, v2, v3
-            Rcut(i1, i2) = v3
-            sigma_matrix(i1, i2) = v2
-            epsilon_matrix(i1, i2) = v1
-            WRITE (*,*) "Reading LJ data"
-          case ('soft')
-            ! Type ID 1, Type ID 2, A, Radius Cutoff
-            read(args, *) s1, s2, v1, v2
-            A_soft = v1
-            Rcut_soft = v2
-            WRITE (*,*) "Reading soft force data"
-        end select
-      case ('pair_style')
-        sigma_matrix(1:MaxNumtypes,1:MaxNumtypes) = 0
-        epsilon_matrix(1:MaxNumtypes,1:MaxNumtypes) = 0
-        read(args, *) pair_style
-        WRITE (*,*) "Pair style",pair_style
-      case ('read_data')
-      	WRITE (*,*) "Reading initial data from ",args
-        call data_parser(args)
-        WRITE (*,*) Natom,"atoms"
-        WRITE (*,*) Nbond,"bonds"
-        write(99, '(I8)') Natom
-      case ('run')
-        ! Timesteps
-        read(args, *) i1
-        WRITE (*,*) "Running simualation for",i1,"steps"
-        call run_simulation(i1, pair_style)
-      case ('velocity')
-        read(args, *) s1, s2, v1, i1
-        Temp_target = v1 
-        call initial       
-        WRITE (*,*) "Setting velocity for temperature",Temp_target
-      case ('#')  
-      case ('')
-      case default
-        !write(*,'(A A)') 'Unrecognized instruction: ', trim(instr)
-    end select
-  end do
+    		SELECT CASE (instr)
+      			CASE ('bond_coeff')
+        			!Bond Type ID, K_bond, Rcut_bond
+        			READ(args, *) i1, v1, v2
+        			K_bond = v1
+        			Rcut_bond = v2
+        			WRITE (*,*) "Reading harmonic bond data"
+      			CASE ('pair_coeff')
+        			SELECT CASE (pair_style)
+          				CASE ('lj/cut')
+            				!Type ID 1, Type ID 2, P1, P2, Radius Cutoff
+            				READ(args, *) i1, i2, v1, v2, v3
+            				Rcut(i1, i2) = v3
+            				sigma_matrix(i1, i2) = v2
+            				epsilon_matrix(i1, i2) = v1
+            				WRITE (*,*) "Reading LJ data"
+          				CASE ('soft')
+            				!Type ID 1, Type ID 2, A, Radius Cutoff
+	            			READ(args, *) s1, s2, v1, v2
+            				A_soft = v1
+            				Rcut_soft = v2
+            				WRITE (*,*) "Reading soft force data"
+        			END SELECT
+      			CASE ('pair_style')
+        			sigma_matrix(1:MaxNumtypes,1:MaxNumtypes) = 0
+        			epsilon_matrix(1:MaxNumtypes,1:MaxNumtypes) = 0
+        			READ(args, *) pair_style
+        			WRITE (*,*) "Pair style",pair_style
+      			CASE ('read_data')
+      				WRITE (*,*) "Reading initial data from ",args
+        			CALL data_parser(args)
+        			WRITE (*,*) Natom,"atoms"
+        			WRITE (*,*) Nbond,"bonds"
+        			WRITE(99, '(I8)') Natom
+      			CASE ('run')
+        			!Timesteps
+        			READ(args, *) i1
+        			WRITE (*,*) "Running simualation for",i1,"steps"
+        			CALL run_simulation(i1, pair_style)
+      			CASE ('velocity')
+        			READ(args, *) s1, s2, v1, i1
+        			Temp_target = v1 
+        			CALL initial       
+        			WRITE (*,*) "Setting velocity for temperature",Temp_target
+      			CASE ('#')  
+      			CASE ('')
+      			CASE DEFAULT
+        	!write(*,'(A A)') 'Unrecognized instruction: ', trim(instr)
+    		END SELECT
+  		END DO
 
-99  close(10)
-end subroutine input_parser
+99  	CLOSE(10)
+	END SUBROUTINE input_parser
 
-subroutine data_parser(filename)
-  character(*), intent(in) :: filename
+	SUBROUTINE data_parser(filename)
+  		CHARACTER(*), INTENT(IN) :: filename
 
-  include 'globals.inc'
+  		INCLUDE 'globals.inc'
 
-  character(len=1024) :: line
-  character(len=80) :: state = ''
-  integer :: i1, i2, i3
-  double precision :: v1, v2, v3
+  		CHARACTER(LEN=1024) :: line
+  		CHARACTER(LEN=80) :: state = ''
+  		INTEGER :: i1, i2, i3
+  		REAL(KIND=8) :: v1, v2, v3
 
-  open(20, file=filename, access='SEQUENTIAL')
+  		OPEN(UNIT=20,FILE=filename)
 
-  do while(.true.)
-    read(20, '(A)', end=199) line
+  		DO WHILE(.TRUE.)
+    		READ(20, '(A)', END=199) line
 
-    select case (line)
-      case (' Atoms')
-        state = 'Atoms'
-        Natom = 0
-        WRITE (*,*) "Reading atom data"
-      case (' Bonds')
-        state = 'Bonds'
-        Nbond = 0
-        WRITE (*,*) "Reading bond data"
-      case ('')
-      case default
-        select case (state)
-          case ('Atoms')
-            ! Atom ID, Molecule ID, Atom Type, X, Y, Z
-            read(line, *) i1, i2, i3, v1, v2, v3
-            At(i1) = i3
-            Xx(i1) = v1
-            Yy(i1) = v2
-            if (i1.gt.Natom) Natom = i1
-          case ('Bonds')
-            ! Bond ID, Bond Type, Atom ID 1, Atom ID 2
-            read(line, *) i1, i2, i3, i4
-            bondlist(1, i1) = i3
-            bondlist(2, i1) = i4
+    		SELECT CASE (line)
+      			CASE (' Atoms')
+        			state = 'Atoms'
+        			Natom = 0
+        			WRITE (*,*) "Reading atom data"
+      			CASE (' Bonds')
+        			state = 'Bonds'
+        			Nbond = 0
+        			WRITE (*,*) "Reading bond data"
+      			case ('')
+      			CASE DEFAULT
+        			SELECT CASE (state)
+          				CASE ('Atoms')
+            				!Atom ID, Molecule ID, Atom Type, X, Y, Z
+            				READ(line, *) i1, i2, i3, v1, v2, v3
+            				At(i1) = i3
+            				Xx(i1) = v1
+            				Yy(i1) = v2
+            				IF(i1 .GT. Natom) Natom = i1
+          				CASE ('Bonds')
+            				!Bond ID, Bond Type, Atom ID 1, Atom ID 2
+            				READ(line, *) i1, i2, i3, i4
+            				bondlist(1, i1) = i3
+            				bondlist(2, i1) = i4
 !WRITE (*,*) "parser bondlist(1, i1) , bondlist(2, i1) ",bondlist(1, i1),bondlist(2, i1)
-            if (i1.gt.Nbond) Nbond = i1
-          case ('')
-        end select
-    end select
-  end do  
+            				IF(i1 .GT. Nbond) Nbond = i1
+          				case ('')
+        		END SELECT
+    		END SELECT
+  		END DO
 
-199 close(20)
-end subroutine data_parser
+199 	CLOSE(20)
+	END SUBROUTINE data_parser
