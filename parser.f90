@@ -1,9 +1,8 @@
 	SUBROUTINE input_parser(filename)
   		
+ 		USE Globals
+  		
   		CHARACTER(*), INTENT(IN) :: filename
-
-  		INCLUDE 'globals.inc'
-
   		CHARACTER(LEN=1024) :: line, instr, args
   		CHARACTER(LEN=256) :: s1, s2, pair_style
   		INTEGER :: i1, i2
@@ -80,10 +79,9 @@
 	END SUBROUTINE input_parser
 
 	SUBROUTINE data_parser(filename)
+
+  		USE Globals
   		CHARACTER(*), INTENT(IN) :: filename
-
-  		INCLUDE 'globals.inc'
-
   		CHARACTER(LEN=1024) :: line
   		CHARACTER(LEN=80) :: state = ''
   		INTEGER :: i1, i2, i3

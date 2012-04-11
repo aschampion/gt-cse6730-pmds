@@ -1,7 +1,7 @@
 	SUBROUTINE Normalize_Velocity
 		
+      	USE Globals
 		IMPLICIT NONE
-      	INCLUDE 'globals.inc'
       	
       	REAL(KIND=8) :: Accx,Accy,Adjust
       	INTEGER	:: i

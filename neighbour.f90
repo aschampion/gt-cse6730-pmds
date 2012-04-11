@@ -1,7 +1,7 @@
 	SUBROUTINE Neighbour
 	
+		USE Globals
 		IMPLICIT NONE
-		INCLUDE 'globals.inc'
 		
 		INTEGER :: numcell,celli,cellj,cellID,i,j,oi,oj,ocelli,ocellj
 		DOUBLE PRECISION:: Lc,xr,yr,rr

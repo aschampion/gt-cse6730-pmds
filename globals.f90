@@ -35,32 +35,28 @@
 
 !    Pi          : Set the value to 3.14159265
 
-     Integer Maxatom, MaxNumtypes, MaxBonds, Maxcell, Maxneigh
+	MODULE Globals
 
-     Parameter (Maxatom = 100000)
-     Parameter (MaxNumtypes = 10)
-     Parameter (MaxBonds = 1000)
-     Parameter (Maxcell = 1500)
-     Parameter (Maxneigh = 50)
+		IMPLICIT NONE
+		SAVE
 
-     Double Precision Fx(Maxatom),Fy(Maxatom),Xx(Maxatom),Yy(Maxatom),&
+    	INTEGER,PARAMETER :: Maxatom=100000
+    	INTEGER,PARAMETER :: MaxNumtypes=10
+    	INTEGER,PARAMETER :: MaxBonds=1000
+    	INTEGER,PARAMETER :: Maxcell=1500
+    	INTEGER,PARAMETER :: Maxneigh=50
+    	REAL(KIND=8),PARAMETER :: Pi = 3.14159265
+    
+    	REAL(KIND=8) :: Fx(Maxatom),Fy(Maxatom),Xx(Maxatom),Yy(Maxatom),&
      		      Xp(Maxatom),Yp(Maxatom),Vx(Maxatom),Vy(Maxatom),&
      		      Rcut(MaxNumtypes, MaxNumtypes),&
      		      Ecut(MaxNumtypes, MaxNumtypes),&
                       sigma_matrix(MaxNumtypes, MaxNumtypes),&
                       epsilon_matrix(MaxNumtypes, MaxNumtypes),&
-     		      Box, Press, Temp, Utot, Upot, Ukin, Pi,Rskin,&
+     		      Box, Press, Temp, Utot, Upot, Ukin,Rskin,&
                       K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target, dT
-
-    
-    Integer  At(Maxatom), Natom, Nbond, Nstep,&
+   		
+   		INTEGER	::	At(Maxatom), Natom, Nbond, Nstep,&
     		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
-                bondlist(2, MaxBonds),Estep
-                    
-    Common /Syss/    Fx, Fy, Xx, Yy, Xp, Yp, Vx, Vy,&
-                     Rcut, Ecut, sigma_matrix, epsilon_matrix,&
-                     Box, Press, Temp, Utot, Upot, Ukin, Rskin,&
-                     K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target,&
-                     At, Natom, Nbond, Nstep, LL, hoc, nlist, list, bondlist, dt,Estep
-
-    Parameter (Pi = 3.14159265)
+                bondlist(2, MaxBonds),Estep    	
+	END MODULE Globals

@@ -2,7 +2,10 @@
 FC = gfortran
 FFLAGS = -fno-align-commons -O
 
-OBJS   = force.o force_soft.o initial.o integrate.o neighbour.o parser.o norm_vel.o
+OBJS   = globals.o force.o force_soft.o initial.o integrate.o neighbour.o parser.o norm_vel.o
+
+globals.o : globals.f90
+	$(FC) $(FFLAGS) -o $@ -c $<
 
 force.o : force.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
@@ -19,13 +22,13 @@ integrate.o : integrate.f90
 neighbour.o : neighbour.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
 
-parser.o : parser.f95
+parser.o : parser.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
 	
 norm_vel.o : normalize_vel.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
 
-pmds : pmds.f95 $(OBJS)
+pmds : pmds.f90 $(OBJS)
 	$(FC) $(FFLAGS) -o $@ $^
 
 all : pmds

@@ -1,7 +1,7 @@
 	SUBROUTINE Initial
 		
+		USE Globals
 		IMPLICIT NONE
-		INCLUDE 'globals.inc'
 
 		! paramters that will be used
 

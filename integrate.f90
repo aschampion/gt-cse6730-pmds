@@ -1,7 +1,7 @@
       SUBROUTINE Integrate
       
+      	USE Globals
       	IMPLICIT NONE
-      	INCLUDE 'globals.inc'
  
 		!Integrate The Equations Of Motion And calculate The Total Impulse
  

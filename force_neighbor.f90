@@ -1,7 +1,7 @@
 	SUBROUTINE Force_neighbor() 
       	
       	IMPLICIT NONE
-       	INCLUDE 'globals.inc'
+       	USE Globals
       	
       	INTEGER:: I,J,K,Type1, Type2, atom1, atom2
       	REAL(KIND=8):: Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcutsq,&
