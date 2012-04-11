@@ -48,6 +48,8 @@ subroutine input_parser(filename)
             WRITE (*,*) "Reading soft force data"
         end select
       case ('pair_style')
+        sigma_matrix(1:MaxNumtypes,1:MaxNumtypes) = 0
+        epsilon_matrix(1:MaxNumtypes,1:MaxNumtypes) = 0
         read(args, *) pair_style
         WRITE (*,*) "Pair style",pair_style
       case ('read_data')
@@ -55,6 +57,7 @@ subroutine input_parser(filename)
         call data_parser(args)
         WRITE (*,*) Natom,"atoms"
         WRITE (*,*) Nbond,"bonds"
+        write(99, '(I8)') Natom
       case ('run')
         ! Timesteps
         read(args, *) i1

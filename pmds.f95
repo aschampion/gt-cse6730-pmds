@@ -2,7 +2,10 @@ program pmds
   character(len=255) :: input_file
 
   call getarg(1, input_file)
+  open(99, file='out.dump', status='REPLACE')
   call input_parser(input_file)
+
+  close(99)
 end program pmds
 
 subroutine run_simulation(num_timesteps, pair_style)
@@ -13,8 +16,6 @@ subroutine run_simulation(num_timesteps, pair_style)
   integer :: num_timesteps, i
   character(*), intent(in) :: pair_style
   REAL(KIND=8) :: Xo(Natom),Yo(Natom)
-
-  !#open(99, file='out.dump')
   
   Nstep = 0
   
@@ -24,10 +25,9 @@ subroutine run_simulation(num_timesteps, pair_style)
     
   do while(Nstep.lt.num_timesteps)
     if (mod(Nstep, 100).eq.0) write(*,'(A I8)') 'Running timestep: ', Nstep+1
-    if (mod(Nstep, 10000).eq.0) then
-!      #write(99, '(I5)') Natom
- !     #write(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
-  !    #flush(99)
+    if (mod(Nstep, 10).eq.0) then
+      write(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
+      flush(99)
     endif
     select case (pair_style)
       case ('soft')
@@ -48,6 +48,4 @@ subroutine run_simulation(num_timesteps, pair_style)
   DO i=1,Natom
   	IF(Xx(i) .LT. 0.0D0) WRITE (*,*) Xx(i),Xo(i)
   END DO
-
- ! #close(99)
 end subroutine
