@@ -17,8 +17,8 @@
 			
  
 			!START LOOP THROUGH ALL ATOM INTERACTIONS
-      		DO I = 1,Natom - 1
-         		DO J = I + 1,Natom
+      		DO I = 1,(Natom - 1)
+         		DO J = (I + 1),Natom
  
 					!Calculate the distance between the two atoms
             		Dx = Xx(I) - Xx(J)
@@ -67,7 +67,7 @@
 
 		!Harmonic Bonds             
         !Run through the bond list and grab the interacting atoms
-     	DO k = 1, MaxBonds
+     	DO k = 1, NBond
         	atom1 = BondList(1,k)
             atom2 = BondList(2,k)
  
