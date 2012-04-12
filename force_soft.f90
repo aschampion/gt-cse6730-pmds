@@ -91,7 +91,7 @@
 
       	END DO
       	
-      	!WRITE (*,*) UPot/Natom
+      	!WRITE (*,*) 'Soft Potential + Bond', UPot/Natom
       	
       	!Scale The Pressure
       	Press = Press/(3.0d0*Box*Box*Box)

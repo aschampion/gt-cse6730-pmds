@@ -36,11 +36,20 @@
       			CASE('soft')
         			A_soft = 19.0*Nstep/num_timesteps + 1.0
         			CALL force_soft()
-        			IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Calculating soft force'
+        			IF(MOD(Nstep,100) .EQ. 0) THEN
+                                        WRITE(*,'(A I4)') 'Calculating soft force'
+                                        WRITE (*,*) 'Potential Soft',Upot/Natom
+                                        WRITE (*,*) 'Ukin Soft',     Ukin/Natom
+                                END IF
+
       			CASE('lj')
         			CALL force()
-        			IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Calculating LJ force'
-    		END SELECT
+        			IF(MOD(Nstep,100) .EQ. 0) THEN
+                                        WRITE(*,'(A I4)') 'Calculating LJ force'
+                                        WRITE (*,*) 'Potential LJ',Upot/Natom
+                                        WRITE (*,*) 'Ukin LJ',     Ukin/Natom
+                                END IF	
+               END SELECT
     
     		CALL integrate
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'

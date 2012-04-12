@@ -46,8 +46,8 @@
                			sigma_square = sigma**2.0
                			R_six_i = (R_square_i*sigma_square)**3.0
           
-               			!Upot = Upot + 4.00*eps*R_six_i*(R_six_i - 1.00) - Ecut
-               			Ff = 48.0*eps*R_square_i*R_six_i*(R_six_i - 0.5)
+               			 Upot  = Upot + 4.00*eps*R_six_i*(R_six_i - 1.00) - Ecut(Type1,Type2)
+               			 Ff     = 48.0*eps*R_six_i*(R_six_i - 0.5)
 
                			Press = Press + Ff
                			Ff = Ff*R_square_i
@@ -92,7 +92,7 @@
             Fy(atom2) = Fy(atom2) - Ff*Dy
       	END DO
       	
-      	WRITE (*,*) Upot/Natom
+!      	WRITE (*,*) 'Potential LJ',Upot/Natom
  
 		!Scale The Pressure
       	Press = Press/(3.0d0*Box*Box*Box)

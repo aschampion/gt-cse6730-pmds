@@ -5,7 +5,7 @@
 
 		! paramters that will be used
 
-  		INTEGER:: I, seed(3)
+  		INTEGER:: I,J, seed(3)
   		REAL(KIND=8):: Accx, Accy, Adjust
 
   		Accx = 0.0d0
@@ -36,5 +36,11 @@
 		END DO
 
   !Call Neighbour
-
+                ! Calculate Ecut for different atom types
+                 DO I =1 , MaxNumtypes
+                       DO J = 1, MaxNumtypes
+                           Ecut(I,J) = 4.0*epsilon_matrix(I,J)*   & 
+                           (((sigma_matrix(I,J)/Rcut(I,J))**12.0) - ((sigma_matrix(I,J)/Rcut(I,J))**6.0))
+                       END DO
+                 END DO
 	END SUBROUTINE Initial

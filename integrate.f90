@@ -64,7 +64,7 @@
 			
 		END DO
 		
-		!WRITE (*,*) Ukin/Natom
+		!WRITE (*,*) 'Ukin', Ukin/Natom
 		
 		!WRITE (*,*) dT
 		!DO i=1,Natom
