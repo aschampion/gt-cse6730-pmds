@@ -33,12 +33,17 @@
         			WRITE (*,*) "Reading harmonic bond data"
       			CASE ('pair_coeff')
         			SELECT CASE (pair_style)
-          				CASE ('lj/cut')
+          				CASE ('lj')
             				!Type ID 1, Type ID 2, P1, P2, Radius Cutoff
             				READ(args, *) i1, i2, v1, v2, v3
             				Rcut(i1, i2) = v3
             				sigma_matrix(i1, i2) = v2
             				epsilon_matrix(i1, i2) = v1
+                           		Ecut(i1,i2) = 4.0*v1* (((v2/v3)**12.0) - ((v2/v3)**6.0))
+                                        Ecut(i2,i1) = Ecut(i1,i2)
+            				Rcut(i2, i1) = v3
+            				sigma_matrix(i2, i1) = v2
+            				epsilon_matrix(i2, i1) = v1
             				WRITE (*,*) "Reading LJ data"
           				CASE ('soft')
             				!Type ID 1, Type ID 2, A, Radius Cutoff
