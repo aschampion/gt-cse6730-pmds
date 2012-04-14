@@ -17,8 +17,8 @@
 			
  
 			!START LOOP THROUGH ALL ATOM INTERACTIONS
-      		DO I = 1,(Natom - 1)
-         		DO J = (I + 1),Natom
+      		DO I = 1, (Natom - 1)
+         		DO J = (I + 1), Natom
  
 					!Calculate the distance between the two atoms
             		Dx = Xx(I) - Xx(J)

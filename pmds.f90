@@ -40,6 +40,7 @@
                                         WRITE(*,'(A I4)') 'Calculating soft force'
                                         WRITE (*,*) 'Potential Soft',Upot/Natom
                                         WRITE (*,*) 'Ukin Soft',     Ukin/Natom
+                                        WRITE (*,*) 'Tot Soft',     Ukin/Natom + Upot/Natom
                                 END IF
 
       			CASE('lj')
@@ -48,6 +49,7 @@
                                         WRITE(*,'(A I4)') 'Calculating LJ force'
                                         WRITE (*,*) 'Potential LJ',Upot/Natom
                                         WRITE (*,*) 'Ukin LJ',     Ukin/Natom
+                                        WRITE (*,*) 'Tot LJ',     Ukin/Natom + Upot/Natom
                                 END IF	
                END SELECT
     
