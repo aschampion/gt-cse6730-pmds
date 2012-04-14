@@ -1,5 +1,5 @@
 # FC     = gfortran-mp-4.8
-FC = gfortran
+FC = openmpif90
 FFLAGS =-O
 #FFLAGS =-fno-align-comments -O
 

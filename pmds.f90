@@ -1,13 +1,19 @@
 	PROGRAM pmds
+		USE mpi
   		
   		CHARACTER(LEN=255) :: input_file
+		INTEGER :: ierr
 
   		CALL GETARG(1, input_file)
   		OPEN(UNIT=99, FILE='out.dump')
+
+		CALL MPI_INIT(ierr)
   		
   		CALL input_parser(input_file)
 
   		CLOSE(99)
+
+		CALL MPI_FINALIZE(ierr)
   		
 	END PROGRAM pmds
 
@@ -16,13 +22,19 @@
   		USE Globals
 		IMPLICIT NONE
   		
-  		INTEGER :: num_timesteps, i
+  		INTEGER :: num_timesteps, i, nprocs, rank, ierr, atomsp
   		CHARACTER(*), INTENT(IN) :: pair_style
   		REAL(KIND=8) :: Xo(Natom),Yo(Natom)
+
+		CALL MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
+		CALL MPI_COMM_SIZE(MPI_COMM_WORLD, nprocs, ierr)
+		atomsp = CEILING(REAL(Natom)/nprocs)
+		NAstart = atomsp*rank + 1;
+		NAend = MIN(Natom, atomsp*(rank + 1))
   
   		Nstep = 0
   
-  		DO i=1,Natom
+  		DO i=NAstart,NAend
   			Xo(i) = Xx(i)
   		END DO
     
@@ -55,6 +67,10 @@
     
     		CALL integrate
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
+		CALL MPI_ALLGATHER(Xx(NAstart,NAend), NAend-NAstart, MPI_DOUBLE,&
+				   Xx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
+		CALL MPI_ALLGATHER(Yy(NAstart,NAend), NAend-NAstart, MPI_DOUBLE,&
+				   Yy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
 
     		Nstep = Nstep + 1
 	  	END DO
@@ -64,3 +80,10 @@
   		END DO
   		
 	END SUBROUTINE run_simulation
+
+	SUBROUTINE broadcast_velocity
+		CALL MPI_ALLGATHER(Vx(NAstart,NAend), NAend-NAstart, MPI_DOUBLE,&
+				   Vx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
+		CALL MPI_ALLGATHER(Vy(NAstart,NAend), NAend-NAstart, MPI_DOUBLE,&
+				   Vy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
+	END SUBROUTINE broadcast_velocity

@@ -8,7 +8,7 @@
       	INTEGER	:: I
       	REAL(KIND=8) :: Xxn(Natom),Yyn(Natom),Zzn(Natom)
 
-		DO i=1,Natom
+	DO i = NAstart,NAend
       		Xxn(i) = 2.0D0*Xx(i)-Xp(i)+Fx(i)*dt*dt
       		Yyn(i) = 2.0D0*Yy(i)-Yp(i)+Fy(i)*dt*dt
       		
@@ -23,6 +23,7 @@
 		!cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 		IF(MOD(Nstep,Estep) .EQ. 0) THEN
+			CALL Broadcast_velocity()
 			CALL Normalize_velocity()
 		ENDIF
 		
@@ -32,7 +33,7 @@
 		!     Scale Velocities And Put Particles Back In The Box      !
 		!     Beware: The Old Positions Are Also Put Back In The Box  !
 		!cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-		DO i=1,Natom
+		DO i = NAstart,NAend
 		
 			Ukin = Ukin + 0.5D0*(Vx(i)**2+Vy(i)**2)
 		

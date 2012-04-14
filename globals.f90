@@ -58,5 +58,5 @@
    		
    		INTEGER	::	At(Maxatom), Natom, Nbond, Nstep,&
     		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
-                bondlist(2, MaxBonds),Estep    	
+                bondlist(2, MaxBonds),Estep,NAstart,NAend
 	END MODULE Globals
