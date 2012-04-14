@@ -26,6 +26,7 @@
   		INTEGER :: num_timesteps, i, nprocs, rank, ierr, atomsp
   		CHARACTER(*), INTENT(IN) :: pair_style
   		REAL(KIND=8) :: Xo(Natom),Yo(Natom)
+		DOUBLE PRECISION :: Xsend(Maxatom)
 
 		CALL MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
 		CALL MPI_COMM_SIZE(MPI_COMM_WORLD, nprocs, ierr)
@@ -68,10 +69,13 @@
     
     		CALL integrate
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
-		CALL MPI_ALLGATHER(Xx(NAstart:NAend), NAend-NAstart, MPI_DOUBLE_PRECISION,&
-				   Xx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
-		CALL MPI_ALLGATHER(Yy(NAstart:NAend), NAend-NAstart, MPI_DOUBLE_PRECISION,&
-				   Yy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
+		
+		Xsend = Xx(NAstart:NAend)
+		CALL MPI_ALLGATHER(Xsend, NAend-NAstart, MPI_DOUBLE_PRECISION,&
+				   Xx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
+		Xsend = Yy(NAstart:NAend)
+		CALL MPI_ALLGATHER(Xsend, NAend-NAstart, MPI_DOUBLE_PRECISION,&
+				   Yy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
 
     		Nstep = Nstep + 1
 	  	END DO
@@ -83,10 +87,14 @@
 	END SUBROUTINE run_simulation
 
 	SUBROUTINE broadcast_velocity
+		USE mpi
 		USE globals
 		INTEGER :: ierr
-		CALL MPI_ALLGATHER(Vx(NAstart:NAend), NAend-NAstart, MPI_DOUBLE_PRECISION,&
+		DOUBLE PRECISION :: Xsend(NAend-NAstart)
+		Xsend = Vx(NAstart:NAend)
+		CALL MPI_ALLGATHER(Xsend, NAend-NAstart, MPI_DOUBLE_PRECISION,&
 				   Vx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
-		CALL MPI_ALLGATHER(Vy(NAstart:NAend), NAend-NAstart, MPI_DOUBLE_PRECISION,&
+		Xsend = Vy(NAstart:NAend)
+		CALL MPI_ALLGATHER(Xsend, NAend-NAstart, MPI_DOUBLE_PRECISION,&
 				   Vy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
 	END SUBROUTINE broadcast_velocity
