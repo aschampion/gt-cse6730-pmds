@@ -18,6 +18,7 @@
 	END PROGRAM pmds
 
 	SUBROUTINE run_simulation(num_timesteps, pair_style)
+		USE mpi
   		
   		USE Globals
 		IMPLICIT NONE
@@ -67,9 +68,9 @@
     
     		CALL integrate
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
-		CALL MPI_ALLGATHER(Xx(NAstart,NAend), NAend-NAstart, MPI_DOUBLE,&
+		CALL MPI_ALLGATHER(Xx(NAstart:NAend), NAend-NAstart, MPI_DOUBLE_PRECISION,&
 				   Xx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
-		CALL MPI_ALLGATHER(Yy(NAstart,NAend), NAend-NAstart, MPI_DOUBLE,&
+		CALL MPI_ALLGATHER(Yy(NAstart:NAend), NAend-NAstart, MPI_DOUBLE_PRECISION,&
 				   Yy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
 
     		Nstep = Nstep + 1
@@ -82,8 +83,10 @@
 	END SUBROUTINE run_simulation
 
 	SUBROUTINE broadcast_velocity
-		CALL MPI_ALLGATHER(Vx(NAstart,NAend), NAend-NAstart, MPI_DOUBLE,&
-				   Vx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
-		CALL MPI_ALLGATHER(Vy(NAstart,NAend), NAend-NAstart, MPI_DOUBLE,&
-				   Vy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD)
+		USE globals
+		INTEGER :: ierr
+		CALL MPI_ALLGATHER(Vx(NAstart:NAend), NAend-NAstart, MPI_DOUBLE_PRECISION,&
+				   Vx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHER(Vy(NAstart:NAend), NAend-NAstart, MPI_DOUBLE_PRECISION,&
+				   Vy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
 	END SUBROUTINE broadcast_velocity
