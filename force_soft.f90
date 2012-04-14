@@ -94,7 +94,7 @@
       	!WRITE (*,*) 'Soft Potential + Bond', UPot/Natom
       	
       	!Scale The Pressure
-      	Press = Press/(3.0d0*Box*Box*Box)
+      	Press = Press/(2.0d0*Box*Box)
       
       	!write(*,*) K_bond,Rcut_bond
       
