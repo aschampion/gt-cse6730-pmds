@@ -67,9 +67,9 @@
 		
 		Press = Press + 2.0d0*Ukin*Dble(Natom)/(Box*Box*Dble(2*Natom-2))
 
-		IF(MOD(Nstep,100) .EQ. 0) THEN
-		   WRITE (*,*) 'Press', Press
-		ENDIF
+! 		IF(MOD(Nstep,100) .EQ. 0) THEN
+! 		   WRITE (*,*) 'Press', Press
+! 		ENDIF
 		
 		!WRITE (*,*) dT
 		!DO i=1,Natom
