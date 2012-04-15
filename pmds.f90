@@ -27,7 +27,7 @@
   		END DO
     
   		DO WHILE(Nstep .LT. num_timesteps)
-    		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I8)') 'Running timestep: ', Nstep+1
+    		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I8)') 'Running timestep: ', Nstep
     		IF(MOD(Nstep,10) .EQ. 0) THEN
       			WRITE(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
       			FLUSH(99)
@@ -35,32 +35,35 @@
     		SELECT CASE(pair_style)
       			CASE('soft')
         			A_soft = 19.0*Nstep/num_timesteps + 1.0
-        			CALL force_soft()
+        			CALL force_soft_neighbor
         			IF(MOD(Nstep,100) .EQ. 0) THEN
                                         WRITE(*,'(A I4)') 'Calculating soft force'
                                         WRITE (*,*) 'Potential Soft',Upot/Natom
                                         WRITE (*,*) 'Ukin Soft',     Ukin/Natom
                                         WRITE (*,*) 'Tot Soft',     Ukin/Natom + Upot/Natom
+                                        WRITE (*,*) 'Pressure', Press
                                 END IF
 
       			CASE('lj')
-        			CALL force()
+        			CALL force_neighbor
         			IF(MOD(Nstep,100) .EQ. 0) THEN
-                                        WRITE(*,'(A I4)') 'Calculating LJ force'
-                                        WRITE (*,*) 'Potential LJ',Upot/Natom
-                                        WRITE (*,*) 'Ukin LJ',     Ukin/Natom
-                                        WRITE (*,*) 'Tot LJ',     Ukin/Natom + Upot/Natom
-                                END IF	
+                                        WRITE(*,'(A I4)') 'Calculating lj force'
+                                        WRITE (*,*) 'Potential Soft',Upot/Natom
+                                        WRITE (*,*) 'Ukin Soft',     Ukin/Natom
+                                        WRITE (*,*) 'Tot Soft',     Ukin/Natom + Upot/Natom
+                                        WRITE (*,*) 'Pressure',Press
+                                END IF
                END SELECT
     
     		CALL integrate
+    		
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
 
     		Nstep = Nstep + 1
 	  	END DO
   
-  		DO i=1,Natom
-			WRITE (*,*) Xx(i),Xo(i)
-  		END DO
+  		!DO i=1,Natom
+		!	WRITE (*,*) Xx(i),Xo(i)
+  		!END DO
   		
 	END SUBROUTINE run_simulation

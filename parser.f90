@@ -5,7 +5,7 @@
   		CHARACTER(*), INTENT(IN) :: filename
   		CHARACTER(LEN=1024) :: line, instr, args
   		CHARACTER(LEN=256) :: s1, s2, pair_style
-  		INTEGER :: i1, i2,I,J
+  		INTEGER :: i1, i2
   		REAL(KIND=8) :: v1, v2, v3
 
   		OPEN(UNIT=10, FILE='in.micelle')
@@ -44,11 +44,6 @@
             				Rcut(i2, i1) = v3
             				sigma_matrix(i2, i1) = v2
             				epsilon_matrix(i2, i1) = v1
-                                        DO I=1, 4
-                                            DO J=1,4
-                                             WRITE(300,*) I, J, Ecut(I,J)
-                                            END DO
-  					END DO
             				WRITE (*,*) "Reading LJ data"
           				CASE ('soft')
             				!Type ID 1, Type ID 2, A, Radius Cutoff

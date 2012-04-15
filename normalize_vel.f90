@@ -29,10 +29,12 @@
 
 		!Scale All Velocities To The Correct Temperature
 
-  		Adjust = Dsqrt(Temp_target*Dble(2*Natom-2)/(Ukin))
+  		Adjust = SQRT(Temp_target*REAL(2*Natom-2)/Ukin)
   		IF(Natom .EQ. 1) THEN
   			Adjust = 1.0D0
   		ENDIF
+  		
+  		!WRITE (*,*) Adjust
   
   		DO I = 1,Natom
     		Vx(I) = Adjust*Vx(I)

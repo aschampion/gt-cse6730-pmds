@@ -32,6 +32,8 @@
 !	 nlist		 : No. of neighbour atoms in each verlet list
 !	 list		 : Verlet list for each atom
 !	 Rskin		 : Skin radius for limiting Verlet list radius
+!	 Cstep		 : Update neighbour list every Cstep steps
+!	 MMov		 : Maximum movement distance
 
 !    Pi          : Set the value to 3.14159265
 
@@ -43,7 +45,7 @@
     	INTEGER,PARAMETER :: Maxatom=100000
     	INTEGER,PARAMETER :: MaxNumtypes=10
     	INTEGER,PARAMETER :: MaxBonds=1000
-    	INTEGER,PARAMETER :: Maxcell=1500
+    	INTEGER,PARAMETER :: Maxcell=30
     	INTEGER,PARAMETER :: Maxneigh=50
     	REAL(KIND=8),PARAMETER :: Pi = 3.14159265
     
@@ -54,9 +56,9 @@
                       sigma_matrix(MaxNumtypes, MaxNumtypes),&
                       epsilon_matrix(MaxNumtypes, MaxNumtypes),&
      		      Box, Press, Temp, Utot, Upot, Ukin,Rskin,&
-                      K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target, dT
+                      K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target, dT,MMov
    		
-   		INTEGER	::	At(Maxatom), Natom, Nbond, Nstep,&
-    		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
+   		INTEGER	::	At(Maxatom), Natom, Nbond, Nstep,Cstep,&
+    		LL(Maxatom), hoc(Maxcell,Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
                 bondlist(2, MaxBonds),Estep    	
 	END MODULE Globals
