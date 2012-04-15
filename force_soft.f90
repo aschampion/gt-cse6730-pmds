@@ -1,4 +1,4 @@
-	SUBROUTINE Force_soft
+	SUBROUTINE Force_soft_neighbor
 
 		USE Globals
 		IMPLICIT NONE       
@@ -13,6 +13,11 @@
          	Fy(I) = 0.0
       	END DO
  
+	IF(MMov .GT. (0.75D0*Rskin)) THEN
+		CALL Neighbour
+		MMov = 0.0D0
+	END IF
+
       	Upot = 0.0
       	Press = 0.0
       
@@ -22,7 +27,9 @@
 		!END DO
 		!WRITE (*,*) "i am here 11111111111111111111111"
       	DO I = NAstart,NAend
-         	DO J = 1,Natom
+         	DO k = 1,nlist(i)
+
+      		J = list(I,k)
 		IF (I .eq. J) CYCLE 
 				
 		IF (((I.lt.J) .and. ((MOD(I+J, 2).eq.1))) .or. ((I.gt.J) .and.& 
@@ -117,4 +124,4 @@
       	!	WRITE (*,*) i,Fx(i),Fy(i)
 	    !END DO
  
-	END SUBROUTINE Force_Soft
+	END SUBROUTINE Force_soft_neighbor

@@ -1,0 +1,4136 @@
+ Reading initial data from data.micelle                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+ Reading atom data
+ Reading initial data from data.micelle                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+ Reading atom data
+ Reading initial data from data.micelle                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+ Reading atom data
+ Reading initial data from data.micelle                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+ Reading atom data
+ Reading bond data
+ Reading bond data
+ Reading bond data
+ Reading bond data
+        1200 atoms
+         300 bonds
+        1200 atoms
+         300 bonds
+        1200 atoms
+         300 bonds
+        1200 atoms
+         300 bonds
+ Pair stylesoft                                                                                                                                                                                                                                                            
+ Reading soft force data
+ Reading harmonic bond data
+ Pair stylesoft                                                                                                                                                                                                                                                            
+ Pair stylesoft                                                                                                                                                                                                                                                            
+ Reading soft force data
+ Reading soft force data
+ Pair stylesoft                                                                                                                                                                                                                                                            
+ Reading harmonic bond data
+ Reading harmonic bond data
+ Reading soft force data
+ Setting velocity for temperature  0.45000000000000001     
+ Reading harmonic bond data
+ Running simualation for        1000 steps
+Running timestep:        1
+ Setting velocity for temperature  0.45000000000000001     
+ Setting velocity for temperature  0.45000000000000001     
+ Running simualation for        1000 steps
+Running timestep:        1
+ Setting velocity for temperature  0.45000000000000001     
+ Running simualation for        1000 steps
+Running timestep:        1
+ Running simualation for        1000 steps
+Running timestep:        1
+Calculating soft force
+ Potential Soft  0.52400410982980283     
+ Ukin Soft  0.17004450845332245     
+Calculating soft force
+ Potential Soft  0.52400410982980283     
+ Ukin Soft  0.17004450845332245     
+ Tot Soft  0.69404861828312525     
+ Tot Soft  0.69404861828312525     
+Calculating soft force
+ Potential Soft  0.52400410982980283     
+ Ukin Soft  0.17004450845332245     
+ Tot Soft  0.69404861828312525     
+Calculating soft force
+ Potential Soft  0.52400410982980283     
+ Ukin Soft  0.17004450845332245     
+ Tot Soft  0.69404861828312525     
+Integrating
+ after integrate Press   1.7907429696912067     
+Integrating
+Integrating
+ after integrate Press   1.7907429696912067     
+ after integrate Press   1.7907429696912067     
+Integrating
+ after integrate Press   1.7907429696912067     
+Running timestep:      101
+Running timestep:      101
+Running timestep:      101
+Running timestep:      101
+Calculating soft force
+ Potential Soft   1.0777987449559823     
+ Ukin Soft  0.72621837191593686     
+ Tot Soft   1.8040171168719192     
+Calculating soft force
+ Potential Soft   1.0777987449559823     
+ Ukin Soft  0.72621837191593686     
+ Tot Soft   1.8040171168719192     
+Calculating soft force
+ Potential Soft   1.0777987449559823     
+ Ukin Soft  0.72621837191593686     
+ Tot Soft   1.8040171168719192     
+Calculating soft force
+ Potential Soft   1.0777987449559823     
+ Ukin Soft  0.72621837191593686     
+ Tot Soft   1.8040171168719192     
+Running timestep:      201
+Running timestep:      201
+Running timestep:      201
+Calculating soft force
+ Potential Soft   1.1403587643907933     
+ Ukin Soft  0.67870223235192140     
+ Tot Soft   1.8190609967427147     
+Calculating soft force
+ Potential Soft   1.1403587643907933     
+ Ukin Soft  0.67870223235192140     
+ Tot Soft   1.8190609967427147     
+Running timestep:      201
+Calculating soft force
+ Potential Soft   1.1403587643907933     
+ Ukin Soft  0.67870223235192140     
+ Tot Soft   1.8190609967427147     
+Calculating soft force
+ Potential Soft   1.1403587643907933     
+ Ukin Soft  0.67870223235192140     
+ Tot Soft   1.8190609967427147     
+Running timestep:      301
+Running timestep:      301
+Calculating soft force
+ Potential Soft   1.1805675807745650     
+ Ukin Soft  0.56272284466867817     
+ Tot Soft   1.7432904254432433     
+Running timestep:      301
+Calculating soft force
+ Potential Soft   1.1805675807745650     
+ Ukin Soft  0.56272284466867817     
+ Tot Soft   1.7432904254432433     
+Calculating soft force
+ Potential Soft   1.1805675807745650     
+ Ukin Soft  0.56272284466867817     
+ Tot Soft   1.7432904254432433     
+Running timestep:      301
+Calculating soft force
+ Potential Soft   1.1805675807745650     
+ Ukin Soft  0.56272284466867817     
+ Tot Soft   1.7432904254432433     
+Running timestep:      401
+Calculating soft force
+ Potential Soft   1.2621301946353700     
+ Ukin Soft  0.52977115134652053     
+ Tot Soft   1.7919013459818904     
+Running timestep:      401
+Running timestep:      401
+Calculating soft force
+ Potential Soft   1.2621301946353700     
+ Ukin Soft  0.52977115134652053     
+ Tot Soft   1.7919013459818904     
+Running timestep:      401
+Calculating soft force
+ Potential Soft   1.2621301946353700     
+ Ukin Soft  0.52977115134652053     
+ Tot Soft   1.7919013459818904     
+Calculating soft force
+ Potential Soft   1.2621301946353700     
+ Ukin Soft  0.52977115134652053     
+ Tot Soft   1.7919013459818904     
+Running timestep:      501
+Calculating soft force
+ Potential Soft   1.3288112317515861     
+ Ukin Soft  0.52654659086464928     
+ Tot Soft   1.8553578226162353     
+Running timestep:      501
+Calculating soft force
+ Potential Soft   1.3288112317515861     
+ Ukin Soft  0.52654659086464928     
+ Tot Soft   1.8553578226162353     
+Running timestep:      501
+Calculating soft force
+ Potential Soft   1.3288112317515861     
+ Ukin Soft  0.52654659086464928     
+ Tot Soft   1.8553578226162353     
+Running timestep:      501
+Calculating soft force
+ Potential Soft   1.3288112317515861     
+ Ukin Soft  0.52654659086464928     
+ Tot Soft   1.8553578226162353     
+Running timestep:      601
+Calculating soft force
+ Potential Soft   1.3896187632524375     
+ Ukin Soft  0.50423246313049452     
+ Tot Soft   1.8938512263829321     
+Running timestep:      601
+Calculating soft force
+ Potential Soft   1.3896187632524375     
+ Ukin Soft  0.50423246313049452     
+ Tot Soft   1.8938512263829321     
+Running timestep:      601
+Calculating soft force
+ Potential Soft   1.3896187632524375     
+ Ukin Soft  0.50423246313049452     
+ Tot Soft   1.8938512263829321     
+Running timestep:      601
+Calculating soft force
+ Potential Soft   1.3896187632524375     
+ Ukin Soft  0.50423246313049452     
+ Tot Soft   1.8938512263829321     
+Running timestep:      701
+Calculating soft force
+ Potential Soft   1.4442177252257782     
+ Ukin Soft  0.50799075848943032     
+ Tot Soft   1.9522084837152085     
+Running timestep:      701
+Calculating soft force
+ Potential Soft   1.4442177252257782     
+ Ukin Soft  0.50799075848943032     
+ Tot Soft   1.9522084837152085     
+Running timestep:      701
+Calculating soft force
+ Potential Soft   1.4442177252257782     
+ Ukin Soft  0.50799075848943032     
+ Tot Soft   1.9522084837152085     
+Running timestep:      701
+Calculating soft force
+ Potential Soft   1.4442177252257782     
+ Ukin Soft  0.50799075848943032     
+ Tot Soft   1.9522084837152085     
+Running timestep:      801
+Calculating soft force
+ Potential Soft   1.4744407908225783     
+ Ukin Soft  0.50868415135867484     
+ Tot Soft   1.9831249421812531     
+Running timestep:      801
+Calculating soft force
+ Potential Soft   1.4744407908225783     
+ Ukin Soft  0.50868415135867484     
+ Tot Soft   1.9831249421812531     
+Running timestep:      801
+Calculating soft force
+ Potential Soft   1.4744407908225783     
+ Ukin Soft  0.50868415135867484     
+ Tot Soft   1.9831249421812531     
+Running timestep:      801
+Calculating soft force
+ Potential Soft   1.4744407908225783     
+ Ukin Soft  0.50868415135867484     
+ Tot Soft   1.9831249421812531     
+Running timestep:      901
+Calculating soft force
+ Potential Soft   1.5190026355998905     
+ Ukin Soft  0.47794595554835906     
+ Tot Soft   1.9969485911482496     
+Running timestep:      901
+Calculating soft force
+ Potential Soft   1.5190026355998905     
+ Ukin Soft  0.47794595554835906     
+ Tot Soft   1.9969485911482496     
+Running timestep:      901
+Calculating soft force
+ Potential Soft   1.5190026355998905     
+ Ukin Soft  0.47794595554835906     
+ Tot Soft   1.9969485911482496     
+Running timestep:      901
+Calculating soft force
+ Potential Soft   1.5190026355998905     
+ Ukin Soft  0.47794595554835906     
+ Tot Soft   1.9969485911482496     
+ Pair stylelj                                                                                                                                                                                                                                                              
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Running simualation for       60000 steps
+Running timestep:        1
+Calculating LJ force
+ Potential LJ -0.91109768293084281     
+ Ukin LJ  0.50498058833871395     
+ Tot LJ -0.40611709459212886     
+Integrating
+ after integrate Press   1.2574365015136593     
+ Pair stylelj                                                                                                                                                                                                                                                              
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Running simualation for       60000 steps
+Running timestep:        1
+Calculating LJ force
+ Potential LJ -0.91109768293084281     
+ Ukin LJ  0.50498058833871395     
+ Tot LJ -0.40611709459212886     
+Integrating
+ after integrate Press   1.2574365015136593     
+ Pair stylelj                                                                                                                                                                                                                                                              
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Running simualation for       60000 steps
+Running timestep:        1
+Calculating LJ force
+ Potential LJ -0.91109768293084281     
+ Ukin LJ  0.50498058833871395     
+ Tot LJ -0.40611709459212886     
+Integrating
+ after integrate Press   1.2574365015136593     
+ Pair stylelj                                                                                                                                                                                                                                                              
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Reading LJ data
+ Running simualation for       60000 steps
+Running timestep:        1
+Calculating LJ force
+ Potential LJ -0.91109768293084281     
+ Ukin LJ  0.50498058833871395     
+ Tot LJ -0.40611709459212886     
+Integrating
+ after integrate Press   1.2574365015136593     
+Running timestep:      101
+Running timestep:      101
+Running timestep:      101
+Running timestep:      101
+Running timestep:      201
+Running timestep:      201
+Running timestep:      201
+Running timestep:      201
+Running timestep:      301
+Running timestep:      301
+Running timestep:      301
+Running timestep:      301
+Running timestep:      401
+Running timestep:      401
+Running timestep:      401
+Running timestep:      401
+Running timestep:      501
+Running timestep:      501
+Running timestep:      501
+Running timestep:      501
+Running timestep:      601
+Running timestep:      601
+Running timestep:      601
+Running timestep:      601
+Running timestep:      701
+Running timestep:      701
+Running timestep:      701
+Running timestep:      701
+Running timestep:      801
+Running timestep:      801
+Running timestep:      801
+Running timestep:      801
+Running timestep:      901
+Running timestep:      901
+Running timestep:      901
+Running timestep:      901
+Running timestep:     1001
+Calculating LJ force
+ Potential LJ  -1.7155894670282525     
+ Ukin LJ  0.44673481091073164     
+ Tot LJ  -1.2688546561175209     
+Integrating
+ after integrate Press  0.76225285927057262     
+Running timestep:     1001
+Calculating LJ force
+ Potential LJ  -1.7155894670282525     
+ Ukin LJ  0.44673481091073164     
+ Tot LJ  -1.2688546561175209     
+Integrating
+ after integrate Press  0.76225285927057262     
+Running timestep:     1001
+Calculating LJ force
+ Potential LJ  -1.7155894670282525     
+ Ukin LJ  0.44673481091073164     
+ Tot LJ  -1.2688546561175209     
+Integrating
+ after integrate Press  0.76225285927057262     
+Running timestep:     1001
+Calculating LJ force
+ Potential LJ  -1.7155894670282525     
+ Ukin LJ  0.44673481091073164     
+ Tot LJ  -1.2688546561175209     
+Integrating
+ after integrate Press  0.76225285927057262     
+Running timestep:     1101
+Running timestep:     1101
+Running timestep:     1101
+Running timestep:     1101
+Running timestep:     1201
+Running timestep:     1201
+Running timestep:     1201
+Running timestep:     1201
+Running timestep:     1301
+Running timestep:     1301
+Running timestep:     1301
+Running timestep:     1301
+Running timestep:     1401
+Running timestep:     1401
+Running timestep:     1401
+Running timestep:     1401
+Running timestep:     1501
+Running timestep:     1501
+Running timestep:     1501
+Running timestep:     1501
+Running timestep:     1601
+Running timestep:     1601
+Running timestep:     1601
+Running timestep:     1601
+Running timestep:     1701
+Running timestep:     1701
+Running timestep:     1701
+Running timestep:     1701
+Running timestep:     1801
+Running timestep:     1801
+Running timestep:     1801
+Running timestep:     1801
+Running timestep:     1901
+Running timestep:     1901
+Running timestep:     1901
+Running timestep:     1901
+Running timestep:     2001
+Calculating LJ force
+ Potential LJ  -1.7549863841341777     
+ Ukin LJ  0.45997185213949449     
+ Tot LJ  -1.2950145319946833     
+Integrating
+ after integrate Press  0.71298560947645717     
+Running timestep:     2001
+Calculating LJ force
+ Potential LJ  -1.7549863841341777     
+ Ukin LJ  0.45997185213949449     
+ Tot LJ  -1.2950145319946833     
+Integrating
+ after integrate Press  0.71298560947645717     
+Running timestep:     2001
+Calculating LJ force
+ Potential LJ  -1.7549863841341777     
+ Ukin LJ  0.45997185213949449     
+ Tot LJ  -1.2950145319946833     
+Integrating
+ after integrate Press  0.71298560947645717     
+Running timestep:     2001
+Calculating LJ force
+ Potential LJ  -1.7549863841341777     
+ Ukin LJ  0.45997185213949449     
+ Tot LJ  -1.2950145319946833     
+Integrating
+ after integrate Press  0.71298560947645717     
+Running timestep:     2101
+Running timestep:     2101
+Running timestep:     2101
+Running timestep:     2101
+Running timestep:     2201
+Running timestep:     2201
+Running timestep:     2201
+Running timestep:     2201
+Running timestep:     2301
+Running timestep:     2301
+Running timestep:     2301
+Running timestep:     2301
+Running timestep:     2401
+Running timestep:     2401
+Running timestep:     2401
+Running timestep:     2401
+Running timestep:     2501
+Running timestep:     2501
+Running timestep:     2501
+Running timestep:     2501
+Running timestep:     2601
+Running timestep:     2601
+Running timestep:     2601
+Running timestep:     2601
+Running timestep:     2701
+Running timestep:     2701
+Running timestep:     2701
+Running timestep:     2701
+Running timestep:     2801
+Running timestep:     2801
+Running timestep:     2801
+Running timestep:     2801
+Running timestep:     2901
+Running timestep:     2901
+Running timestep:     2901
+Running timestep:     2901
+Running timestep:     3001
+Calculating LJ force
+ Potential LJ  -1.8152523839465959     
+ Ukin LJ  0.45552770985016727     
+ Tot LJ  -1.3597246740964286     
+Integrating
+ after integrate Press  0.67715366954027423     
+Running timestep:     3001
+Calculating LJ force
+ Potential LJ  -1.8152523839465959     
+ Ukin LJ  0.45552770985016727     
+ Tot LJ  -1.3597246740964286     
+Integrating
+ after integrate Press  0.67715366954027423     
+Running timestep:     3001
+Calculating LJ force
+ Potential LJ  -1.8152523839465959     
+ Ukin LJ  0.45552770985016727     
+ Tot LJ  -1.3597246740964286     
+Integrating
+ after integrate Press  0.67715366954027423     
+Running timestep:     3101
+Running timestep:     3001
+Calculating LJ force
+ Potential LJ  -1.8152523839465959     
+ Ukin LJ  0.45552770985016727     
+ Tot LJ  -1.3597246740964286     
+Integrating
+ after integrate Press  0.67715366954027423     
+Running timestep:     3101
+Running timestep:     3101
+Running timestep:     3201
+Running timestep:     3101
+Running timestep:     3201
+Running timestep:     3201
+Running timestep:     3301
+Running timestep:     3201
+Running timestep:     3301
+Running timestep:     3301
+Running timestep:     3401
+Running timestep:     3301
+Running timestep:     3401
+Running timestep:     3401
+Running timestep:     3501
+Running timestep:     3401
+Running timestep:     3501
+Running timestep:     3501
+Running timestep:     3601
+Running timestep:     3501
+Running timestep:     3601
+Running timestep:     3601
+Running timestep:     3701
+Running timestep:     3601
+Running timestep:     3701
+Running timestep:     3701
+Running timestep:     3701
+Running timestep:     3801
+Running timestep:     3801
+Running timestep:     3801
+Running timestep:     3801
+Running timestep:     3901
+Running timestep:     3901
+Running timestep:     3901
+Running timestep:     3901
+Running timestep:     4001
+Calculating LJ force
+ Potential LJ  -1.8427652191413086     
+ Ukin LJ  0.45759175974166327     
+ Tot LJ  -1.3851734593996454     
+Integrating
+ after integrate Press  0.66858576902513545     
+Running timestep:     4001
+Calculating LJ force
+ Potential LJ  -1.8427652191413086     
+ Ukin LJ  0.45759175974166327     
+ Tot LJ  -1.3851734593996454     
+Integrating
+ after integrate Press  0.66858576902513545     
+Running timestep:     4001
+Calculating LJ force
+ Potential LJ  -1.8427652191413086     
+ Ukin LJ  0.45759175974166327     
+ Tot LJ  -1.3851734593996454     
+Integrating
+ after integrate Press  0.66858576902513545     
+Running timestep:     4001
+Calculating LJ force
+ Potential LJ  -1.8427652191413086     
+ Ukin LJ  0.45759175974166327     
+ Tot LJ  -1.3851734593996454     
+Integrating
+ after integrate Press  0.66858576902513545     
+Running timestep:     4101
+Running timestep:     4101
+Running timestep:     4101
+Running timestep:     4101
+Running timestep:     4201
+Running timestep:     4201
+Running timestep:     4201
+Running timestep:     4301
+Running timestep:     4201
+Running timestep:     4301
+Running timestep:     4301
+Running timestep:     4401
+Running timestep:     4301
+Running timestep:     4401
+Running timestep:     4401
+Running timestep:     4501
+Running timestep:     4401
+Running timestep:     4501
+Running timestep:     4501
+Running timestep:     4601
+Running timestep:     4501
+Running timestep:     4601
+Running timestep:     4601
+Running timestep:     4701
+Running timestep:     4601
+Running timestep:     4701
+Running timestep:     4701
+Running timestep:     4801
+Running timestep:     4701
+Running timestep:     4801
+Running timestep:     4801
+Running timestep:     4901
+Running timestep:     4801
+Running timestep:     4901
+Running timestep:     4901
+Running timestep:     5001
+Calculating LJ force
+ Potential LJ  -1.8548411027950629     
+ Ukin LJ  0.45261131336355853     
+ Tot LJ  -1.4022297894315043     
+Integrating
+ after integrate Press  0.61727030589289167     
+Running timestep:     4901
+Running timestep:     5001
+Calculating LJ force
+ Potential LJ  -1.8548411027950629     
+ Ukin LJ  0.45261131336355853     
+ Tot LJ  -1.4022297894315043     
+Integrating
+ after integrate Press  0.61727030589289167     
+Running timestep:     5001
+Calculating LJ force
+ Potential LJ  -1.8548411027950629     
+ Ukin LJ  0.45261131336355853     
+ Tot LJ  -1.4022297894315043     
+Integrating
+ after integrate Press  0.61727030589289167     
+Running timestep:     5101
+Running timestep:     5001
+Calculating LJ force
+ Potential LJ  -1.8548411027950629     
+ Ukin LJ  0.45261131336355853     
+ Tot LJ  -1.4022297894315043     
+Integrating
+ after integrate Press  0.61727030589289167     
+Running timestep:     5101
+Running timestep:     5101
+Running timestep:     5201
+Running timestep:     5101
+Running timestep:     5201
+Running timestep:     5201
+Running timestep:     5301
+Running timestep:     5201
+Running timestep:     5301
+Running timestep:     5301
+Running timestep:     5401
+Running timestep:     5301
+Running timestep:     5401
+Running timestep:     5401
+Running timestep:     5501
+Running timestep:     5501
+Running timestep:     5401
+Running timestep:     5501
+Running timestep:     5601
+Running timestep:     5601
+Running timestep:     5501
+Running timestep:     5601
+Running timestep:     5701
+Running timestep:     5701
+Running timestep:     5601
+Running timestep:     5701
+Running timestep:     5801
+Running timestep:     5801
+Running timestep:     5701
+Running timestep:     5801
+Running timestep:     5901
+Running timestep:     5901
+Running timestep:     5801
+Running timestep:     5901
+Running timestep:     6001
+Calculating LJ force
+ Potential LJ  -1.8678675626834493     
+ Ukin LJ  0.47275959721349958     
+ Tot LJ  -1.3951079654699496     
+Integrating
+ after integrate Press  0.60351499500395001     
+Running timestep:     6001
+Calculating LJ force
+ Potential LJ  -1.8678675626834493     
+ Ukin LJ  0.47275959721349958     
+ Tot LJ  -1.3951079654699496     
+Integrating
+ after integrate Press  0.60351499500395001     
+Running timestep:     5901
+Running timestep:     6001
+Calculating LJ force
+ Potential LJ  -1.8678675626834493     
+ Ukin LJ  0.47275959721349958     
+ Tot LJ  -1.3951079654699496     
+Integrating
+ after integrate Press  0.60351499500395001     
+Running timestep:     6101
+Running timestep:     6101
+Running timestep:     6001
+Calculating LJ force
+ Potential LJ  -1.8678675626834493     
+ Ukin LJ  0.47275959721349958     
+ Tot LJ  -1.3951079654699496     
+Integrating
+ after integrate Press  0.60351499500395001     
+Running timestep:     6101
+Running timestep:     6201
+Running timestep:     6201
+Running timestep:     6101
+Running timestep:     6201
+Running timestep:     6301
+Running timestep:     6301
+Running timestep:     6201
+Running timestep:     6301
+Running timestep:     6401
+Running timestep:     6401
+Running timestep:     6301
+Running timestep:     6401
+Running timestep:     6501
+Running timestep:     6501
+Running timestep:     6401
+Running timestep:     6501
+Running timestep:     6601
+Running timestep:     6601
+Running timestep:     6501
+Running timestep:     6601
+Running timestep:     6701
+Running timestep:     6701
+Running timestep:     6601
+Running timestep:     6701
+Running timestep:     6801
+Running timestep:     6801
+Running timestep:     6701
+Running timestep:     6801
+Running timestep:     6901
+Running timestep:     6901
+Running timestep:     6801
+Running timestep:     6901
+Running timestep:     7001
+Calculating LJ force
+ Potential LJ  -1.8547034659568238     
+ Ukin LJ  0.45397756606046502     
+ Tot LJ  -1.4007258998963588     
+Integrating
+ after integrate Press  0.60346377802279028     
+Running timestep:     7001
+Calculating LJ force
+ Potential LJ  -1.8547034659568238     
+ Ukin LJ  0.45397756606046502     
+ Tot LJ  -1.4007258998963588     
+Integrating
+ after integrate Press  0.60346377802279028     
+Running timestep:     7001
+Running timestep:     6901
+Calculating LJ force
+ Potential LJ  -1.8547034659568238     
+ Ukin LJ  0.45397756606046502     
+ Tot LJ  -1.4007258998963588     
+Integrating
+ after integrate Press  0.60346377802279028     
+Running timestep:     7101
+Running timestep:     7101
+Running timestep:     7101
+Running timestep:     7001
+Calculating LJ force
+ Potential LJ  -1.8547034659568238     
+ Ukin LJ  0.45397756606046502     
+ Tot LJ  -1.4007258998963588     
+Integrating
+ after integrate Press  0.60346377802279028     
+Running timestep:     7201
+Running timestep:     7201
+Running timestep:     7201
+Running timestep:     7101
+Running timestep:     7301
+Running timestep:     7301
+Running timestep:     7301
+Running timestep:     7201
+Running timestep:     7401
+Running timestep:     7401
+Running timestep:     7401
+Running timestep:     7301
+Running timestep:     7501
+Running timestep:     7501
+Running timestep:     7501
+Running timestep:     7401
+Running timestep:     7601
+Running timestep:     7601
+Running timestep:     7601
+Running timestep:     7501
+Running timestep:     7701
+Running timestep:     7701
+Running timestep:     7701
+Running timestep:     7601
+Running timestep:     7801
+Running timestep:     7801
+Running timestep:     7801
+Running timestep:     7701
+Running timestep:     7901
+Running timestep:     7901
+Running timestep:     7901
+Running timestep:     7801
+Running timestep:     8001
+Calculating LJ force
+ Potential LJ  -1.8925048526009334     
+ Ukin LJ  0.45112844753443238     
+ Tot LJ  -1.4413764050665010     
+Integrating
+ after integrate Press  0.56872731313907587     
+Running timestep:     8001
+Calculating LJ force
+ Potential LJ  -1.8925048526009334     
+ Ukin LJ  0.45112844753443238     
+ Tot LJ  -1.4413764050665010     
+Integrating
+ after integrate Press  0.56872731313907587     
+Running timestep:     8001
+Calculating LJ force
+ Potential LJ  -1.8925048526009334     
+ Ukin LJ  0.45112844753443238     
+ Tot LJ  -1.4413764050665010     
+Integrating
+ after integrate Press  0.56872731313907587     
+Running timestep:     8101
+Running timestep:     7901
+Running timestep:     8101
+Running timestep:     8101
+Running timestep:     8201
+Running timestep:     8001
+Calculating LJ force
+ Potential LJ  -1.8925048526009334     
+ Ukin LJ  0.45112844753443238     
+ Tot LJ  -1.4413764050665010     
+Integrating
+ after integrate Press  0.56872731313907587     
+Running timestep:     8201
+Running timestep:     8201
+Running timestep:     8301
+Running timestep:     8101
+Running timestep:     8301
+Running timestep:     8301
+Running timestep:     8401
+Running timestep:     8201
+Running timestep:     8401
+Running timestep:     8401
+Running timestep:     8501
+Running timestep:     8501
+Running timestep:     8301
+Running timestep:     8501
+Running timestep:     8601
+Running timestep:     8601
+Running timestep:     8401
+Running timestep:     8601
+Running timestep:     8701
+Running timestep:     8701
+Running timestep:     8501
+Running timestep:     8701
+Running timestep:     8801
+Running timestep:     8801
+Running timestep:     8601
+Running timestep:     8801
+Running timestep:     8901
+Running timestep:     8901
+Running timestep:     8701
+Running timestep:     8901
+Running timestep:     9001
+Calculating LJ force
+ Potential LJ  -1.8704970281233155     
+ Ukin LJ  0.45605078294756413     
+ Tot LJ  -1.4144462451757513     
+Integrating
+ after integrate Press  0.60449102941432975     
+Running timestep:     9001
+Calculating LJ force
+ Potential LJ  -1.8704970281233155     
+ Ukin LJ  0.45605078294756413     
+ Tot LJ  -1.4144462451757513     
+Integrating
+ after integrate Press  0.60449102941432975     
+Running timestep:     8801
+Running timestep:     9001
+Calculating LJ force
+ Potential LJ  -1.8704970281233155     
+ Ukin LJ  0.45605078294756413     
+ Tot LJ  -1.4144462451757513     
+Integrating
+ after integrate Press  0.60449102941432975     
+Running timestep:     9101
+Running timestep:     9101
+Running timestep:     8901
+Running timestep:     9101
+Running timestep:     9201
+Running timestep:     9201
+Running timestep:     9001
+Calculating LJ force
+ Potential LJ  -1.8704970281233155     
+ Ukin LJ  0.45605078294756413     
+ Tot LJ  -1.4144462451757513     
+Integrating
+ after integrate Press  0.60449102941432975     
+Running timestep:     9201
+Running timestep:     9301
+Running timestep:     9301
+Running timestep:     9101
+Running timestep:     9301
+Running timestep:     9401
+Running timestep:     9401
+Running timestep:     9201
+Running timestep:     9401
+Running timestep:     9501
+Running timestep:     9501
+Running timestep:     9301
+Running timestep:     9501
+Running timestep:     9601
+Running timestep:     9601
+Running timestep:     9401
+Running timestep:     9601
+Running timestep:     9701
+Running timestep:     9701
+Running timestep:     9501
+Running timestep:     9701
+Running timestep:     9801
+Running timestep:     9801
+Running timestep:     9601
+Running timestep:     9801
+Running timestep:     9901
+Running timestep:     9901
+Running timestep:     9701
+Running timestep:    10001
+Calculating LJ force
+ Potential LJ  -1.8834220336316443     
+ Ukin LJ  0.43790189990073997     
+ Tot LJ  -1.4455201337309043     
+Integrating
+ after integrate Press  0.62235791354766790     
+Running timestep:     9901
+Running timestep:    10001
+Calculating LJ force
+ Potential LJ  -1.8834220336316443     
+ Ukin LJ  0.43790189990073997     
+ Tot LJ  -1.4455201337309043     
+Integrating
+ after integrate Press  0.62235791354766790     
+Running timestep:     9801
+Running timestep:    10101
+Running timestep:    10001
+Calculating LJ force
+ Potential LJ  -1.8834220336316443     
+ Ukin LJ  0.43790189990073997     
+ Tot LJ  -1.4455201337309043     
+Integrating
+ after integrate Press  0.62235791354766790     
+Running timestep:    10101
+Running timestep:     9901
+Running timestep:    10201
+Running timestep:    10101
+Running timestep:    10201
+Running timestep:    10001
+Calculating LJ force
+ Potential LJ  -1.8834220336316443     
+ Ukin LJ  0.43790189990073997     
+ Tot LJ  -1.4455201337309043     
+Integrating
+ after integrate Press  0.62235791354766790     
+Running timestep:    10301
+Running timestep:    10201
+Running timestep:    10301
+Running timestep:    10101
+Running timestep:    10401
+Running timestep:    10301
+Running timestep:    10401
+Running timestep:    10201
+Running timestep:    10501
+Running timestep:    10401
+Running timestep:    10501
+Running timestep:    10301
+Running timestep:    10601
+Running timestep:    10501
+Running timestep:    10601
+Running timestep:    10401
+Running timestep:    10701
+Running timestep:    10601
+Running timestep:    10701
+Running timestep:    10501
+Running timestep:    10801
+Running timestep:    10701
+Running timestep:    10801
+Running timestep:    10601
+Running timestep:    10901
+Running timestep:    10801
+Running timestep:    10901
+Running timestep:    10701
+Running timestep:    11001
+Running timestep:    10901
+Calculating LJ force
+ Potential LJ  -1.9004479170664195     
+ Ukin LJ  0.45952505954763001     
+ Tot LJ  -1.4409228575187893     
+Integrating
+ after integrate Press  0.58832359242960564     
+Running timestep:    11001
+Calculating LJ force
+ Potential LJ  -1.9004479170664195     
+ Ukin LJ  0.45952505954763001     
+ Tot LJ  -1.4409228575187893     
+Integrating
+ after integrate Press  0.58832359242960564     
+Running timestep:    10801
+Running timestep:    11101
+Running timestep:    11001
+Calculating LJ force
+ Potential LJ  -1.9004479170664195     
+ Ukin LJ  0.45952505954763001     
+ Tot LJ  -1.4409228575187893     
+Integrating
+ after integrate Press  0.58832359242960564     
+Running timestep:    11101
+Running timestep:    10901
+Running timestep:    11201
+Running timestep:    11101
+Running timestep:    11201
+Running timestep:    11001
+Calculating LJ force
+ Potential LJ  -1.9004479170664195     
+ Ukin LJ  0.45952505954763001     
+ Tot LJ  -1.4409228575187893     
+Integrating
+ after integrate Press  0.58832359242960564     
+Running timestep:    11301
+Running timestep:    11201
+Running timestep:    11301
+Running timestep:    11101
+Running timestep:    11401
+Running timestep:    11301
+Running timestep:    11401
+Running timestep:    11201
+Running timestep:    11501
+Running timestep:    11401
+Running timestep:    11501
+Running timestep:    11301
+Running timestep:    11501
+Running timestep:    11601
+Running timestep:    11601
+Running timestep:    11401
+Running timestep:    11601
+Running timestep:    11701
+Running timestep:    11701
+Running timestep:    11501
+Running timestep:    11701
+Running timestep:    11801
+Running timestep:    11801
+Running timestep:    11601
+Running timestep:    11801
+Running timestep:    11901
+Running timestep:    11901
+Running timestep:    11701
+Running timestep:    11901
+Running timestep:    12001
+Calculating LJ force
+ Potential LJ  -1.9050829551905630     
+ Ukin LJ  0.46477305361146598     
+ Tot LJ  -1.4403099015790970     
+Integrating
+ after integrate Press  0.57113744484949813     
+Running timestep:    12001
+Calculating LJ force
+ Potential LJ  -1.9050829551905630     
+ Ukin LJ  0.46477305361146598     
+ Tot LJ  -1.4403099015790970     
+Integrating
+ after integrate Press  0.57113744484949813     
+Running timestep:    11801
+Running timestep:    12001
+Calculating LJ force
+ Potential LJ  -1.9050829551905630     
+ Ukin LJ  0.46477305361146598     
+ Tot LJ  -1.4403099015790970     
+Integrating
+ after integrate Press  0.57113744484949813     
+Running timestep:    12101
+Running timestep:    12101
+Running timestep:    11901
+Running timestep:    12101
+Running timestep:    12201
+Running timestep:    12201
+Running timestep:    12001
+Calculating LJ force
+ Potential LJ  -1.9050829551905630     
+ Ukin LJ  0.46477305361146598     
+ Tot LJ  -1.4403099015790970     
+Integrating
+ after integrate Press  0.57113744484949813     
+Running timestep:    12201
+Running timestep:    12301
+Running timestep:    12301
+Running timestep:    12101
+Running timestep:    12301
+Running timestep:    12401
+Running timestep:    12401
+Running timestep:    12201
+Running timestep:    12401
+Running timestep:    12501
+Running timestep:    12501
+Running timestep:    12301
+Running timestep:    12501
+Running timestep:    12601
+Running timestep:    12601
+Running timestep:    12401
+Running timestep:    12601
+Running timestep:    12701
+Running timestep:    12701
+Running timestep:    12501
+Running timestep:    12701
+Running timestep:    12801
+Running timestep:    12801
+Running timestep:    12601
+Running timestep:    12801
+Running timestep:    12901
+Running timestep:    12901
+Running timestep:    12701
+Running timestep:    12901
+Running timestep:    13001
+Calculating LJ force
+ Potential LJ  -1.9335317959547766     
+ Ukin LJ  0.44281211537612741     
+ Tot LJ  -1.4907196805786493     
+Integrating
+ after integrate Press  0.53734503674590239     
+Running timestep:    13001
+Calculating LJ force
+ Potential LJ  -1.9335317959547766     
+ Ukin LJ  0.44281211537612741     
+ Tot LJ  -1.4907196805786493     
+Integrating
+ after integrate Press  0.53734503674590239     
+Running timestep:    12801
+Running timestep:    13001
+Calculating LJ force
+ Potential LJ  -1.9335317959547766     
+ Ukin LJ  0.44281211537612741     
+ Tot LJ  -1.4907196805786493     
+Integrating
+ after integrate Press  0.53734503674590239     
+Running timestep:    13101
+Running timestep:    13101
+Running timestep:    12901
+Running timestep:    13101
+Running timestep:    13201
+Running timestep:    13201
+Running timestep:    13001
+Calculating LJ force
+ Potential LJ  -1.9335317959547766     
+ Ukin LJ  0.44281211537612741     
+ Tot LJ  -1.4907196805786493     
+Integrating
+ after integrate Press  0.53734503674590239     
+Running timestep:    13201
+Running timestep:    13301
+Running timestep:    13301
+Running timestep:    13101
+Running timestep:    13301
+Running timestep:    13401
+Running timestep:    13401
+Running timestep:    13201
+Running timestep:    13401
+Running timestep:    13501
+Running timestep:    13501
+Running timestep:    13301
+Running timestep:    13601
+Running timestep:    13501
+Running timestep:    13601
+Running timestep:    13401
+Running timestep:    13701
+Running timestep:    13601
+Running timestep:    13701
+Running timestep:    13501
+Running timestep:    13801
+Running timestep:    13701
+Running timestep:    13801
+Running timestep:    13601
+Running timestep:    13801
+Running timestep:    13901
+Running timestep:    13901
+Running timestep:    13701
+Running timestep:    13901
+Running timestep:    14001
+Calculating LJ force
+ Potential LJ  -1.9227058413593519     
+ Ukin LJ  0.44165748891057877     
+ Tot LJ  -1.4810483524487732     
+Integrating
+ after integrate Press  0.57680324109161774     
+Running timestep:    14001
+Calculating LJ force
+ Potential LJ  -1.9227058413593519     
+ Ukin LJ  0.44165748891057877     
+ Tot LJ  -1.4810483524487732     
+Integrating
+ after integrate Press  0.57680324109161774     
+Running timestep:    13801
+Running timestep:    14001
+Calculating LJ force
+ Potential LJ  -1.9227058413593519     
+ Ukin LJ  0.44165748891057877     
+ Tot LJ  -1.4810483524487732     
+Integrating
+ after integrate Press  0.57680324109161774     
+Running timestep:    14101
+Running timestep:    14101
+Running timestep:    13901
+Running timestep:    14101
+Running timestep:    14201
+Running timestep:    14201
+Running timestep:    14001
+Calculating LJ force
+ Potential LJ  -1.9227058413593519     
+ Ukin LJ  0.44165748891057877     
+ Tot LJ  -1.4810483524487732     
+Integrating
+ after integrate Press  0.57680324109161774     
+Running timestep:    14201
+Running timestep:    14301
+Running timestep:    14301
+Running timestep:    14101
+Running timestep:    14301
+Running timestep:    14401
+Running timestep:    14401
+Running timestep:    14201
+Running timestep:    14401
+Running timestep:    14501
+Running timestep:    14501
+Running timestep:    14301
+Running timestep:    14501
+Running timestep:    14601
+Running timestep:    14601
+Running timestep:    14401
+Running timestep:    14601
+Running timestep:    14701
+Running timestep:    14701
+Running timestep:    14501
+Running timestep:    14701
+Running timestep:    14801
+Running timestep:    14801
+Running timestep:    14601
+Running timestep:    14801
+Running timestep:    14901
+Running timestep:    14901
+Running timestep:    14701
+Running timestep:    14901
+Running timestep:    15001
+Calculating LJ force
+ Potential LJ  -1.9373989802967659     
+ Ukin LJ  0.44774704510751140     
+ Tot LJ  -1.4896519351892545     
+Integrating
+ after integrate Press  0.54182035225839120     
+Running timestep:    15001
+Calculating LJ force
+ Potential LJ  -1.9373989802967659     
+ Ukin LJ  0.44774704510751140     
+ Tot LJ  -1.4896519351892545     
+Integrating
+ after integrate Press  0.54182035225839120     
+Running timestep:    14801
+Running timestep:    15001
+Calculating LJ force
+ Potential LJ  -1.9373989802967659     
+ Ukin LJ  0.44774704510751140     
+ Tot LJ  -1.4896519351892545     
+Integrating
+ after integrate Press  0.54182035225839120     
+Running timestep:    15101
+Running timestep:    15101
+Running timestep:    14901
+Running timestep:    15101
+Running timestep:    15201
+Running timestep:    15201
+Running timestep:    15201
+Running timestep:    15001
+Calculating LJ force
+ Potential LJ  -1.9373989802967659     
+ Ukin LJ  0.44774704510751140     
+ Tot LJ  -1.4896519351892545     
+Integrating
+ after integrate Press  0.54182035225839120     
+Running timestep:    15301
+Running timestep:    15301
+Running timestep:    15301
+Running timestep:    15101
+Running timestep:    15401
+Running timestep:    15401
+Running timestep:    15401
+Running timestep:    15201
+Running timestep:    15501
+Running timestep:    15501
+Running timestep:    15501
+Running timestep:    15301
+Running timestep:    15601
+Running timestep:    15601
+Running timestep:    15601
+Running timestep:    15401
+Running timestep:    15701
+Running timestep:    15701
+Running timestep:    15701
+Running timestep:    15501
+Running timestep:    15801
+Running timestep:    15801
+Running timestep:    15801
+Running timestep:    15601
+Running timestep:    15901
+Running timestep:    15901
+Running timestep:    15901
+Running timestep:    15701
+Running timestep:    16001
+Calculating LJ force
+ Potential LJ  -1.9535588570402274     
+ Ukin LJ  0.43435183447951448     
+ Tot LJ  -1.5192070225607128     
+Integrating
+ after integrate Press  0.53100542038683285     
+Running timestep:    16001
+Calculating LJ force
+ Potential LJ  -1.9535588570402274     
+ Ukin LJ  0.43435183447951448     
+ Tot LJ  -1.5192070225607128     
+Integrating
+ after integrate Press  0.53100542038683285     
+Running timestep:    16001
+Calculating LJ force
+ Potential LJ  -1.9535588570402274     
+ Ukin LJ  0.43435183447951448     
+ Tot LJ  -1.5192070225607128     
+Integrating
+ after integrate Press  0.53100542038683285     
+Running timestep:    15801
+Running timestep:    16101
+Running timestep:    16101
+Running timestep:    16101
+Running timestep:    15901
+Running timestep:    16201
+Running timestep:    16201
+Running timestep:    16201
+Running timestep:    16001
+Calculating LJ force
+ Potential LJ  -1.9535588570402274     
+ Ukin LJ  0.43435183447951448     
+ Tot LJ  -1.5192070225607128     
+Integrating
+ after integrate Press  0.53100542038683285     
+Running timestep:    16301
+Running timestep:    16301
+Running timestep:    16301
+Running timestep:    16101
+Running timestep:    16401
+Running timestep:    16401
+Running timestep:    16401
+Running timestep:    16201
+Running timestep:    16501
+Running timestep:    16501
+Running timestep:    16501
+Running timestep:    16301
+Running timestep:    16601
+Running timestep:    16601
+Running timestep:    16601
+Running timestep:    16701
+Running timestep:    16401
+Running timestep:    16701
+Running timestep:    16701
+Running timestep:    16801
+Running timestep:    16501
+Running timestep:    16801
+Running timestep:    16801
+Running timestep:    16901
+Running timestep:    16601
+Running timestep:    16901
+Running timestep:    16901
+Running timestep:    17001
+Calculating LJ force
+ Potential LJ  -1.9525202104035073     
+ Ukin LJ  0.42956301787632500     
+ Tot LJ  -1.5229571925271823     
+Integrating
+ after integrate Press  0.54989862257078315     
+Running timestep:    16701
+Running timestep:    17001
+Calculating LJ force
+ Potential LJ  -1.9525202104035073     
+ Ukin LJ  0.42956301787632500     
+ Tot LJ  -1.5229571925271823     
+Integrating
+ after integrate Press  0.54989862257078315     
+Running timestep:    17001
+Calculating LJ force
+ Potential LJ  -1.9525202104035073     
+ Ukin LJ  0.42956301787632500     
+ Tot LJ  -1.5229571925271823     
+Integrating
+ after integrate Press  0.54989862257078315     
+Running timestep:    17101
+Running timestep:    16801
+Running timestep:    17101
+Running timestep:    17101
+Running timestep:    17201
+Running timestep:    16901
+Running timestep:    17201
+Running timestep:    17201
+Running timestep:    17301
+Running timestep:    17001
+Calculating LJ force
+ Potential LJ  -1.9525202104035073     
+ Ukin LJ  0.42956301787632500     
+ Tot LJ  -1.5229571925271823     
+Integrating
+ after integrate Press  0.54989862257078315     
+Running timestep:    17301
+Running timestep:    17301
+Running timestep:    17401
+Running timestep:    17101
+Running timestep:    17401
+Running timestep:    17401
+Running timestep:    17501
+Running timestep:    17201
+Running timestep:    17501
+Running timestep:    17501
+Running timestep:    17601
+Running timestep:    17301
+Running timestep:    17601
+Running timestep:    17601
+Running timestep:    17701
+Running timestep:    17401
+Running timestep:    17701
+Running timestep:    17701
+Running timestep:    17801
+Running timestep:    17501
+Running timestep:    17801
+Running timestep:    17801
+Running timestep:    17901
+Running timestep:    17601
+Running timestep:    17901
+Running timestep:    17901
+Running timestep:    18001
+Calculating LJ force
+ Potential LJ  -1.9733591069404830     
+ Ukin LJ  0.46696100263374840     
+ Tot LJ  -1.5063981043067347     
+Integrating
+ after integrate Press  0.51216170458723509     
+Running timestep:    17701
+Running timestep:    18001
+Calculating LJ force
+ Potential LJ  -1.9733591069404830     
+ Ukin LJ  0.46696100263374840     
+ Tot LJ  -1.5063981043067347     
+Integrating
+ after integrate Press  0.51216170458723509     
+Running timestep:    18001
+Calculating LJ force
+ Potential LJ  -1.9733591069404830     
+ Ukin LJ  0.46696100263374840     
+ Tot LJ  -1.5063981043067347     
+Integrating
+ after integrate Press  0.51216170458723509     
+Running timestep:    18101
+Running timestep:    17801
+Running timestep:    18101
+Running timestep:    18101
+Running timestep:    18201
+Running timestep:    17901
+Running timestep:    18201
+Running timestep:    18201
+Running timestep:    18301
+Running timestep:    18001
+Calculating LJ force
+ Potential LJ  -1.9733591069404830     
+ Ukin LJ  0.46696100263374840     
+ Tot LJ  -1.5063981043067347     
+Integrating
+ after integrate Press  0.51216170458723509     
+Running timestep:    18301
+Running timestep:    18301
+Running timestep:    18401
+Running timestep:    18101
+Running timestep:    18401
+Running timestep:    18401
+Running timestep:    18501
+Running timestep:    18201
+Running timestep:    18501
+Running timestep:    18601
+Running timestep:    18501
+Running timestep:    18301
+Running timestep:    18601
+Running timestep:    18701
+Running timestep:    18601
+Running timestep:    18401
+Running timestep:    18701
+Running timestep:    18801
+Running timestep:    18701
+Running timestep:    18501
+Running timestep:    18801
+Running timestep:    18901
+Running timestep:    18801
+Running timestep:    18601
+Running timestep:    18901
+Running timestep:    18901
+Running timestep:    19001
+Calculating LJ force
+ Potential LJ  -1.9615559915905123     
+ Ukin LJ  0.44481784620609033     
+ Tot LJ  -1.5167381453844220     
+Integrating
+ after integrate Press  0.52962397746117162     
+Running timestep:    18701
+Running timestep:    19001
+Calculating LJ force
+ Potential LJ  -1.9615559915905123     
+ Ukin LJ  0.44481784620609033     
+ Tot LJ  -1.5167381453844220     
+Integrating
+ after integrate Press  0.52962397746117162     
+Running timestep:    19001
+Running timestep:    19101
+Calculating LJ force
+ Potential LJ  -1.9615559915905123     
+ Ukin LJ  0.44481784620609033     
+ Tot LJ  -1.5167381453844220     
+Integrating
+ after integrate Press  0.52962397746117162     
+Running timestep:    18801
+Running timestep:    19101
+Running timestep:    19101
+Running timestep:    19201
+Running timestep:    18901
+Running timestep:    19201
+Running timestep:    19201
+Running timestep:    19301
+Running timestep:    19001
+Calculating LJ force
+ Potential LJ  -1.9615559915905123     
+ Ukin LJ  0.44481784620609033     
+ Tot LJ  -1.5167381453844220     
+Integrating
+ after integrate Press  0.52962397746117162     
+Running timestep:    19301
+Running timestep:    19301
+Running timestep:    19401
+Running timestep:    19101
+Running timestep:    19401
+Running timestep:    19401
+Running timestep:    19501
+Running timestep:    19201
+Running timestep:    19501
+Running timestep:    19501
+Running timestep:    19601
+Running timestep:    19301
+Running timestep:    19601
+Running timestep:    19601
+Running timestep:    19701
+Running timestep:    19401
+Running timestep:    19701
+Running timestep:    19701
+Running timestep:    19801
+Running timestep:    19501
+Running timestep:    19801
+Running timestep:    19801
+Running timestep:    19901
+Running timestep:    19601
+Running timestep:    19901
+Running timestep:    19901
+Running timestep:    20001
+Calculating LJ force
+ Potential LJ  -1.9724711779334871     
+ Ukin LJ  0.44555183001760612     
+ Tot LJ  -1.5269193479158809     
+Integrating
+ after integrate Press  0.49988438463558205     
+Running timestep:    19701
+Running timestep:    20001
+Calculating LJ force
+ Potential LJ  -1.9724711779334871     
+ Ukin LJ  0.44555183001760612     
+ Tot LJ  -1.5269193479158809     
+Integrating
+ after integrate Press  0.49988438463558205     
+Running timestep:    20001
+Calculating LJ force
+ Potential LJ  -1.9724711779334871     
+ Ukin LJ  0.44555183001760612     
+ Tot LJ  -1.5269193479158809     
+Integrating
+ after integrate Press  0.49988438463558205     
+Running timestep:    20101
+Running timestep:    19801
+Running timestep:    20101
+Running timestep:    20101
+Running timestep:    20201
+Running timestep:    19901
+Running timestep:    20201
+Running timestep:    20201
+Running timestep:    20301
+Running timestep:    20001
+Calculating LJ force
+ Potential LJ  -1.9724711779334871     
+ Ukin LJ  0.44555183001760612     
+ Tot LJ  -1.5269193479158809     
+Integrating
+ after integrate Press  0.49988438463558205     
+Running timestep:    20301
+Running timestep:    20301
+Running timestep:    20401
+Running timestep:    20101
+Running timestep:    20401
+Running timestep:    20401
+Running timestep:    20501
+Running timestep:    20201
+Running timestep:    20501
+Running timestep:    20501
+Running timestep:    20601
+Running timestep:    20301
+Running timestep:    20601
+Running timestep:    20601
+Running timestep:    20701
+Running timestep:    20701
+Running timestep:    20401
+Running timestep:    20701
+Running timestep:    20801
+Running timestep:    20801
+Running timestep:    20501
+Running timestep:    20801
+Running timestep:    20901
+Running timestep:    20901
+Running timestep:    20601
+Running timestep:    20901
+Running timestep:    21001
+Calculating LJ force
+ Potential LJ  -1.9674035501421479     
+ Ukin LJ  0.45101633090398074     
+ Tot LJ  -1.5163872192381671     
+Integrating
+ after integrate Press  0.52192523400149127     
+Running timestep:    21001
+Calculating LJ force
+ Potential LJ  -1.9674035501421479     
+ Ukin LJ  0.45101633090398074     
+ Tot LJ  -1.5163872192381671     
+Integrating
+ after integrate Press  0.52192523400149127     
+Running timestep:    20701
+Running timestep:    21001
+Calculating LJ force
+ Potential LJ  -1.9674035501421479     
+ Ukin LJ  0.45101633090398074     
+ Tot LJ  -1.5163872192381671     
+Integrating
+ after integrate Press  0.52192523400149127     
+Running timestep:    21101
+Running timestep:    21101
+Running timestep:    20801
+Running timestep:    21101
+Running timestep:    21201
+Running timestep:    21201
+Running timestep:    20901
+Running timestep:    21201
+Running timestep:    21301
+Running timestep:    21301
+Running timestep:    21001
+Calculating LJ force
+ Potential LJ  -1.9674035501421479     
+ Ukin LJ  0.45101633090398074     
+ Tot LJ  -1.5163872192381671     
+Integrating
+ after integrate Press  0.52192523400149127     
+Running timestep:    21301
+Running timestep:    21401
+Running timestep:    21401
+Running timestep:    21101
+Running timestep:    21401
+Running timestep:    21501
+Running timestep:    21501
+Running timestep:    21201
+Running timestep:    21501
+Running timestep:    21601
+Running timestep:    21601
+Running timestep:    21301
+Running timestep:    21601
+Running timestep:    21701
+Running timestep:    21701
+Running timestep:    21401
+Running timestep:    21701
+Running timestep:    21801
+Running timestep:    21801
+Running timestep:    21501
+Running timestep:    21801
+Running timestep:    21901
+Running timestep:    21901
+Running timestep:    21601
+Running timestep:    21901
+Running timestep:    22001
+Calculating LJ force
+ Potential LJ  -1.9548191099799817     
+ Ukin LJ  0.45889720803065642     
+ Tot LJ  -1.4959219019493253     
+Integrating
+ after integrate Press  0.53159270859997987     
+Running timestep:    22001
+Calculating LJ force
+ Potential LJ  -1.9548191099799817     
+ Ukin LJ  0.45889720803065642     
+ Tot LJ  -1.4959219019493253     
+Integrating
+ after integrate Press  0.53159270859997987     
+Running timestep:    21701
+Running timestep:    22001
+Calculating LJ force
+ Potential LJ  -1.9548191099799817     
+ Ukin LJ  0.45889720803065642     
+ Tot LJ  -1.4959219019493253     
+Integrating
+ after integrate Press  0.53159270859997987     
+Running timestep:    22101
+Running timestep:    22101
+Running timestep:    21801
+Running timestep:    22101
+Running timestep:    22201
+Running timestep:    22201
+Running timestep:    21901
+Running timestep:    22201
+Running timestep:    22301
+Running timestep:    22301
+Running timestep:    22001
+Calculating LJ force
+ Potential LJ  -1.9548191099799817     
+ Ukin LJ  0.45889720803065642     
+ Tot LJ  -1.4959219019493253     
+Integrating
+ after integrate Press  0.53159270859997987     
+Running timestep:    22301
+Running timestep:    22401
+Running timestep:    22401
+Running timestep:    22101
+Running timestep:    22401
+Running timestep:    22501
+Running timestep:    22501
+Running timestep:    22201
+Running timestep:    22501
+Running timestep:    22601
+Running timestep:    22601
+Running timestep:    22301
+Running timestep:    22601
+Running timestep:    22701
+Running timestep:    22701
+Running timestep:    22401
+Running timestep:    22701
+Running timestep:    22801
+Running timestep:    22501
+Running timestep:    22801
+Running timestep:    22801
+Running timestep:    22901
+Running timestep:    22601
+Running timestep:    22901
+Running timestep:    22901
+Running timestep:    23001
+Calculating LJ force
+ Potential LJ  -1.9487917240856469     
+ Ukin LJ  0.45722756642580115     
+ Tot LJ  -1.4915641576598457     
+Integrating
+ after integrate Press  0.55099038482509721     
+Running timestep:    22701
+Running timestep:    23001
+Calculating LJ force
+ Potential LJ  -1.9487917240856469     
+ Ukin LJ  0.45722756642580115     
+ Tot LJ  -1.4915641576598457     
+Integrating
+ after integrate Press  0.55099038482509721     
+Running timestep:    23001
+Calculating LJ force
+ Potential LJ  -1.9487917240856469     
+ Ukin LJ  0.45722756642580115     
+ Tot LJ  -1.4915641576598457     
+Integrating
+ after integrate Press  0.55099038482509721     
+Running timestep:    23101
+Running timestep:    22801
+Running timestep:    23101
+Running timestep:    23101
+Running timestep:    23201
+Running timestep:    22901
+Running timestep:    23201
+Running timestep:    23201
+Running timestep:    23301
+Running timestep:    23001
+Calculating LJ force
+ Potential LJ  -1.9487917240856469     
+ Ukin LJ  0.45722756642580115     
+ Tot LJ  -1.4915641576598457     
+Integrating
+ after integrate Press  0.55099038482509721     
+Running timestep:    23301
+Running timestep:    23301
+Running timestep:    23401
+Running timestep:    23101
+Running timestep:    23401
+Running timestep:    23401
+Running timestep:    23501
+Running timestep:    23201
+Running timestep:    23501
+Running timestep:    23501
+Running timestep:    23601
+Running timestep:    23301
+Running timestep:    23601
+Running timestep:    23601
+Running timestep:    23701
+Running timestep:    23401
+Running timestep:    23701
+Running timestep:    23701
+Running timestep:    23801
+Running timestep:    23501
+Running timestep:    23801
+Running timestep:    23801
+Running timestep:    23901
+Running timestep:    23601
+Running timestep:    23901
+Running timestep:    23901
+Running timestep:    24001
+Calculating LJ force
+ Potential LJ  -1.9714985855945766     
+ Ukin LJ  0.46536421473928036     
+ Tot LJ  -1.5061343708552961     
+Integrating
+ after integrate Press  0.54348416963451962     
+Running timestep:    23701
+Running timestep:    24001
+Calculating LJ force
+ Potential LJ  -1.9714985855945766     
+ Ukin LJ  0.46536421473928036     
+ Tot LJ  -1.5061343708552961     
+Integrating
+ after integrate Press  0.54348416963451962     
+Running timestep:    24001
+Calculating LJ force
+ Potential LJ  -1.9714985855945766     
+ Ukin LJ  0.46536421473928036     
+ Tot LJ  -1.5061343708552961     
+Integrating
+ after integrate Press  0.54348416963451962     
+Running timestep:    24101
+Running timestep:    23801
+Running timestep:    24101
+Running timestep:    24101
+Running timestep:    24201
+Running timestep:    23901
+Running timestep:    24201
+Running timestep:    24201
+Running timestep:    24301
+Running timestep:    24001
+Calculating LJ force
+ Potential LJ  -1.9714985855945766     
+ Ukin LJ  0.46536421473928036     
+ Tot LJ  -1.5061343708552961     
+Integrating
+ after integrate Press  0.54348416963451962     
+Running timestep:    24301
+Running timestep:    24301
+Running timestep:    24401
+Running timestep:    24101
+Running timestep:    24401
+Running timestep:    24401
+Running timestep:    24501
+Running timestep:    24201
+Running timestep:    24501
+Running timestep:    24501
+Running timestep:    24601
+Running timestep:    24301
+Running timestep:    24601
+Running timestep:    24601
+Running timestep:    24701
+Running timestep:    24401
+Running timestep:    24701
+Running timestep:    24701
+Running timestep:    24801
+Running timestep:    24501
+Running timestep:    24801
+Running timestep:    24801
+Running timestep:    24901
+Running timestep:    24601
+Running timestep:    24901
+Running timestep:    24901
+Running timestep:    25001
+Calculating LJ force
+ Potential LJ  -1.9803307274476245     
+ Ukin LJ  0.45519523224504205     
+ Tot LJ  -1.5251354952025824     
+Integrating
+ after integrate Press  0.53319298992694297     
+Running timestep:    24701
+Running timestep:    25001
+Calculating LJ force
+ Potential LJ  -1.9803307274476245     
+ Ukin LJ  0.45519523224504205     
+ Tot LJ  -1.5251354952025824     
+Integrating
+ after integrate Press  0.53319298992694297     
+Running timestep:    25001
+Calculating LJ force
+ Potential LJ  -1.9803307274476245     
+ Ukin LJ  0.45519523224504205     
+ Tot LJ  -1.5251354952025824     
+Integrating
+ after integrate Press  0.53319298992694297     
+Running timestep:    25101
+Running timestep:    24801
+Running timestep:    25101
+Running timestep:    25101
+Running timestep:    25201
+Running timestep:    24901
+Running timestep:    25201
+Running timestep:    25201
+Running timestep:    25301
+Running timestep:    25001
+Calculating LJ force
+ Potential LJ  -1.9803307274476245     
+ Ukin LJ  0.45519523224504205     
+ Tot LJ  -1.5251354952025824     
+Integrating
+ after integrate Press  0.53319298992694297     
+Running timestep:    25301
+Running timestep:    25301
+Running timestep:    25401
+Running timestep:    25101
+Running timestep:    25401
+Running timestep:    25401
+Running timestep:    25501
+Running timestep:    25201
+Running timestep:    25501
+Running timestep:    25501
+Running timestep:    25601
+Running timestep:    25301
+Running timestep:    25601
+Running timestep:    25601
+Running timestep:    25701
+Running timestep:    25401
+Running timestep:    25701
+Running timestep:    25701
+Running timestep:    25801
+Running timestep:    25501
+Running timestep:    25801
+Running timestep:    25801
+Running timestep:    25901
+Running timestep:    25601
+Running timestep:    25901
+Running timestep:    25901
+Running timestep:    26001
+Calculating LJ force
+ Potential LJ  -1.9721325307180104     
+ Ukin LJ  0.46411806728658783     
+ Tot LJ  -1.5080144634314225     
+Integrating
+ after integrate Press  0.52178557216392196     
+Running timestep:    25701
+Running timestep:    26001
+Running timestep:    26001
+Calculating LJ force
+ Potential LJ  -1.9721325307180104     
+ Ukin LJ  0.46411806728658783     
+ Tot LJ  -1.5080144634314225     
+Integrating
+ after integrate Press  0.52178557216392196     
+Calculating LJ force
+ Potential LJ  -1.9721325307180104     
+ Ukin LJ  0.46411806728658783     
+ Tot LJ  -1.5080144634314225     
+Integrating
+ after integrate Press  0.52178557216392196     
+Running timestep:    26101
+Running timestep:    25801
+Running timestep:    26101
+Running timestep:    26101
+Running timestep:    26201
+Running timestep:    25901
+Running timestep:    26201
+Running timestep:    26201
+Running timestep:    26301
+Running timestep:    26001
+Calculating LJ force
+ Potential LJ  -1.9721325307180104     
+ Ukin LJ  0.46411806728658783     
+ Tot LJ  -1.5080144634314225     
+Integrating
+ after integrate Press  0.52178557216392196     
+Running timestep:    26301
+Running timestep:    26301
+Running timestep:    26401
+Running timestep:    26101
+Running timestep:    26401
+Running timestep:    26401
+Running timestep:    26501
+Running timestep:    26201
+Running timestep:    26501
+Running timestep:    26501
+Running timestep:    26601
+Running timestep:    26301
+Running timestep:    26601
+Running timestep:    26601
+Running timestep:    26701
+Running timestep:    26401
+Running timestep:    26701
+Running timestep:    26701
+Running timestep:    26801
+Running timestep:    26501
+Running timestep:    26801
+Running timestep:    26801
+Running timestep:    26901
+Running timestep:    26601
+Running timestep:    26901
+Running timestep:    26901
+Running timestep:    27001
+Calculating LJ force
+ Potential LJ  -1.9982185035397735     
+ Ukin LJ  0.42503772514717686     
+ Tot LJ  -1.5731807783925966     
+Integrating
+ after integrate Press  0.48632423564857219     
+Running timestep:    26701
+Running timestep:    27001
+Calculating LJ force
+ Potential LJ  -1.9982185035397735     
+ Ukin LJ  0.42503772514717686     
+ Tot LJ  -1.5731807783925966     
+Integrating
+ after integrate Press  0.48632423564857219     
+Running timestep:    27001
+Calculating LJ force
+ Potential LJ  -1.9982185035397735     
+ Ukin LJ  0.42503772514717686     
+ Tot LJ  -1.5731807783925966     
+Integrating
+ after integrate Press  0.48632423564857219     
+Running timestep:    27101
+Running timestep:    26801
+Running timestep:    27101
+Running timestep:    27101
+Running timestep:    27201
+Running timestep:    26901
+Running timestep:    27201
+Running timestep:    27201
+Running timestep:    27301
+Running timestep:    27001
+Calculating LJ force
+ Potential LJ  -1.9982185035397735     
+ Ukin LJ  0.42503772514717686     
+ Tot LJ  -1.5731807783925966     
+Integrating
+ after integrate Press  0.48632423564857219     
+Running timestep:    27301
+Running timestep:    27401
+Running timestep:    27301
+Running timestep:    27101
+Running timestep:    27401
+Running timestep:    27501
+Running timestep:    27401
+Running timestep:    27201
+Running timestep:    27501
+Running timestep:    27601
+Running timestep:    27501
+Running timestep:    27301
+Running timestep:    27601
+Running timestep:    27701
+Running timestep:    27601
+Running timestep:    27401
+Running timestep:    27701
+Running timestep:    27801
+Running timestep:    27701
+Running timestep:    27501
+Running timestep:    27801
+Running timestep:    27901
+Running timestep:    27801
+Running timestep:    27601
+Running timestep:    27901
+Running timestep:    28001
+Calculating LJ force
+ Potential LJ  -1.9969335415848062     
+ Ukin LJ  0.45418412041708534     
+ Tot LJ  -1.5427494211677208     
+Integrating
+ after integrate Press  0.51539924616298760     
+Running timestep:    27901
+Running timestep:    27701
+Running timestep:    28101
+Running timestep:    28001
+Calculating LJ force
+ Potential LJ  -1.9969335415848062     
+ Ukin LJ  0.45418412041708534     
+ Tot LJ  -1.5427494211677208     
+Integrating
+ after integrate Press  0.51539924616298760     
+Running timestep:    28001
+Calculating LJ force
+ Potential LJ  -1.9969335415848062     
+ Ukin LJ  0.45418412041708534     
+ Tot LJ  -1.5427494211677208     
+Integrating
+ after integrate Press  0.51539924616298760     
+Running timestep:    27801
+Running timestep:    28201
+Running timestep:    28101
+Running timestep:    28101
+Running timestep:    27901
+Running timestep:    28301
+Running timestep:    28201
+Running timestep:    28201
+Running timestep:    28001
+Calculating LJ force
+ Potential LJ  -1.9969335415848062     
+ Ukin LJ  0.45418412041708534     
+ Tot LJ  -1.5427494211677208     
+Integrating
+ after integrate Press  0.51539924616298760     
+Running timestep:    28401
+Running timestep:    28301
+Running timestep:    28301
+Running timestep:    28101
+Running timestep:    28501
+Running timestep:    28401
+Running timestep:    28401
+Running timestep:    28201
+Running timestep:    28601
+Running timestep:    28501
+Running timestep:    28501
+Running timestep:    28301
+Running timestep:    28701
+Running timestep:    28601
+Running timestep:    28601
+Running timestep:    28401
+Running timestep:    28801
+Running timestep:    28701
+Running timestep:    28701
+Running timestep:    28501
+Running timestep:    28901
+Running timestep:    28801
+Running timestep:    28801
+Running timestep:    28601
+Running timestep:    29001
+Running timestep:    28901
+Calculating LJ force
+ Potential LJ  -1.9609144282342588     
+ Ukin LJ  0.45252112246896287     
+ Tot LJ  -1.5083933057652958     
+Integrating
+ after integrate Press  0.53205446503516751     
+Running timestep:    28901
+Running timestep:    28701
+Running timestep:    29101
+Running timestep:    29001
+Calculating LJ force
+ Potential LJ  -1.9609144282342588     
+ Ukin LJ  0.45252112246896287     
+ Tot LJ  -1.5083933057652958     
+Integrating
+ after integrate Press  0.53205446503516751     
+Running timestep:    29001
+Calculating LJ force
+ Potential LJ  -1.9609144282342588     
+ Ukin LJ  0.45252112246896287     
+ Tot LJ  -1.5083933057652958     
+Integrating
+ after integrate Press  0.53205446503516751     
+Running timestep:    28801
+Running timestep:    29101
+Running timestep:    29201
+Running timestep:    29101
+Running timestep:    29301
+Running timestep:    29201
+Running timestep:    28901
+Running timestep:    29201
+Running timestep:    29301
+Running timestep:    29401
+Running timestep:    29001
+Calculating LJ force
+ Potential LJ  -1.9609144282342588     
+ Ukin LJ  0.45252112246896287     
+ Tot LJ  -1.5083933057652958     
+Integrating
+ after integrate Press  0.53205446503516751     
+Running timestep:    29301
+Running timestep:    29401
+Running timestep:    29501
+Running timestep:    29101
+Running timestep:    29401
+Running timestep:    29501
+Running timestep:    29601
+Running timestep:    29201
+Running timestep:    29501
+Running timestep:    29601
+Running timestep:    29701
+Running timestep:    29301
+Running timestep:    29601
+Running timestep:    29701
+Running timestep:    29801
+Running timestep:    29401
+Running timestep:    29701
+Running timestep:    29801
+Running timestep:    29901
+Running timestep:    29501
+Running timestep:    29801
+Running timestep:    29901
+Running timestep:    30001
+Calculating LJ force
+ Potential LJ  -1.9973489163637801     
+ Ukin LJ  0.46919761655425002     
+ Tot LJ  -1.5281512998095301     
+Integrating
+ after integrate Press  0.49800238736042379     
+Running timestep:    29601
+Running timestep:    29901
+Running timestep:    30001
+Calculating LJ force
+ Potential LJ  -1.9973489163637801     
+ Ukin LJ  0.46919761655425002     
+ Tot LJ  -1.5281512998095301     
+Integrating
+ after integrate Press  0.49800238736042379     
+Running timestep:    30101
+Running timestep:    29701
+Running timestep:    30001
+Calculating LJ force
+ Potential LJ  -1.9973489163637801     
+ Ukin LJ  0.46919761655425002     
+ Tot LJ  -1.5281512998095301     
+Integrating
+ after integrate Press  0.49800238736042379     
+Running timestep:    30101
+Running timestep:    30201
+Running timestep:    29801
+Running timestep:    30101
+Running timestep:    30301
+Running timestep:    30201
+Running timestep:    29901
+Running timestep:    30201
+Running timestep:    30401
+Running timestep:    30301
+Running timestep:    30001
+Calculating LJ force
+ Potential LJ  -1.9973489163637801     
+ Ukin LJ  0.46919761655425002     
+ Tot LJ  -1.5281512998095301     
+Integrating
+ after integrate Press  0.49800238736042379     
+Running timestep:    30301
+Running timestep:    30501
+Running timestep:    30401
+Running timestep:    30101
+Running timestep:    30401
+Running timestep:    30601
+Running timestep:    30501
+Running timestep:    30201
+Running timestep:    30501
+Running timestep:    30701
+Running timestep:    30601
+Running timestep:    30301
+Running timestep:    30601
+Running timestep:    30801
+Running timestep:    30701
+Running timestep:    30401
+Running timestep:    30701
+Running timestep:    30901
+Running timestep:    30501
+Running timestep:    30801
+Running timestep:    30801
+Running timestep:    31001
+Calculating LJ force
+ Potential LJ  -1.9826673961207253     
+ Ukin LJ  0.45177864158285092     
+ Tot LJ  -1.5308887545378744     
+Integrating
+ after integrate Press  0.53865246530394206     
+Running timestep:    30601
+Running timestep:    30901
+Running timestep:    30901
+Running timestep:    31101
+Running timestep:    30701
+Running timestep:    31001
+Calculating LJ force
+ Potential LJ  -1.9826673961207253     
+ Ukin LJ  0.45177864158285092     
+ Tot LJ  -1.5308887545378744     
+Integrating
+ after integrate Press  0.53865246530394206     
+Running timestep:    31001
+Calculating LJ force
+ Potential LJ  -1.9826673961207253     
+ Ukin LJ  0.45177864158285092     
+ Tot LJ  -1.5308887545378744     
+Integrating
+ after integrate Press  0.53865246530394206     
+Running timestep:    31201
+Running timestep:    30801
+Running timestep:    31101
+Running timestep:    31101
+Running timestep:    31301
+Running timestep:    30901
+Running timestep:    31201
+Running timestep:    31201
+Running timestep:    31401
+Running timestep:    31001
+Calculating LJ force
+ Potential LJ  -1.9826673961207253     
+ Ukin LJ  0.45177864158285092     
+ Tot LJ  -1.5308887545378744     
+Integrating
+ after integrate Press  0.53865246530394206     
+Running timestep:    31301
+Running timestep:    31301
+Running timestep:    31501
+Running timestep:    31101
+Running timestep:    31401
+Running timestep:    31401
+Running timestep:    31601
+Running timestep:    31201
+Running timestep:    31501
+Running timestep:    31501
+Running timestep:    31701
+Running timestep:    31301
+Running timestep:    31601
+Running timestep:    31601
+Running timestep:    31801
+Running timestep:    31401
+Running timestep:    31701
+Running timestep:    31701
+Running timestep:    31901
+Running timestep:    31501
+Running timestep:    31801
+Running timestep:    31801
+Running timestep:    32001
+Calculating LJ force
+ Potential LJ  -1.9897974863762049     
+ Ukin LJ  0.45904684980473054     
+ Tot LJ  -1.5307506365714745     
+Integrating
+ after integrate Press  0.50912019384855989     
+Running timestep:    31601
+Running timestep:    31901
+Running timestep:    31901
+Running timestep:    32101
+Running timestep:    31701
+Running timestep:    32001
+Calculating LJ force
+ Potential LJ  -1.9897974863762049     
+ Ukin LJ  0.45904684980473054     
+ Tot LJ  -1.5307506365714745     
+Integrating
+ after integrate Press  0.50912019384855989     
+Running timestep:    32001
+Calculating LJ force
+ Potential LJ  -1.9897974863762049     
+ Ukin LJ  0.45904684980473054     
+ Tot LJ  -1.5307506365714745     
+Integrating
+ after integrate Press  0.50912019384855989     
+Running timestep:    32201
+Running timestep:    31801
+Running timestep:    32101
+Running timestep:    32101
+Running timestep:    32301
+Running timestep:    31901
+Running timestep:    32201
+Running timestep:    32201
+Running timestep:    32401
+Running timestep:    32001
+Calculating LJ force
+ Potential LJ  -1.9897974863762049     
+ Ukin LJ  0.45904684980473054     
+ Tot LJ  -1.5307506365714745     
+Integrating
+ after integrate Press  0.50912019384855989     
+Running timestep:    32301
+Running timestep:    32301
+Running timestep:    32501
+Running timestep:    32101
+Running timestep:    32401
+Running timestep:    32401
+Running timestep:    32601
+Running timestep:    32201
+Running timestep:    32501
+Running timestep:    32501
+Running timestep:    32701
+Running timestep:    32301
+Running timestep:    32601
+Running timestep:    32601
+Running timestep:    32801
+Running timestep:    32401
+Running timestep:    32701
+Running timestep:    32701
+Running timestep:    32901
+Running timestep:    32501
+Running timestep:    32801
+Running timestep:    32801
+Running timestep:    33001
+Calculating LJ force
+ Potential LJ  -1.9793850431526285     
+ Ukin LJ  0.46870207841355360     
+ Tot LJ  -1.5106829647390749     
+Integrating
+ after integrate Press  0.53604703894748340     
+Running timestep:    32901
+Running timestep:    32601
+Running timestep:    32901
+Running timestep:    33101
+Running timestep:    33001
+Calculating LJ force
+ Potential LJ  -1.9793850431526285     
+ Ukin LJ  0.46870207841355360     
+ Tot LJ  -1.5106829647390749     
+Integrating
+ after integrate Press  0.53604703894748340     
+Running timestep:    32701
+Running timestep:    33001
+Calculating LJ force
+ Potential LJ  -1.9793850431526285     
+ Ukin LJ  0.46870207841355360     
+ Tot LJ  -1.5106829647390749     
+Integrating
+ after integrate Press  0.53604703894748340     
+Running timestep:    33201
+Running timestep:    33101
+Running timestep:    32801
+Running timestep:    33101
+Running timestep:    33301
+Running timestep:    33201
+Running timestep:    32901
+Running timestep:    33201
+Running timestep:    33401
+Running timestep:    33301
+Running timestep:    33001
+Calculating LJ force
+ Potential LJ  -1.9793850431526285     
+ Ukin LJ  0.46870207841355360     
+ Tot LJ  -1.5106829647390749     
+Integrating
+ after integrate Press  0.53604703894748340     
+Running timestep:    33301
+Running timestep:    33501
+Running timestep:    33401
+Running timestep:    33101
+Running timestep:    33401
+Running timestep:    33601
+Running timestep:    33501
+Running timestep:    33201
+Running timestep:    33501
+Running timestep:    33701
+Running timestep:    33601
+Running timestep:    33301
+Running timestep:    33601
+Running timestep:    33801
+Running timestep:    33701
+Running timestep:    33401
+Running timestep:    33701
+Running timestep:    33901
+Running timestep:    33801
+Running timestep:    33501
+Running timestep:    33801
+Running timestep:    34001
+Calculating LJ force
+ Potential LJ  -1.9817511669507606     
+ Ukin LJ  0.45061616566120627     
+ Tot LJ  -1.5311350012895544     
+Integrating
+ after integrate Press  0.52261767761555178     
+Running timestep:    33901
+Running timestep:    33601
+Running timestep:    33901
+Running timestep:    34101
+Running timestep:    34001
+Calculating LJ force
+ Potential LJ  -1.9817511669507606     
+ Ukin LJ  0.45061616566120627     
+ Tot LJ  -1.5311350012895544     
+Integrating
+ after integrate Press  0.52261767761555178     
+Running timestep:    33701
+Running timestep:    34001
+Calculating LJ force
+ Potential LJ  -1.9817511669507606     
+ Ukin LJ  0.45061616566120627     
+ Tot LJ  -1.5311350012895544     
+Integrating
+ after integrate Press  0.52261767761555178     
+Running timestep:    34201
+Running timestep:    34101
+Running timestep:    33801
+Running timestep:    34101
+Running timestep:    34301
+Running timestep:    34201
+Running timestep:    33901
+Running timestep:    34201
+Running timestep:    34301
+Running timestep:    34401
+Running timestep:    34001
+Calculating LJ force
+ Potential LJ  -1.9817511669507606     
+ Ukin LJ  0.45061616566120627     
+ Tot LJ  -1.5311350012895544     
+Integrating
+ after integrate Press  0.52261767761555178     
+Running timestep:    34301
+Running timestep:    34401
+Running timestep:    34501
+Running timestep:    34101
+Running timestep:    34401
+Running timestep:    34501
+Running timestep:    34601
+Running timestep:    34201
+Running timestep:    34501
+Running timestep:    34701
+Running timestep:    34601
+Running timestep:    34301
+Running timestep:    34601
+Running timestep:    34801
+Running timestep:    34701
+Running timestep:    34401
+Running timestep:    34701
+Running timestep:    34801
+Running timestep:    34901
+Running timestep:    34501
+Running timestep:    34801
+Running timestep:    34901
+Running timestep:    35001
+Calculating LJ force
+ Potential LJ  -2.0058549111732704     
+ Ukin LJ  0.45097268054062550     
+ Tot LJ  -1.5548822306326449     
+Integrating
+ after integrate Press  0.49737352342289631     
+Running timestep:    34601
+Running timestep:    34901
+Running timestep:    35001
+Calculating LJ force
+ Potential LJ  -2.0058549111732704     
+ Ukin LJ  0.45097268054062550     
+ Tot LJ  -1.5548822306326449     
+Integrating
+ after integrate Press  0.49737352342289631     
+Running timestep:    35101
+Running timestep:    34701
+Running timestep:    35001
+Calculating LJ force
+ Potential LJ  -2.0058549111732704     
+ Ukin LJ  0.45097268054062550     
+ Tot LJ  -1.5548822306326449     
+Integrating
+ after integrate Press  0.49737352342289631     
+Running timestep:    35101
+Running timestep:    35201
+Running timestep:    34801
+Running timestep:    35101
+Running timestep:    35201
+Running timestep:    35301
+Running timestep:    34901
+Running timestep:    35201
+Running timestep:    35301
+Running timestep:    35401
+Running timestep:    35001
+Calculating LJ force
+ Potential LJ  -2.0058549111732704     
+ Ukin LJ  0.45097268054062550     
+ Tot LJ  -1.5548822306326449     
+Integrating
+ after integrate Press  0.49737352342289631     
+Running timestep:    35301
+Running timestep:    35401
+Running timestep:    35501
+Running timestep:    35101
+Running timestep:    35401
+Running timestep:    35501
+Running timestep:    35601
+Running timestep:    35201
+Running timestep:    35501
+Running timestep:    35601
+Running timestep:    35701
+Running timestep:    35301
+Running timestep:    35601
+Running timestep:    35701
+Running timestep:    35801
+Running timestep:    35401
+Running timestep:    35701
+Running timestep:    35801
+Running timestep:    35901
+Running timestep:    35501
+Running timestep:    35801
+Running timestep:    35901
+Running timestep:    36001
+Calculating LJ force
+ Potential LJ  -2.0142002119254196     
+ Ukin LJ  0.46880864649062726     
+ Tot LJ  -1.5453915654347923     
+Integrating
+ after integrate Press  0.47328731839026367     
+Running timestep:    35601
+Running timestep:    35901
+Running timestep:    36101
+Running timestep:    36001
+Calculating LJ force
+ Potential LJ  -2.0142002119254196     
+ Ukin LJ  0.46880864649062726     
+ Tot LJ  -1.5453915654347923     
+Integrating
+ after integrate Press  0.47328731839026367     
+Running timestep:    35701
+Running timestep:    36001
+Calculating LJ force
+ Potential LJ  -2.0142002119254196     
+ Ukin LJ  0.46880864649062726     
+ Tot LJ  -1.5453915654347923     
+Integrating
+ after integrate Press  0.47328731839026367     
+Running timestep:    36201
+Running timestep:    36101
+Running timestep:    35801
+Running timestep:    36101
+Running timestep:    36301
+Running timestep:    36201
+Running timestep:    35901
+Running timestep:    36201
+Running timestep:    36401
+Running timestep:    36301
+Running timestep:    36001
+Calculating LJ force
+ Potential LJ  -2.0142002119254196     
+ Ukin LJ  0.46880864649062726     
+ Tot LJ  -1.5453915654347923     
+Integrating
+ after integrate Press  0.47328731839026367     
+Running timestep:    36501
+Running timestep:    36301
+Running timestep:    36401
+Running timestep:    36101
+Running timestep:    36601
+Running timestep:    36401
+Running timestep:    36501
+Running timestep:    36201
+Running timestep:    36701
+Running timestep:    36501
+Running timestep:    36601
+Running timestep:    36301
+Running timestep:    36801
+Running timestep:    36601
+Running timestep:    36701
+Running timestep:    36401
+Running timestep:    36901
+Running timestep:    36701
+Running timestep:    36801
+Running timestep:    36501
+Running timestep:    37001
+Calculating LJ force
+ Potential LJ  -2.0082170229232745     
+ Ukin LJ  0.44323469943513893     
+ Tot LJ  -1.5649823234881355     
+Integrating
+ after integrate Press  0.49798563094373632     
+Running timestep:    36801
+Running timestep:    36901
+Running timestep:    36601
+Running timestep:    37101
+Running timestep:    36901
+Running timestep:    37001
+Calculating LJ force
+ Potential LJ  -2.0082170229232745     
+ Ukin LJ  0.44323469943513893     
+ Tot LJ  -1.5649823234881355     
+Integrating
+ after integrate Press  0.49798563094373632     
+Running timestep:    36701
+Running timestep:    37201
+Running timestep:    37001
+Calculating LJ force
+ Potential LJ  -2.0082170229232745     
+ Ukin LJ  0.44323469943513893     
+ Tot LJ  -1.5649823234881355     
+Integrating
+ after integrate Press  0.49798563094373632     
+Running timestep:    37101
+Running timestep:    36801
+Running timestep:    37301
+Running timestep:    37101
+Running timestep:    37201
+Running timestep:    36901
+Running timestep:    37401
+Running timestep:    37201
+Running timestep:    37301
+Running timestep:    37001
+Calculating LJ force
+ Potential LJ  -2.0082170229232745     
+ Ukin LJ  0.44323469943513893     
+ Tot LJ  -1.5649823234881355     
+Integrating
+ after integrate Press  0.49798563094373632     
+Running timestep:    37501
+Running timestep:    37301
+Running timestep:    37101
+Running timestep:    37401
+Running timestep:    37601
+Running timestep:    37401
+Running timestep:    37201
+Running timestep:    37501
+Running timestep:    37701
+Running timestep:    37501
+Running timestep:    37301
+Running timestep:    37601
+Running timestep:    37801
+Running timestep:    37601
+Running timestep:    37401
+Running timestep:    37701
+Running timestep:    37901
+Running timestep:    37701
+Running timestep:    37801
+Running timestep:    37501
+Running timestep:    38001
+Running timestep:    37801
+Calculating LJ force
+ Potential LJ  -1.9935920194387908     
+ Ukin LJ  0.43664975099617104     
+ Tot LJ  -1.5569422684426197     
+Integrating
+ after integrate Press  0.50306015145079874     
+Running timestep:    37901
+Running timestep:    37601
+Running timestep:    37901
+Running timestep:    38101
+Running timestep:    38001
+Calculating LJ force
+ Potential LJ  -1.9935920194387908     
+ Ukin LJ  0.43664975099617104     
+ Tot LJ  -1.5569422684426197     
+Integrating
+ after integrate Press  0.50306015145079874     
+Running timestep:    37701
+Running timestep:    38001
+Running timestep:    38201
+Calculating LJ force
+ Potential LJ  -1.9935920194387908     
+ Ukin LJ  0.43664975099617104     
+ Tot LJ  -1.5569422684426197     
+Integrating
+ after integrate Press  0.50306015145079874     
+Running timestep:    38101
+Running timestep:    37801
+Running timestep:    38101
+Running timestep:    38301
+Running timestep:    38201
+Running timestep:    37901
+Running timestep:    38201
+Running timestep:    38401
+Running timestep:    38301
+Running timestep:    38001
+Calculating LJ force
+ Potential LJ  -1.9935920194387908     
+ Ukin LJ  0.43664975099617104     
+ Tot LJ  -1.5569422684426197     
+Integrating
+ after integrate Press  0.50306015145079874     
+Running timestep:    38301
+Running timestep:    38501
+Running timestep:    38401
+Running timestep:    38101
+Running timestep:    38401
+Running timestep:    38601
+Running timestep:    38501
+Running timestep:    38201
+Running timestep:    38501
+Running timestep:    38701
+Running timestep:    38601
+Running timestep:    38301
+Running timestep:    38601
+Running timestep:    38801
+Running timestep:    38701
+Running timestep:    38401
+Running timestep:    38701
+Running timestep:    38801
+Running timestep:    38901
+Running timestep:    38501
+Running timestep:    38801
+Running timestep:    39001
+Running timestep:    38901
+Calculating LJ force
+ Potential LJ  -2.0058828215942923     
+ Ukin LJ  0.43876180620457783     
+ Tot LJ  -1.5671210153897146     
+Integrating
+ after integrate Press  0.50264695861809838     
+Running timestep:    38601
+Running timestep:    38901
+Running timestep:    39101
+Running timestep:    39001
+Calculating LJ force
+ Potential LJ  -2.0058828215942923     
+ Ukin LJ  0.43876180620457783     
+ Tot LJ  -1.5671210153897146     
+Integrating
+ after integrate Press  0.50264695861809838     
+Running timestep:    38701
+Running timestep:    39001
+Calculating LJ force
+ Potential LJ  -2.0058828215942923     
+ Ukin LJ  0.43876180620457783     
+ Tot LJ  -1.5671210153897146     
+Integrating
+ after integrate Press  0.50264695861809838     
+Running timestep:    39201
+Running timestep:    39101
+Running timestep:    38801
+Running timestep:    39101
+Running timestep:    39301
+Running timestep:    39201
+Running timestep:    38901
+Running timestep:    39201
+Running timestep:    39401
+Running timestep:    39301
+Running timestep:    39001
+Calculating LJ force
+ Potential LJ  -2.0058828215942923     
+ Ukin LJ  0.43876180620457783     
+ Tot LJ  -1.5671210153897146     
+Integrating
+ after integrate Press  0.50264695861809838     
+Running timestep:    39301
+Running timestep:    39501
+Running timestep:    39401
+Running timestep:    39101
+Running timestep:    39401
+Running timestep:    39601
+Running timestep:    39501
+Running timestep:    39201
+Running timestep:    39501
+Running timestep:    39701
+Running timestep:    39601
+Running timestep:    39301
+Running timestep:    39601
+Running timestep:    39801
+Running timestep:    39701
+Running timestep:    39401
+Running timestep:    39701
+Running timestep:    39901
+Running timestep:    39801
+Running timestep:    39501
+Running timestep:    39801
+Running timestep:    40001
+Calculating LJ force
+ Potential LJ  -1.9939995504248982     
+ Ukin LJ  0.46152985202814262     
+ Tot LJ  -1.5324696983967556     
+Integrating
+ after integrate Press  0.50428944936352293     
+Running timestep:    39901
+Running timestep:    39601
+Running timestep:    39901
+Running timestep:    40101
+Running timestep:    40001
+Calculating LJ force
+ Potential LJ  -1.9939995504248982     
+ Ukin LJ  0.46152985202814262     
+ Tot LJ  -1.5324696983967556     
+Integrating
+ after integrate Press  0.50428944936352293     
+Running timestep:    39701
+Running timestep:    40001
+Calculating LJ force
+ Potential LJ  -1.9939995504248982     
+ Ukin LJ  0.46152985202814262     
+ Tot LJ  -1.5324696983967556     
+Integrating
+ after integrate Press  0.50428944936352293     
+Running timestep:    40201
+Running timestep:    40101
+Running timestep:    39801
+Running timestep:    40101
+Running timestep:    40301
+Running timestep:    40201
+Running timestep:    39901
+Running timestep:    40201
+Running timestep:    40401
+Running timestep:    40301
+Running timestep:    40001
+Calculating LJ force
+ Potential LJ  -1.9939995504248982     
+ Ukin LJ  0.46152985202814262     
+ Tot LJ  -1.5324696983967556     
+Integrating
+ after integrate Press  0.50428944936352293     
+Running timestep:    40301
+Running timestep:    40501
+Running timestep:    40401
+Running timestep:    40101
+Running timestep:    40401
+Running timestep:    40601
+Running timestep:    40501
+Running timestep:    40201
+Running timestep:    40501
+Running timestep:    40701
+Running timestep:    40601
+Running timestep:    40601
+Running timestep:    40301
+Running timestep:    40801
+Running timestep:    40701
+Running timestep:    40701
+Running timestep:    40401
+Running timestep:    40901
+Running timestep:    40801
+Running timestep:    40801
+Running timestep:    40501
+Running timestep:    41001
+Calculating LJ force
+ Potential LJ  -1.9884161015116726     
+ Ukin LJ  0.45128485880204694     
+ Tot LJ  -1.5371312427096258     
+Integrating
+ after integrate Press  0.48979106537606693     
+Running timestep:    40901
+Running timestep:    40901
+Running timestep:    40601
+Running timestep:    41101
+Running timestep:    41001
+Calculating LJ force
+ Potential LJ  -1.9884161015116726     
+ Ukin LJ  0.45128485880204694     
+ Tot LJ  -1.5371312427096258     
+Integrating
+ after integrate Press  0.48979106537606693     
+Running timestep:    41001
+Calculating LJ force
+ Potential LJ  -1.9884161015116726     
+ Ukin LJ  0.45128485880204694     
+ Tot LJ  -1.5371312427096258     
+Integrating
+ after integrate Press  0.48979106537606693     
+Running timestep:    40701
+Running timestep:    41201
+Running timestep:    41101
+Running timestep:    41101
+Running timestep:    40801
+Running timestep:    41301
+Running timestep:    41201
+Running timestep:    41201
+Running timestep:    40901
+Running timestep:    41401
+Running timestep:    41301
+Running timestep:    41301
+Running timestep:    41001
+Calculating LJ force
+ Potential LJ  -1.9884161015116726     
+ Ukin LJ  0.45128485880204694     
+ Tot LJ  -1.5371312427096258     
+Integrating
+ after integrate Press  0.48979106537606693     
+Running timestep:    41501
+Running timestep:    41401
+Running timestep:    41401
+Running timestep:    41101
+Running timestep:    41601
+Running timestep:    41501
+Running timestep:    41501
+Running timestep:    41201
+Running timestep:    41701
+Running timestep:    41601
+Running timestep:    41601
+Running timestep:    41301
+Running timestep:    41801
+Running timestep:    41701
+Running timestep:    41701
+Running timestep:    41401
+Running timestep:    41901
+Running timestep:    41801
+Running timestep:    41801
+Running timestep:    41501
+Running timestep:    42001
+Calculating LJ force
+ Potential LJ  -2.0007354875841385     
+ Ukin LJ  0.44038775355985660     
+ Tot LJ  -1.5603477340242820     
+Integrating
+ after integrate Press  0.51581630038570558     
+Running timestep:    41901
+Running timestep:    41901
+Running timestep:    41601
+Running timestep:    42101
+Running timestep:    42001
+Calculating LJ force
+ Potential LJ  -2.0007354875841385     
+ Ukin LJ  0.44038775355985660     
+ Tot LJ  -1.5603477340242820     
+Integrating
+ after integrate Press  0.51581630038570558     
+Running timestep:    42001
+Calculating LJ force
+ Potential LJ  -2.0007354875841385     
+ Ukin LJ  0.44038775355985660     
+ Tot LJ  -1.5603477340242820     
+Integrating
+ after integrate Press  0.51581630038570558     
+Running timestep:    41701
+Running timestep:    42201
+Running timestep:    42101
+Running timestep:    42101
+Running timestep:    41801
+Running timestep:    42301
+Running timestep:    42201
+Running timestep:    42201
+Running timestep:    41901
+Running timestep:    42401
+Running timestep:    42301
+Running timestep:    42301
+Running timestep:    42001
+Calculating LJ force
+ Potential LJ  -2.0007354875841385     
+ Ukin LJ  0.44038775355985660     
+ Tot LJ  -1.5603477340242820     
+Integrating
+ after integrate Press  0.51581630038570558     
+Running timestep:    42501
+Running timestep:    42401
+Running timestep:    42401
+Running timestep:    42101
+Running timestep:    42601
+Running timestep:    42501
+Running timestep:    42501
+Running timestep:    42201
+Running timestep:    42701
+Running timestep:    42601
+Running timestep:    42601
+Running timestep:    42301
+Running timestep:    42801
+Running timestep:    42701
+Running timestep:    42701
+Running timestep:    42401
+Running timestep:    42901
+Running timestep:    42801
+Running timestep:    42801
+Running timestep:    42501
+Running timestep:    43001
+Running timestep:    42901
+Calculating LJ force
+ Potential LJ  -2.0000846031264623     
+ Ukin LJ  0.43830819666503706     
+ Tot LJ  -1.5617764064614252     
+Integrating
+ after integrate Press  0.49847811007492998     
+Running timestep:    42901
+Running timestep:    42601
+Running timestep:    43101
+Running timestep:    43001
+Calculating LJ force
+ Potential LJ  -2.0000846031264623     
+ Ukin LJ  0.43830819666503706     
+ Tot LJ  -1.5617764064614252     
+Integrating
+ after integrate Press  0.49847811007492998     
+Running timestep:    43001
+Calculating LJ force
+ Potential LJ  -2.0000846031264623     
+ Ukin LJ  0.43830819666503706     
+ Tot LJ  -1.5617764064614252     
+Integrating
+ after integrate Press  0.49847811007492998     
+Running timestep:    42701
+Running timestep:    43201
+Running timestep:    43101
+Running timestep:    43101
+Running timestep:    42801
+Running timestep:    43301
+Running timestep:    43201
+Running timestep:    43201
+Running timestep:    43401
+Running timestep:    42901
+Running timestep:    43301
+Running timestep:    43301
+Running timestep:    43501
+Running timestep:    43001
+Running timestep:    43401
+Calculating LJ force
+ Potential LJ  -2.0000846031264623     
+ Ukin LJ  0.43830819666503706     
+ Tot LJ  -1.5617764064614252     
+Integrating
+ after integrate Press  0.49847811007492998     
+Running timestep:    43401
+Running timestep:    43601
+Running timestep:    43501
+Running timestep:    43101
+Running timestep:    43501
+Running timestep:    43701
+Running timestep:    43601
+Running timestep:    43201
+Running timestep:    43601
+Running timestep:    43801
+Running timestep:    43701
+Running timestep:    43301
+Running timestep:    43701
+Running timestep:    43901
+Running timestep:    43801
+Running timestep:    43401
+Running timestep:    43801
+Running timestep:    44001
+Calculating LJ force
+ Potential LJ  -2.0341404141461776     
+ Ukin LJ  0.43814353431695263     
+ Tot LJ  -1.5959968798292250     
+Integrating
+ after integrate Press  0.45419552542117331     
+Running timestep:    43901
+Running timestep:    43501
+Running timestep:    43901
+Running timestep:    44101
+Running timestep:    44001
+Calculating LJ force
+ Potential LJ  -2.0341404141461776     
+ Ukin LJ  0.43814353431695263     
+ Tot LJ  -1.5959968798292250     
+Integrating
+ after integrate Press  0.45419552542117331     
+Running timestep:    43601
+Running timestep:    44001
+Calculating LJ force
+ Potential LJ  -2.0341404141461776     
+ Ukin LJ  0.43814353431695263     
+ Tot LJ  -1.5959968798292250     
+Integrating
+ after integrate Press  0.45419552542117331     
+Running timestep:    44201
+Running timestep:    44101
+Running timestep:    43701
+Running timestep:    44101
+Running timestep:    44301
+Running timestep:    44201
+Running timestep:    43801
+Running timestep:    44201
+Running timestep:    44401
+Running timestep:    44301
+Running timestep:    43901
+Running timestep:    44301
+Running timestep:    44501
+Running timestep:    44401
+Running timestep:    44001
+Calculating LJ force
+ Potential LJ  -2.0341404141461776     
+ Ukin LJ  0.43814353431695263     
+ Tot LJ  -1.5959968798292250     
+Integrating
+ after integrate Press  0.45419552542117331     
+Running timestep:    44401
+Running timestep:    44601
+Running timestep:    44501
+Running timestep:    44101
+Running timestep:    44501
+Running timestep:    44701
+Running timestep:    44601
+Running timestep:    44201
+Running timestep:    44601
+Running timestep:    44801
+Running timestep:    44701
+Running timestep:    44301
+Running timestep:    44701
+Running timestep:    44901
+Running timestep:    44801
+Running timestep:    44401
+Running timestep:    44801
+Running timestep:    45001
+Calculating LJ force
+ Potential LJ  -2.0031941262832049     
+ Ukin LJ  0.43007268291855155     
+ Tot LJ  -1.5731214433646534     
+Integrating
+ after integrate Press  0.49920830328457849     
+Running timestep:    44901
+Running timestep:    44501
+Running timestep:    44901
+Running timestep:    45101
+Running timestep:    45001
+Calculating LJ force
+ Potential LJ  -2.0031941262832049     
+ Ukin LJ  0.43007268291855155     
+ Tot LJ  -1.5731214433646534     
+Integrating
+ after integrate Press  0.49920830328457849     
+Running timestep:    44601
+Running timestep:    45001
+Calculating LJ force
+ Potential LJ  -2.0031941262832049     
+ Ukin LJ  0.43007268291855155     
+ Tot LJ  -1.5731214433646534     
+Integrating
+ after integrate Press  0.49920830328457849     
+Running timestep:    45201
+Running timestep:    45101
+Running timestep:    44701
+Running timestep:    45101
+Running timestep:    45301
+Running timestep:    45201
+Running timestep:    44801
+Running timestep:    45201
+Running timestep:    45401
+Running timestep:    45301
+Running timestep:    44901
+Running timestep:    45301
+Running timestep:    45501
+Running timestep:    45401
+Running timestep:    45001
+Calculating LJ force
+ Potential LJ  -2.0031941262832049     
+ Ukin LJ  0.43007268291855155     
+ Tot LJ  -1.5731214433646534     
+Integrating
+ after integrate Press  0.49920830328457849     
+Running timestep:    45401
+Running timestep:    45601
+Running timestep:    45501
+Running timestep:    45101
+Running timestep:    45501
+Running timestep:    45701
+Running timestep:    45601
+Running timestep:    45201
+Running timestep:    45601
+Running timestep:    45801
+Running timestep:    45701
+Running timestep:    45301
+Running timestep:    45701
+Running timestep:    45901
+Running timestep:    45801
+Running timestep:    45401
+Running timestep:    45801
+Running timestep:    46001
+Calculating LJ force
+ Potential LJ  -2.0303997910267730     
+ Ukin LJ  0.44341972353266085     
+ Tot LJ  -1.5869800674941121     
+Integrating
+ after integrate Press  0.46677200827774146     
+Running timestep:    45901
+Running timestep:    45501
+Running timestep:    45901
+Running timestep:    46101
+Running timestep:    46001
+Calculating LJ force
+ Potential LJ  -2.0303997910267730     
+ Ukin LJ  0.44341972353266085     
+ Tot LJ  -1.5869800674941121     
+Integrating
+ after integrate Press  0.46677200827774146     
+Running timestep:    45601
+Running timestep:    46001
+Calculating LJ force
+ Potential LJ  -2.0303997910267730     
+ Ukin LJ  0.44341972353266085     
+ Tot LJ  -1.5869800674941121     
+Integrating
+ after integrate Press  0.46677200827774146     
+Running timestep:    46201
+Running timestep:    46101
+Running timestep:    45701
+Running timestep:    46101
+Running timestep:    46301
+Running timestep:    46201
+Running timestep:    45801
+Running timestep:    46201
+Running timestep:    46401
+Running timestep:    46301
+Running timestep:    46301
+Running timestep:    45901
+Running timestep:    46501
+Running timestep:    46401
+Running timestep:    46401
+Running timestep:    46001
+Calculating LJ force
+ Potential LJ  -2.0303997910267730     
+ Ukin LJ  0.44341972353266085     
+ Tot LJ  -1.5869800674941121     
+Integrating
+ after integrate Press  0.46677200827774146     
+Running timestep:    46601
+Running timestep:    46501
+Running timestep:    46501
+Running timestep:    46101
+Running timestep:    46701
+Running timestep:    46601
+Running timestep:    46601
+Running timestep:    46201
+Running timestep:    46801
+Running timestep:    46701
+Running timestep:    46701
+Running timestep:    46301
+Running timestep:    46901
+Running timestep:    46801
+Running timestep:    46801
+Running timestep:    46401
+Running timestep:    47001
+Running timestep:    46901
+Calculating LJ force
+ Potential LJ  -2.0330062272537819     
+ Ukin LJ  0.42731889692948771     
+ Tot LJ  -1.6056873303242942     
+Integrating
+ after integrate Press  0.47207003999572267     
+Running timestep:    46901
+Running timestep:    46501
+Running timestep:    47101
+Running timestep:    47001
+Calculating LJ force
+ Potential LJ  -2.0330062272537819     
+ Ukin LJ  0.42731889692948771     
+ Tot LJ  -1.6056873303242942     
+Integrating
+ after integrate Press  0.47207003999572267     
+Running timestep:    47001
+Calculating LJ force
+ Potential LJ  -2.0330062272537819     
+ Ukin LJ  0.42731889692948771     
+ Tot LJ  -1.6056873303242942     
+Integrating
+ after integrate Press  0.47207003999572267     
+Running timestep:    46601
+Running timestep:    47201
+Running timestep:    47101
+Running timestep:    47101
+Running timestep:    46701
+Running timestep:    47301
+Running timestep:    47201
+Running timestep:    47201
+Running timestep:    46801
+Running timestep:    47401
+Running timestep:    47301
+Running timestep:    47301
+Running timestep:    46901
+Running timestep:    47501
+Running timestep:    47401
+Running timestep:    47401
+Running timestep:    47001
+Calculating LJ force
+ Potential LJ  -2.0330062272537819     
+ Ukin LJ  0.42731889692948771     
+ Tot LJ  -1.6056873303242942     
+Integrating
+ after integrate Press  0.47207003999572267     
+Running timestep:    47601
+Running timestep:    47501
+Running timestep:    47501
+Running timestep:    47101
+Running timestep:    47701
+Running timestep:    47601
+Running timestep:    47601
+Running timestep:    47201
+Running timestep:    47701
+Running timestep:    47801
+Running timestep:    47701
+Running timestep:    47301
+Running timestep:    47901
+Running timestep:    47801
+Running timestep:    47801
+Running timestep:    47401
+Running timestep:    47901
+Running timestep:    48001
+Calculating LJ force
+ Potential LJ  -2.0441178566681923     
+ Ukin LJ  0.45165256451893165     
+ Tot LJ  -1.5924652921492606     
+Integrating
+ after integrate Press  0.46421813847549448     
+Running timestep:    47901
+Running timestep:    47501
+Running timestep:    48101
+Running timestep:    48001
+Calculating LJ force
+ Potential LJ  -2.0441178566681923     
+ Ukin LJ  0.45165256451893165     
+ Tot LJ  -1.5924652921492606     
+Integrating
+ after integrate Press  0.46421813847549448     
+Running timestep:    48001
+Calculating LJ force
+ Potential LJ  -2.0441178566681923     
+ Ukin LJ  0.45165256451893165     
+ Tot LJ  -1.5924652921492606     
+Integrating
+ after integrate Press  0.46421813847549448     
+Running timestep:    47601
+Running timestep:    48201
+Running timestep:    48101
+Running timestep:    48101
+Running timestep:    47701
+Running timestep:    48301
+Running timestep:    48201
+Running timestep:    48201
+Running timestep:    47801
+Running timestep:    48401
+Running timestep:    48301
+Running timestep:    48301
+Running timestep:    47901
+Running timestep:    48501
+Running timestep:    48401
+Running timestep:    48401
+Running timestep:    48001
+Calculating LJ force
+ Potential LJ  -2.0441178566681923     
+ Ukin LJ  0.45165256451893165     
+ Tot LJ  -1.5924652921492606     
+Integrating
+ after integrate Press  0.46421813847549448     
+Running timestep:    48501
+Running timestep:    48601
+Running timestep:    48501
+Running timestep:    48101
+Running timestep:    48601
+Running timestep:    48701
+Running timestep:    48601
+Running timestep:    48201
+Running timestep:    48701
+Running timestep:    48801
+Running timestep:    48701
+Running timestep:    48301
+Running timestep:    48801
+Running timestep:    48901
+Running timestep:    48801
+Running timestep:    48401
+Running timestep:    48901
+Running timestep:    49001
+Calculating LJ force
+ Potential LJ  -2.0268115347855127     
+ Ukin LJ  0.44217498476434242     
+ Tot LJ  -1.5846365500211703     
+Integrating
+ after integrate Press  0.48402994836156865     
+Running timestep:    48901
+Running timestep:    48501
+Running timestep:    49001
+Calculating LJ force
+ Potential LJ  -2.0268115347855127     
+ Ukin LJ  0.44217498476434242     
+ Tot LJ  -1.5846365500211703     
+Integrating
+ after integrate Press  0.48402994836156865     
+Running timestep:    49101
+Running timestep:    49001
+Calculating LJ force
+ Potential LJ  -2.0268115347855127     
+ Ukin LJ  0.44217498476434242     
+ Tot LJ  -1.5846365500211703     
+Integrating
+ after integrate Press  0.48402994836156865     
+Running timestep:    48601
+Running timestep:    49101
+Running timestep:    49201
+Running timestep:    49101
+Running timestep:    48701
+Running timestep:    49201
+Running timestep:    49301
+Running timestep:    49201
+Running timestep:    48801
+Running timestep:    49301
+Running timestep:    49401
+Running timestep:    49301
+Running timestep:    48901
+Running timestep:    49401
+Running timestep:    49501
+Running timestep:    49401
+Running timestep:    49001
+Calculating LJ force
+ Potential LJ  -2.0268115347855127     
+ Ukin LJ  0.44217498476434242     
+ Tot LJ  -1.5846365500211703     
+Integrating
+ after integrate Press  0.48402994836156865     
+Running timestep:    49501
+Running timestep:    49601
+Running timestep:    49501
+Running timestep:    49101
+Running timestep:    49601
+Running timestep:    49701
+Running timestep:    49601
+Running timestep:    49701
+Running timestep:    49201
+Running timestep:    49801
+Running timestep:    49701
+Running timestep:    49301
+Running timestep:    49801
+Running timestep:    49901
+Running timestep:    49801
+Running timestep:    49901
+Running timestep:    49401
+Running timestep:    50001
+Calculating LJ force
+ Potential LJ  -2.0317085346300519     
+ Ukin LJ  0.46278351358754172     
+ Tot LJ  -1.5689250210425101     
+Integrating
+ after integrate Press  0.47729676122950943     
+Running timestep:    49901
+Running timestep:    50001
+Calculating LJ force
+ Potential LJ  -2.0317085346300519     
+ Ukin LJ  0.46278351358754172     
+ Tot LJ  -1.5689250210425101     
+Integrating
+ after integrate Press  0.47729676122950943     
+Running timestep:    49501
+Running timestep:    50101
+Running timestep:    50001
+Calculating LJ force
+ Potential LJ  -2.0317085346300519     
+ Ukin LJ  0.46278351358754172     
+ Tot LJ  -1.5689250210425101     
+Integrating
+ after integrate Press  0.47729676122950943     
+Running timestep:    50101
+Running timestep:    49601
+Running timestep:    50201
+Running timestep:    50101
+Running timestep:    50201
+Running timestep:    49701
+Running timestep:    50301
+Running timestep:    50201
+Running timestep:    50301
+Running timestep:    49801
+Running timestep:    50401
+Running timestep:    50301
+Running timestep:    50401
+Running timestep:    49901
+Running timestep:    50501
+Running timestep:    50401
+Running timestep:    50501
+Running timestep:    50001
+Calculating LJ force
+ Potential LJ  -2.0317085346300519     
+ Ukin LJ  0.46278351358754172     
+ Tot LJ  -1.5689250210425101     
+Integrating
+ after integrate Press  0.47729676122950943     
+Running timestep:    50601
+Running timestep:    50501
+Running timestep:    50601
+Running timestep:    50101
+Running timestep:    50701
+Running timestep:    50601
+Running timestep:    50701
+Running timestep:    50201
+Running timestep:    50801
+Running timestep:    50701
+Running timestep:    50801
+Running timestep:    50301
+Running timestep:    50901
+Running timestep:    50801
+Running timestep:    50901
+Running timestep:    50401
+Running timestep:    51001
+Calculating LJ force
+ Potential LJ  -2.0350963745488535     
+ Ukin LJ  0.45075920374447437     
+ Tot LJ  -1.5843371708043792     
+Integrating
+ after integrate Press  0.46887102528374303     
+Running timestep:    50901
+Running timestep:    51001
+Calculating LJ force
+ Potential LJ  -2.0350963745488535     
+ Ukin LJ  0.45075920374447437     
+ Tot LJ  -1.5843371708043792     
+Integrating
+ after integrate Press  0.46887102528374303     
+Running timestep:    50501
+Running timestep:    51101
+Running timestep:    51001
+Calculating LJ force
+ Potential LJ  -2.0350963745488535     
+ Ukin LJ  0.45075920374447437     
+ Tot LJ  -1.5843371708043792     
+Integrating
+ after integrate Press  0.46887102528374303     
+Running timestep:    51101
+Running timestep:    50601
+Running timestep:    51201
+Running timestep:    51101
+Running timestep:    51201
+Running timestep:    50701
+Running timestep:    51301
+Running timestep:    51201
+Running timestep:    51301
+Running timestep:    50801
+Running timestep:    51401
+Running timestep:    51301
+Running timestep:    51401
+Running timestep:    50901
+Running timestep:    51501
+Running timestep:    51401
+Running timestep:    51501
+Running timestep:    51001
+Running timestep:    51601
+Calculating LJ force
+ Potential LJ  -2.0350963745488535     
+ Ukin LJ  0.45075920374447437     
+ Tot LJ  -1.5843371708043792     
+Integrating
+ after integrate Press  0.46887102528374303     
+Running timestep:    51501
+Running timestep:    51601
+Running timestep:    51701
+Running timestep:    51101
+Running timestep:    51601
+Running timestep:    51701
+Running timestep:    51801
+Running timestep:    51201
+Running timestep:    51701
+Running timestep:    51801
+Running timestep:    51901
+Running timestep:    51301
+Running timestep:    51801
+Running timestep:    51901
+Running timestep:    52001
+Calculating LJ force
+ Potential LJ  -2.0520151446875823     
+ Ukin LJ  0.46292958456440791     
+ Tot LJ  -1.5890855601231744     
+Integrating
+ after integrate Press  0.45544555360339783     
+Running timestep:    51401
+Running timestep:    51901
+Running timestep:    52001
+Calculating LJ force
+ Potential LJ  -2.0520151446875823     
+ Ukin LJ  0.46292958456440791     
+ Tot LJ  -1.5890855601231744     
+Integrating
+ after integrate Press  0.45544555360339783     
+Running timestep:    52101
+Running timestep:    51501
+Running timestep:    52001
+Calculating LJ force
+ Potential LJ  -2.0520151446875823     
+ Ukin LJ  0.46292958456440791     
+ Tot LJ  -1.5890855601231744     
+Integrating
+ after integrate Press  0.45544555360339783     
+Running timestep:    52101
+Running timestep:    52201
+Running timestep:    51601
+Running timestep:    52101
+Running timestep:    52201
+Running timestep:    52301
+Running timestep:    51701
+Running timestep:    52201
+Running timestep:    52301
+Running timestep:    52401
+Running timestep:    51801
+Running timestep:    52301
+Running timestep:    52401
+Running timestep:    52501
+Running timestep:    51901
+Running timestep:    52401
+Running timestep:    52501
+Running timestep:    52601
+Running timestep:    52001
+Calculating LJ force
+ Potential LJ  -2.0520151446875823     
+ Ukin LJ  0.46292958456440791     
+ Tot LJ  -1.5890855601231744     
+Integrating
+ after integrate Press  0.45544555360339783     
+Running timestep:    52501
+Running timestep:    52601
+Running timestep:    52701
+Running timestep:    52101
+Running timestep:    52601
+Running timestep:    52701
+Running timestep:    52801
+Running timestep:    52201
+Running timestep:    52701
+Running timestep:    52801
+Running timestep:    52901
+Running timestep:    52301
+Running timestep:    52801
+Running timestep:    52901
+Running timestep:    53001
+Calculating LJ force
+ Potential LJ  -2.0545786895718301     
+ Ukin LJ  0.44042423370579087     
+ Tot LJ  -1.6141544558660392     
+Integrating
+ after integrate Press  0.48070632756602993     
+Running timestep:    52401
+Running timestep:    52901
+Running timestep:    53001
+Calculating LJ force
+ Potential LJ  -2.0545786895718301     
+ Ukin LJ  0.44042423370579087     
+ Tot LJ  -1.6141544558660392     
+Integrating
+ after integrate Press  0.48070632756602993     
+Running timestep:    53101
+Running timestep:    52501
+Running timestep:    53001
+Calculating LJ force
+ Potential LJ  -2.0545786895718301     
+ Ukin LJ  0.44042423370579087     
+ Tot LJ  -1.6141544558660392     
+Integrating
+ after integrate Press  0.48070632756602993     
+Running timestep:    53101
+Running timestep:    53201
+Running timestep:    52601
+Running timestep:    53101
+Running timestep:    53201
+Running timestep:    53301
+Running timestep:    52701
+Running timestep:    53201
+Running timestep:    53301
+Running timestep:    53401
+Running timestep:    52801
+Running timestep:    53301
+Running timestep:    53401
+Running timestep:    53501
+Running timestep:    52901
+Running timestep:    53401
+Running timestep:    53501
+Running timestep:    53601
+Running timestep:    53001
+Calculating LJ force
+ Potential LJ  -2.0545786895718301     
+ Ukin LJ  0.44042423370579087     
+ Tot LJ  -1.6141544558660392     
+Integrating
+ after integrate Press  0.48070632756602993     
+Running timestep:    53501
+Running timestep:    53601
+Running timestep:    53701
+Running timestep:    53101
+Running timestep:    53601
+Running timestep:    53701
+Running timestep:    53801
+Running timestep:    53201
+Running timestep:    53701
+Running timestep:    53801
+Running timestep:    53901
+Running timestep:    53301
+Running timestep:    53801
+Running timestep:    53901
+Running timestep:    54001
+Calculating LJ force
+ Potential LJ  -2.0387951903830466     
+ Ukin LJ  0.42341720701392610     
+ Tot LJ  -1.6153779833691204     
+Integrating
+ after integrate Press  0.46562119178863109     
+Running timestep:    53401
+Running timestep:    53901
+Running timestep:    54001
+Calculating LJ force
+ Potential LJ  -2.0387951903830466     
+ Ukin LJ  0.42341720701392610     
+ Tot LJ  -1.6153779833691204     
+Integrating
+ after integrate Press  0.46562119178863109     
+Running timestep:    54101
+Running timestep:    53501
+Running timestep:    54001
+Calculating LJ force
+ Potential LJ  -2.0387951903830466     
+ Ukin LJ  0.42341720701392610     
+ Tot LJ  -1.6153779833691204     
+Integrating
+ after integrate Press  0.46562119178863109     
+Running timestep:    54101
+Running timestep:    54201
+Running timestep:    54101
+Running timestep:    53601
+Running timestep:    54201
+Running timestep:    54301
+Running timestep:    54201
+Running timestep:    53701
+Running timestep:    54301
+Running timestep:    54401
+Running timestep:    54301
+Running timestep:    53801
+Running timestep:    54401
+Running timestep:    54501
+Running timestep:    54401
+Running timestep:    53901
+Running timestep:    54501
+Running timestep:    54601
+Running timestep:    54501
+Running timestep:    54001
+Calculating LJ force
+ Potential LJ  -2.0387951903830466     
+ Ukin LJ  0.42341720701392610     
+ Tot LJ  -1.6153779833691204     
+Integrating
+ after integrate Press  0.46562119178863109     
+Running timestep:    54601
+Running timestep:    54701
+Running timestep:    54601
+Running timestep:    54101
+Running timestep:    54701
+Running timestep:    54801
+Running timestep:    54701
+Running timestep:    54201
+Running timestep:    54801
+Running timestep:    54901
+Running timestep:    54801
+Running timestep:    54301
+Running timestep:    54901
+Running timestep:    55001
+Calculating LJ force
+ Potential LJ  -2.0643750780047068     
+ Ukin LJ  0.45591323979046794     
+ Tot LJ  -1.6084618382142388     
+Integrating
+ after integrate Press  0.46203707581965886     
+Running timestep:    54901
+Running timestep:    54401
+Running timestep:    55001
+Calculating LJ force
+ Potential LJ  -2.0643750780047068     
+ Ukin LJ  0.45591323979046794     
+ Tot LJ  -1.6084618382142388     
+Integrating
+ after integrate Press  0.46203707581965886     
+Running timestep:    55101
+Running timestep:    55001
+Calculating LJ force
+ Potential LJ  -2.0643750780047068     
+ Ukin LJ  0.45591323979046794     
+ Tot LJ  -1.6084618382142388     
+Integrating
+ after integrate Press  0.46203707581965886     
+Running timestep:    54501
+Running timestep:    55101
+Running timestep:    55201
+Running timestep:    55101
+Running timestep:    54601
+Running timestep:    55201
+Running timestep:    55301
+Running timestep:    55201
+Running timestep:    54701
+Running timestep:    55301
+Running timestep:    55401
+Running timestep:    55301
+Running timestep:    54801
+Running timestep:    55401
+Running timestep:    55501
+Running timestep:    55401
+Running timestep:    54901
+Running timestep:    55501
+Running timestep:    55601
+Running timestep:    55501
+Running timestep:    55001
+Calculating LJ force
+ Potential LJ  -2.0643750780047068     
+ Ukin LJ  0.45591323979046794     
+ Tot LJ  -1.6084618382142388     
+Integrating
+ after integrate Press  0.46203707581965886     
+Running timestep:    55601
+Running timestep:    55701
+Running timestep:    55601
+Running timestep:    55101
+Running timestep:    55701
+Running timestep:    55801
+Running timestep:    55701
+Running timestep:    55201
+Running timestep:    55801
+Running timestep:    55901
+Running timestep:    55801
+Running timestep:    55301
+Running timestep:    55901
+Running timestep:    56001
+Calculating LJ force
+ Potential LJ  -2.0505044176893032     
+ Ukin LJ  0.44360933269017871     
+ Tot LJ  -1.6068950849991246     
+Integrating
+ after integrate Press  0.46984132774461623     
+Running timestep:    55901
+Running timestep:    55401
+Running timestep:    56001
+Calculating LJ force
+ Potential LJ  -2.0505044176893032     
+ Ukin LJ  0.44360933269017871     
+ Tot LJ  -1.6068950849991246     
+Integrating
+ after integrate Press  0.46984132774461623     
+Running timestep:    56101
+Running timestep:    56001
+Calculating LJ force
+ Potential LJ  -2.0505044176893032     
+ Ukin LJ  0.44360933269017871     
+ Tot LJ  -1.6068950849991246     
+Integrating
+ after integrate Press  0.46984132774461623     
+Running timestep:    55501
+Running timestep:    56101
+Running timestep:    56201
+Running timestep:    56101
+Running timestep:    55601
+Running timestep:    56201
+Running timestep:    56301
+Running timestep:    56201
+Running timestep:    55701
+Running timestep:    56301
+Running timestep:    56401
+Running timestep:    56301
+Running timestep:    55801
+Running timestep:    56401
+Running timestep:    56501
+Running timestep:    56401
+Running timestep:    55901
+Running timestep:    56501
+Running timestep:    56601
+Running timestep:    56501
+Running timestep:    56601
+Running timestep:    56001
+Calculating LJ force
+ Potential LJ  -2.0505044176893032     
+ Ukin LJ  0.44360933269017871     
+ Tot LJ  -1.6068950849991246     
+Integrating
+ after integrate Press  0.46984132774461623     
+Running timestep:    56701
+Running timestep:    56601
+Running timestep:    56701
+Running timestep:    56101
+Running timestep:    56801
+Running timestep:    56701
+Running timestep:    56801
+Running timestep:    56201
+Running timestep:    56901
+Running timestep:    56801
+Running timestep:    56901
+Running timestep:    56301
+Running timestep:    57001
+Calculating LJ force
+ Potential LJ  -2.0443999157344805     
+ Ukin LJ  0.44256187026263188     
+ Tot LJ  -1.6018380454718486     
+Integrating
+ after integrate Press  0.46636774087082777     
+Running timestep:    56901
+Running timestep:    57001
+Running timestep:    56401
+Calculating LJ force
+ Potential LJ  -2.0443999157344805     
+ Ukin LJ  0.44256187026263188     
+ Tot LJ  -1.6018380454718486     
+Integrating
+ after integrate Press  0.46636774087082777     
+Running timestep:    57101
+Running timestep:    57001
+Calculating LJ force
+ Potential LJ  -2.0443999157344805     
+ Ukin LJ  0.44256187026263188     
+ Tot LJ  -1.6018380454718486     
+Integrating
+ after integrate Press  0.46636774087082777     
+Running timestep:    57101
+Running timestep:    56501
+Running timestep:    57201
+Running timestep:    57101
+Running timestep:    57201
+Running timestep:    56601
+Running timestep:    57301
+Running timestep:    57201
+Running timestep:    57301
+Running timestep:    56701
+Running timestep:    57401
+Running timestep:    57301
+Running timestep:    57401
+Running timestep:    56801
+Running timestep:    57501
+Running timestep:    57401
+Running timestep:    57501
+Running timestep:    56901
+Running timestep:    57601
+Running timestep:    57501
+Running timestep:    57601
+Running timestep:    57001
+Calculating LJ force
+ Potential LJ  -2.0443999157344805     
+ Ukin LJ  0.44256187026263188     
+ Tot LJ  -1.6018380454718486     
+Integrating
+ after integrate Press  0.46636774087082777     
+Running timestep:    57701
+Running timestep:    57601
+Running timestep:    57701
+Running timestep:    57101
+Running timestep:    57801
+Running timestep:    57701
+Running timestep:    57801
+Running timestep:    57201
+Running timestep:    57901
+Running timestep:    57801
+Running timestep:    57901
+Running timestep:    57301
+Running timestep:    58001
+Calculating LJ force
+ Potential LJ  -2.0585623520680896     
+ Ukin LJ  0.43510395406394375     
+ Tot LJ  -1.6234583980041459     
+Integrating
+ after integrate Press  0.46412767586377096     
+Running timestep:    57901
+Running timestep:    58001
+Calculating LJ force
+ Potential LJ  -2.0585623520680896     
+ Ukin LJ  0.43510395406394375     
+ Tot LJ  -1.6234583980041459     
+Integrating
+ after integrate Press  0.46412767586377096     
+Running timestep:    57401
+Running timestep:    58101
+Running timestep:    58001
+Calculating LJ force
+ Potential LJ  -2.0585623520680896     
+ Ukin LJ  0.43510395406394375     
+ Tot LJ  -1.6234583980041459     
+Integrating
+ after integrate Press  0.46412767586377096     
+Running timestep:    58101
+Running timestep:    57501
+Running timestep:    58201
+Running timestep:    58101
+Running timestep:    58201
+Running timestep:    57601
+Running timestep:    58301
+Running timestep:    58201
+Running timestep:    58301
+Running timestep:    57701
+Running timestep:    58401
+Running timestep:    58301
+Running timestep:    58401
+Running timestep:    57801
+Running timestep:    58501
+Running timestep:    58401
+Running timestep:    58501
+Running timestep:    57901
+Running timestep:    58601
+Running timestep:    58501
+Running timestep:    58601
+Running timestep:    58001
+Calculating LJ force
+ Potential LJ  -2.0585623520680896     
+ Ukin LJ  0.43510395406394375     
+ Tot LJ  -1.6234583980041459     
+Integrating
+ after integrate Press  0.46412767586377096     
+Running timestep:    58701
+Running timestep:    58601
+Running timestep:    58701
+Running timestep:    58101
+Running timestep:    58801
+Running timestep:    58701
+Running timestep:    58801
+Running timestep:    58201
+Running timestep:    58901
+Running timestep:    58801
+Running timestep:    58901
+Running timestep:    58301
+Running timestep:    58901
+Running timestep:    59001
+Calculating LJ force
+ Potential LJ  -2.0785979798270775     
+ Ukin LJ  0.44620377372064451     
+ Tot LJ  -1.6323942061064329     
+Integrating
+ after integrate Press  0.44615304289886698     
+Running timestep:    59001
+Calculating LJ force
+ Potential LJ  -2.0785979798270775     
+ Ukin LJ  0.44620377372064451     
+ Tot LJ  -1.6323942061064329     
+Integrating
+ after integrate Press  0.44615304289886698     
+Running timestep:    59001
+Calculating LJ force
+ Potential LJ  -2.0785979798270775     
+ Ukin LJ  0.44620377372064451     
+ Tot LJ  -1.6323942061064329     
+Integrating
+ after integrate Press  0.44615304289886698     
+Running timestep:    58401
+Running timestep:    59101
+Running timestep:    59101
+Running timestep:    59101
+Running timestep:    58501
+Running timestep:    59201
+Running timestep:    59201
+Running timestep:    59201
+Running timestep:    58601
+Running timestep:    59301
+Running timestep:    59301
+Running timestep:    59301
+Running timestep:    58701
+Running timestep:    59401
+Running timestep:    59401
+Running timestep:    59401
+Running timestep:    58801
+Running timestep:    59501
+Running timestep:    59501
+Running timestep:    59501
+Running timestep:    58901
+Running timestep:    59601
+Running timestep:    59601
+Running timestep:    59601
+Running timestep:    59001
+Calculating LJ force
+ Potential LJ  -2.0785979798270775     
+ Ukin LJ  0.44620377372064451     
+ Tot LJ  -1.6323942061064329     
+Integrating
+ after integrate Press  0.44615304289886698     
+Running timestep:    59701
+Running timestep:    59701
+Running timestep:    59101
+Running timestep:    59701
+Running timestep:    59801
+Running timestep:    59801
+Running timestep:    59201
+Running timestep:    59801
+Running timestep:    59901
+Running timestep:    59901
+Running timestep:    59301
+Running timestep:    59901
+Running timestep:    59401
+Running timestep:    59501
+Running timestep:    59601
+Running timestep:    59701
+Running timestep:    59801
+Running timestep:    59901

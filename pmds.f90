@@ -51,7 +51,7 @@
     		SELECT CASE(pair_style)
       			CASE('soft')
         			A_soft = 19.0*Nstep/num_timesteps + 1.0
-        			CALL force_soft()
+        			CALL force_soft_neighbor
         			IF(MOD(Nstep,100) .EQ. 0) THEN
                                         WRITE(*,'(A I4)') 'Calculating soft force'
                                         WRITE (*,*) 'Potential Soft',Upot/Natom
@@ -61,8 +61,8 @@
                                 END IF
 
       			CASE('lj')
-        			CALL force()
-        			IF(MOD(Nstep,100) .EQ. 0) THEN
+        			CALL force_neighbor
+        			IF(MOD(Nstep,1000) .EQ. 0) THEN
                                         WRITE(*,'(A I4)') 'Calculating LJ force'
                                         WRITE (*,*) 'Potential LJ', Upot/Natom
                                         WRITE (*,*) 'Ukin LJ',      Ukin/Natom
@@ -104,9 +104,9 @@
 ! 		ENDIF
 
     		CALL integrate
-    		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
+    		IF(MOD(Nstep,1000) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
 
-		IF(MOD(Nstep,100) .EQ. 0) THEN
+		IF(MOD(Nstep,1000) .EQ. 0) THEN
 		    WRITE (*,*) 'after integrate Press',        Press
 		ENDIF
 		

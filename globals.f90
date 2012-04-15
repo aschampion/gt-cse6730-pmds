@@ -53,10 +53,10 @@
      		      Ecut(MaxNumtypes, MaxNumtypes),&
                       sigma_matrix(MaxNumtypes, MaxNumtypes),&
                       epsilon_matrix(MaxNumtypes, MaxNumtypes),&
-     		      Box, Press, Temp, Utot, Upot, Ukin,Rskin,&
-                      K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target, dT
+     		      Box, Press, Temp, Utot, Upot, Ukin,Rskin, Mvel,&
+                      K_bond, Rcut_bond, A_soft, Rcut_soft, Temp_target, dT, MMov
    		
    		INTEGER	::	At(Maxatom), Natom, Nbond, Nstep,&
-    		LL(Maxatom), hoc(Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
+    		LL(Maxatom), hoc(Maxcell,Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
                 bondlist(2, MaxBonds),Estep,NAstart,NAend
 	END MODULE Globals

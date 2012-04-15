@@ -1,4 +1,4 @@
-      SUBROUTINE Force_neighbor
+      SUBROUTINE Force
       		
       		USE Globals
       		IMPLICIT NONE
@@ -14,11 +14,6 @@
       		END DO
        		Upot = 0.0
       		Press = 0.0
-
-		IF(MMov .GT. (0.75D0*Rskin)) THEN
-			CALL Neighbour
-			MMov = 0.0D0
-		END IF
 
 		! new
 		atom_cout = 0
@@ -155,5 +150,5 @@
 
 		!WRITE (*,*) '33333333 Press LJ',Press
 
-	END SUBROUTINE Force_neighbor
+	END SUBROUTINE Force
 
