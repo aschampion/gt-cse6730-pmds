@@ -42,7 +42,7 @@
 				!Check If The Distance Is Within The Cutoff Radius for Lennard-Jones Potential
 				!If it is calculate Force and update total force on atom I & J 
             	IF (Rr .LT. Rcut_soft) THEN
-            		Part1 = (A_soft*pi)*(Rcut_soft*Rr)
+            		Part1 = (A_soft*pi)/(Rcut_soft*Rr)
                 	Part2 = (sin(pi*Rr/Rcut_soft))
                 	Ff    = (Part1*Part2) 
                 	Upot  = Upot + A_soft*(1.0+cos(pi*Rr/Rcut_soft))  ! Potential at Rcut_soft = 0
@@ -82,8 +82,13 @@
             R_square = Dx*Dx + Dy*Dy
 
             sqR_square = sqrt(R_square)
-            Ff = -K_bond*(2.0-(Rcut_bond/sqR_square))
-            Upot = Upot + K_bond*((sqR_square - Rcut_bond)**2.0)  !The bond potential at Rcut = 0 
+            Upot = Upot + K_bond*((sqR_square - Rcut_bond)**2.0)  !The bond potential at Rcut = 0
+            If (sqR_square .gt. 0) THEN
+            Ff = (-K_bond*2.0*(sqR_square - Rcut_bond))/sqR_square
+            !Ff = -K_bond*(2.0-(Rcut_bond/sqR_square))
+            ELSE
+            Ff = 0.0
+            END IF
             Press = Press + Ff
             Fx(atom1) = Fx(atom1) + Ff*Dx
             Fy(atom1) = Fy(atom1) + Ff*Dy
