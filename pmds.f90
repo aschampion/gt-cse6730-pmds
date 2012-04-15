@@ -1,13 +1,18 @@
 	PROGRAM pmds
 		USE mpi
   		
-  		CHARACTER(LEN=255) :: input_file
-		INTEGER :: ierr
+  		CHARACTER(LEN=255) :: input_file, dump_file
+		CHARACTER(LEN=1) :: pstring
+		INTEGER :: ierr, rank
 
   		CALL GETARG(1, input_file)
-  		OPEN(UNIT=99, FILE='out.dump')
 
 		CALL MPI_INIT(ierr)
+		CALL MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
+		WRITE(UNIT=PSTRING, FMT='(I1)') rank
+		dump_file = 'out.dump.' // pstring
+  		OPEN(UNIT=99, FILE=dump_file)
+
   		
   		CALL input_parser(input_file)
 
@@ -71,11 +76,11 @@
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
 		
 		Xsend = Xx(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart, MPI_DOUBLE_PRECISION,&
-				   Xx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Xx, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 		Xsend = Yy(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart, MPI_DOUBLE_PRECISION,&
-				   Yy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Yy, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 
     		Nstep = Nstep + 1
 	  	END DO
@@ -90,11 +95,11 @@
 		USE mpi
 		USE globals
 		INTEGER :: ierr
-		DOUBLE PRECISION :: Xsend(NAend-NAstart)
+		DOUBLE PRECISION :: Xsend(NAend-NAstart+1)
 		Xsend = Vx(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart, MPI_DOUBLE_PRECISION,&
-				   Vx, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Vx, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 		Xsend = Vy(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart, MPI_DOUBLE_PRECISION,&
-				   Vy, NAend-NAstart, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Vy, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 	END SUBROUTINE broadcast_velocity
