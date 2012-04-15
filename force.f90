@@ -103,8 +103,12 @@
             R_square = Dx*Dx + Dy*Dy  
 
             sqR_square = sqrt(R_square)
-            Ff = -K_bond*(2.0-(Rcut_bond/sqR_square))
             Upot = Upot + K_bond*((sqR_square - Rcut_bond)**2.0)  !The bond potential at Rcut = 0 
+            IF (sqR_square .gt. 0) THEN
+            Ff = (-K_bond*2.0*(sqR_square - Rcut_bond))/sqR_square 
+            ELSE
+            Ff = 0.0
+            END IF
             Press_sub = Press_sub + Ff*sqR_square
 	    atom_cout = atom_cout + 1
             Fx(atom1) = Fx(atom1) + Ff*Dx
