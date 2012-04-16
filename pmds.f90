@@ -26,9 +26,12 @@
   		INTEGER :: num_timesteps, i, nprocs, rank, ierr, atomsp
   		CHARACTER(*), INTENT(IN) :: pair_style
   		REAL(KIND=8) :: Xo(Natom),Yo(Natom)
+
+		!temp buffers
 		DOUBLE PRECISION :: Xsend(Maxatom)
 		DOUBLE PRECISION :: Fsend(Maxatom)
 		DOUBLE PRECISION :: PressSend
+		DOUBLE PRECISION :: MMovSend
 
 		CALL MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
 		CALL MPI_COMM_SIZE(MPI_COMM_WORLD, nprocs, ierr)
@@ -91,6 +94,10 @@
 
 		PressSend = Press
 		CALL MPI_ALLREDUCE(PressSend, Press, 1, MPI_DOUBLE_PRECISION,&
+				   MPI_SUM, MPI_COMM_WORLD, ierr)
+
+		MMovSend = MMov
+		CALL MPI_ALLREDUCE(MMovSend, MMov, 1, MPI_DOUBLE_PRECISION,&
 				   MPI_SUM, MPI_COMM_WORLD, ierr)
 
 ! 		IF(MOD(Nstep,100) .EQ. 0) THEN
