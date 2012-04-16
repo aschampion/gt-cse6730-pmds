@@ -1,12 +1,15 @@
       SUBROUTINE Integrate
       
       	USE Globals
+	USE mpi
+
       	IMPLICIT NONE
  
 		!Integrate The Equations Of Motion And calculate The Total Impulse
  
-      	INTEGER	:: I
+      	INTEGER	:: I,ierr
       	REAL(KIND=8) :: Xxn(Natom),Yyn(Natom),Zzn(Natom)
+	DOUBLE PRECISION :: MvelSend
 
 	DO i = NAstart,NAend
       		Xxn(i) = 2.0D0*Xx(i)-Xp(i)+Fx(i)*dt*dt
@@ -70,6 +73,10 @@
 		END DO
 		
 		Press = Press + 2.0d0*Ukin*Dble(Natom)/(Box*Box*Dble(2*Natom-2))
+
+		MvelSend = Mvel
+		CALL MPI_ALLREDUCE(MvelSend, Mvel, 1, MPI_DOUBLE_PRECISION,&
+				   MPI_MAX, MPI_COMM_WORLD, ierr)
 
 		MMov = MMov + Mvel
 

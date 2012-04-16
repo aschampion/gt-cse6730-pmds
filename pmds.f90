@@ -1,13 +1,17 @@
 	PROGRAM pmds
 		USE mpi
   		
-  		CHARACTER(LEN=255) :: input_file
-		INTEGER :: ierr
+  		CHARACTER(LEN=255) :: input_file, dump_file
+		CHARACTER(LEN=1) :: pstring
+		INTEGER :: ierr, rank
 
   		CALL GETARG(1, input_file)
-  		OPEN(UNIT=99, FILE='out.dump')
 
 		CALL MPI_INIT(ierr)
+		CALL MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
+		WRITE(UNIT=pstring, FMT='(I1)') rank
+		dump_file = 'out.dump.' // pstring
+  		OPEN(UNIT=99, FILE=dump_file)
   		
   		CALL input_parser(input_file)
 
@@ -31,7 +35,6 @@
 		DOUBLE PRECISION :: Xsend(Maxatom)
 		DOUBLE PRECISION :: Fsend(Maxatom)
 		DOUBLE PRECISION :: PressSend
-		DOUBLE PRECISION :: MMovSend
 
 		CALL MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
 		CALL MPI_COMM_SIZE(MPI_COMM_WORLD, nprocs, ierr)
@@ -46,8 +49,8 @@
   		END DO
     
   		DO WHILE(Nstep .LT. num_timesteps)
-    		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I8)') 'Running timestep: ', Nstep+1
-    		IF(MOD(Nstep,10) .EQ. 0) THEN
+    		IF(MOD(Nstep,1000) .EQ. 0) WRITE(*,'(A I8)') 'Running timestep: ', Nstep+1
+    		IF(rank .EQ. 0 .AND. MOD(Nstep,10) .EQ. 0) THEN
       			WRITE(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
       			FLUSH(99)
     		ENDIF
@@ -94,10 +97,6 @@
 
 		PressSend = Press
 		CALL MPI_ALLREDUCE(PressSend, Press, 1, MPI_DOUBLE_PRECISION,&
-				   MPI_SUM, MPI_COMM_WORLD, ierr)
-
-		MMovSend = MMov
-		CALL MPI_ALLREDUCE(MMovSend, MMov, 1, MPI_DOUBLE_PRECISION,&
 				   MPI_SUM, MPI_COMM_WORLD, ierr)
 
 ! 		IF(MOD(Nstep,100) .EQ. 0) THEN

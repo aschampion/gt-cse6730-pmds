@@ -109,11 +109,12 @@
 		    atom2 = BondList(2,k)
 	
 		    !If neither atom belongs to this process, ignore the bond
-		    IF (atom1 .lt. NAstart .AND. atom1 .gt. NAend .AND. &
-			atom2 .lt. NAstart .AND. atom2 .gt. NAend) CYCLE 
+		    IF ((atom1 .lt. NAstart .OR. atom1 .gt. NAend) .AND. &
+			(atom2 .lt. NAstart .OR. atom2 .gt. NAend)) CYCLE
+ 
 
-		    IF (((atom1.lt.atom2) .and. ((MOD(atom1+atom2, 2).eq.1))) .or. & 
-			((atom1.gt.atom2) .and. ((MOD(atom1+atom2, 2).eq.0)))) THEN
+!  		    IF (((atom1.lt.atom2) .and. ((MOD(atom1+atom2, 2).eq.1))) .or. & 
+!  			((atom1.gt.atom2) .and. ((MOD(atom1+atom2, 2).eq.0)))) THEN
 			Dx = Xx(atom1) - Xx(atom2)
 			Dy = Yy(atom1) - Yy(atom2)
 	    
@@ -140,7 +141,7 @@
 
 			Fx(atom2) = Fx(atom2) - Ff*Dx
 			Fy(atom2) = Fy(atom2) - Ff*Dy
-		    ENDIF
+! 		   ENDIF
 		END DO
 
 		Press_sub =  Press_sub/atom_cout
