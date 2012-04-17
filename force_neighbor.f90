@@ -4,8 +4,8 @@
       		IMPLICIT NONE
        		
       		INTEGER	:: I,J,K,Type1, Type2, atom1, atom2
-      		REAL(KIND=8):: Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcutsq, atom_cout,&
-			 sigma_square, R_cut,Rcutsq_bond, eps, sigma, sqR_square, Press_sub    
+      		REAL(KIND=8):: Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcutsq,&
+			 sigma_square, R_cut,Rcutsq_bond, eps, sigma, sqR_square    
 			
 			!Initialize the Forces, Potential Energy and Pressure to 0 
       		DO I = 1,Natom
@@ -20,15 +20,8 @@
 				MMov = 0.0D0
 			END IF
 
-		! new
-		atom_cout = 0
-		Press_sub = 0.0
-			
- 
 			!START LOOP THROUGH ALL ATOM INTERACTIONS
       		DO I = 1,Natom-1
-      			Press_sub = 0.0
-				atom_cout = 0.0
 
       			DO k = 1,nlist(i)
       	!	DO J = (I+1),Natom
@@ -68,11 +61,9 @@
                			 	Ff     = 48.0*eps*R_six_i*(R_six_i - 0.5)
 
                				sqR_square = sqrt(R_square)
-				!Press = Press - Ff*sqR_square
-							Press_sub = Press_sub + Ff*sqR_square
-							atom_cout = atom_cout + 1
-				
+										
                				Ff = Ff*R_square_i
+               				Press = Press + Ff*sqR_square
 						
 						!Update the total force on atoms
                				Fx(I) = Fx(I) + Ff*Dx
@@ -85,20 +76,12 @@
             		END IF
 
      			END DO  !END J
-			IF (atom_cout.NE.0) THEN
-		      !WRITE (*,*) '11111111 Press LJ',Press_sub, atom_cout
-		   		Press_sub = (Press_sub/atom_cout)
-		   		Press = Press + Press_sub
-			ENDIF
 
    		END DO    !END I
 
-		!WRITE (*,*) '11111111 Press LJ',Press
 
 		!Harmonic Bonds             
         !Run through the bond list and grab the interacting atoms
-	Press_sub = 0.0
-	atom_cout = 0
      	DO k = 1, NBond
         	atom1 = BondList(1,k)
             atom2 = BondList(2,k)
@@ -120,8 +103,7 @@
             ELSE
             Ff = 0.0
             END IF
-            Press_sub = Press_sub + Ff*sqR_square
-	    atom_cout = atom_cout + 1
+            Press = Press + Ff*sqR_square
             Fx(atom1) = Fx(atom1) + Ff*Dx
             Fy(atom1) = Fy(atom1) + Ff*Dy
 
@@ -129,12 +111,11 @@
             Fy(atom2) = Fy(atom2) - Ff*Dy
       	END DO
 
-	Press_sub =  Press_sub/atom_cout
       	
 !      	WRITE (*,*) 'Potential LJ',Upot/Natom
  
 		!Scale The Pressure
-      	Press = (Press + Press_sub)/(2.0d0*Box*Box)
+      	Press = (Natom*Temp_Target+Press/6.0D0)/(Box*Box)
 
 	!WRITE (*,*) '2222222222 Press LJ',Press
        	

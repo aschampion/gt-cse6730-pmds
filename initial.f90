@@ -20,7 +20,7 @@
 
   		CALL ITIME(seed)
 
-  		CALL SRAND(2349852)
+  		CALL SRAND(seed(3))
 		
 		!Generate velocity based on uniform distribution
   		DO I = 1, Natom

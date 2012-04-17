@@ -16,16 +16,15 @@
   		USE Globals
 		IMPLICIT NONE
   		
-  		INTEGER :: num_timesteps, i
+  		INTEGER :: num_timesteps,i
   		CHARACTER(*), INTENT(IN) :: pair_style
-  		REAL(KIND=8) :: Xo(Natom),Yo(Natom)
   
   		Nstep = 0
+  		
+  		OPEN(FILE = "Stats.dat",UNIT=35)
+  		
+  		WRITE (35,*) "Timestep","Ukin","Pot","Total","Pressure"
   
-  		DO i=1,Natom
-  			Xo(i) = Xx(i)
-  		END DO
-    
   		DO WHILE(Nstep .LT. num_timesteps)
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I8)') 'Running timestep: ', Nstep
     		IF(MOD(Nstep,10) .EQ. 0) THEN
@@ -43,7 +42,6 @@
                                         WRITE (*,*) 'Tot Soft',     Ukin/Natom + Upot/Natom
                                         WRITE (*,*) 'Pressure', Press
                                 END IF
-
       			CASE('lj')
         			CALL force_neighbor
         			IF(MOD(Nstep,100) .EQ. 0) THEN
@@ -53,6 +51,7 @@
                                         WRITE (*,*) 'Tot Soft',     Ukin/Natom + Upot/Natom
                                         WRITE (*,*) 'Pressure',Press
                                 END IF
+                    WRITE (35,*) i,Ukin/Natom,Upot/Natom,(Ukin+Upot)/Natom,Press
                END SELECT
     
     		CALL integrate
@@ -61,9 +60,15 @@
 
     		Nstep = Nstep + 1
 	  	END DO
+	  	CLOSE(35)
+	  	
+	  	OPEN(FILE = 'FinalRes.dat',UNIT=27)
+	  	WRITE (27,*) "AtomID","Type","Vx","Vy","Fx","Fy"
+	  	DO i=1,Natom
+	  		WRITE (27,*) i,AT(i),Vx(i),Vy(i),SQRT(Vx(i)**2+Vy(i)**2),Fx(i),Fy(i)
+	  	END DO
+	  	CLOSE(27)
+	  	
+	  	
   
-  		!DO i=1,Natom
-		!	WRITE (*,*) Xx(i),Xo(i)
-  		!END DO
-  		
 	END SUBROUTINE run_simulation
