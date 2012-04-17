@@ -87,12 +87,31 @@
 
   		USE Globals
   		CHARACTER(*), INTENT(IN) :: filename
-  		CHARACTER(LEN=1024) :: line
+  		CHARACTER(LEN=1024) :: line, s1, s2
   		CHARACTER(LEN=80) :: state = ''
   		INTEGER :: i1, i2, i3
   		REAL(KIND=8) :: v1, v2, v3
 
   		OPEN(UNIT=20,FILE=filename)
+
+		DO I3 = 1,2
+			READ(20, '(A)', END=199) line
+		END DO
+
+		READ(20, '(A)', END=199) line
+		READ(line, *), v1, s1
+		Natom = v1
+		READ(20, '(A)', END=199) line
+		READ(line, *), v1, s1
+		Nbond = v1
+
+		DO I3 = 1,10
+			READ(20, '(A)', END=199) line
+		END DO
+
+		READ(20, '(A)', END=199) line
+		READ(line, *), v1, v2,  s1, s2
+		Box = v2
 
   		DO WHILE(.TRUE.)
     		READ(20, '(A)', END=199) line
@@ -100,11 +119,9 @@
     		SELECT CASE (line)
       			CASE (' Atoms')
         			state = 'Atoms'
-        			Natom = 0
         			WRITE (*,*) "Reading atom data"
       			CASE (' Bonds')
         			state = 'Bonds'
-        			Nbond = 0
         			WRITE (*,*) "Reading bond data"
       			case ('')
       			CASE DEFAULT
