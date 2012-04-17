@@ -90,8 +90,8 @@
             atom2 = BondList(2,k)
  
 	    !If neither atom belongs to this process, ignore the bond
-	    IF (atom1 .lt. NAstart .AND. atom1 .gt. NAend .AND. &
-                atom2 .lt. NAstart .AND. atom2 .gt. NAend) CYCLE 
+	    IF (atom1 .lt. NAstart .OR. atom1 .gt. NAend .AND. &
+                atom2 .lt. NAstart .OR. atom2 .gt. NAend) CYCLE 
             !Calculate the distance between the two atoms
             Dx = Xx(atom1) - Xx(atom2)
             Dy = Yy(atom1) - Yy(atom2)

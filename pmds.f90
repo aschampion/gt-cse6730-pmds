@@ -47,7 +47,7 @@
     
   		DO WHILE(Nstep .LT. num_timesteps)
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I8)') 'Running timestep: ', Nstep+1
-    		IF(MOD(Nstep,10) .EQ. 0) THEN
+    		IF(rank .EQ. 0 .AND. MOD(Nstep,10) .EQ. 0) THEN
       			WRITE(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
       			FLUSH(99)
     		ENDIF
