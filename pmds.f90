@@ -49,16 +49,24 @@
   		END DO
     
   		DO WHILE(Nstep .LT. num_timesteps)
-    		IF(MOD(Nstep,1000) .EQ. 0) WRITE(*,'(A I8)') 'Running timestep: ', Nstep+1
-    		IF(rank .EQ. 0 .AND. MOD(Nstep,10) .EQ. 0) THEN
+		
+    		IF (rank .EQ. 0.and.(MOD(Nstep,100) .EQ. 0)) WRITE(*,'(A I8)') 'Running timestep: ', Nstep+1
+!     		IF ((Nstep.eq.(num_timesteps -1)) .or.&  
+! 		    (Nstep.eq.1000)) THEN
+! 		   WRITE(*,'(A I8)') 'Running timestep: ', Nstep+1
+! 		ENDIF	
+
+		IF(rank .EQ. 0 .AND. MOD(Nstep,10) .EQ. 0) THEN
       			WRITE(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
       			FLUSH(99)
     		ENDIF
+		
     		SELECT CASE(pair_style)
       			CASE('soft')
         			A_soft = 19.0*Nstep/num_timesteps + 1.0
         			CALL force_soft_neighbor
-        			IF(MOD(Nstep,100) .EQ. 0) THEN
+        			IF ((rank .EQ. 0).AND.(MOD(Nstep,100) .EQ. 0)) THEN
+! 				IF ((rank .EQ. 0).AND.(Nstep .EQ. 999)) THEN
                                         WRITE(*,'(A I4)') 'Calculating soft force'
                                         WRITE (*,*) 'Potential Soft',Upot/Natom
                                         WRITE (*,*) 'Ukin Soft',     Ukin/Natom
@@ -68,7 +76,8 @@
 
       			CASE('lj')
         			CALL force_neighbor
-        			IF(MOD(Nstep,1000) .EQ. 0) THEN
+        			IF ((rank .EQ. 0).AND.(MOD(Nstep,100) .EQ. 0)) THEN
+! 				IF ((rank .EQ. 0) .AND. (Nstep .EQ. (num_timesteps - 1))) THEN
                                         WRITE(*,'(A I4)') 'Calculating LJ force'
                                         WRITE (*,*) 'Potential LJ', Upot/Natom
                                         WRITE (*,*) 'Ukin LJ',      Ukin/Natom
@@ -110,10 +119,10 @@
 ! 		ENDIF
 
     		CALL integrate
-    		IF(MOD(Nstep,1000) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
-
-		IF(MOD(Nstep,1000) .EQ. 0) THEN
-		    WRITE (*,*) 'after integrate Press',        Press
+!     		IF(MOD(Nstep,1000) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
+		IF ((rank .EQ. 0).AND.(MOD(Nstep,100) .EQ. 0)) THEN
+! 		IF ((rank .EQ. 0).AND.(Nstep .EQ. (num_timesteps - 1))) THEN
+		    WRITE (*,*) 'Press: ',        Press
 		ENDIF
 		
     		Nstep = Nstep + 1

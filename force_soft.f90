@@ -21,11 +21,6 @@
       	Upot = 0.0
       	Press = 0.0
       
-		!START LOOP THROUGH ALL ATOM INTERACTIONS
-		!DO i=1,natom
-		!	WRITE (*,*) i,Xx(i),Yy(i)
-		!END DO
-		!WRITE (*,*) "i am here 11111111111111111111111"
       	DO I = NAstart,NAend
          	DO k = 1,nlist(i)
 
@@ -53,7 +48,7 @@
 			    Part2 = (sin(pi*Rr/Rcut_soft))
 			    Ff    = (Part1*Part2) 
 			    Upot  = Upot + A_soft*(1.0+cos(pi*Rr/Rcut_soft))  ! Potential at Rcut_soft = 0
-			    Press = Press + Ff
+			    Press = Press + Ff*Rr
 				    
 					    !Update the total force on atoms
 			    Fx(I) = Fx(I) + Ff*Dx
@@ -104,7 +99,8 @@
 		Ff = 0.0
                 END IF
 
-		Press = Press + Ff
+		Press = Press + Ff*sqR_square
+
 		Fx(atom1) = Fx(atom1) + Ff*Dx
 		Fy(atom1) = Fy(atom1) + Ff*Dy
 
@@ -117,7 +113,7 @@
       	!WRITE (*,*) 'Soft Potential + Bond', UPot/Natom
       	
       	!Scale The Pressure
-      	Press = Press/(2.0d0*Box*Box)
+      	Press = (Natom*Temp_Target+Press/6.0D0)/(Box*Box)
       
       	!write(*,*) K_bond,Rcut_bond
       

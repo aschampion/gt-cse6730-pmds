@@ -73,12 +73,9 @@
 				    Ff     = 48.0*eps*R_six_i*(R_six_i - 0.5)
 
 				    sqR_square = sqrt(R_square)
-				    !Press = Press - Ff*sqR_square
-				    Press_sub = Press_sub + Ff*sqR_square
-				    atom_cout = atom_cout + 1
-				    
 				    Ff = Ff*R_square_i
-						    
+				    Press = Press + Ff*sqR_square
+	    
 						    !Update the total force on atoms
 				    Fx(I) = Fx(I) + Ff*Dx
 				    Fy(I) = Fy(I) + Ff*Dy
@@ -89,13 +86,6 @@
 			    END IF
 			ENDIF
 		    END DO  !END J
-
-		    IF (atom_cout.NE.0) THEN
-		      Press_sub = (Press_sub/atom_cout)
-		      Press = Press + Press_sub
-		      
-		    ENDIF
-
    		END DO    !END I
 
 ! 		WRITE (*,*) '11111111 Press LJ',Press
@@ -134,8 +124,8 @@
 			END IF
 
 
-			Press_sub = Press_sub + Ff*sqR_square
-			atom_cout = atom_cout + 1
+			Press = Press + Ff*sqR_square
+
 			Fx(atom1) = Fx(atom1) + Ff*Dx
 			Fy(atom1) = Fy(atom1) + Ff*Dy
 
@@ -144,15 +134,8 @@
 ! 		   ENDIF
 		END DO
 
-		Press_sub =  Press_sub/atom_cout
-
-! 		IF (MOD(Nstep,100) .EQ. 0) THEN
-! 		    WRITE (*,*) 'FX FY: ', Fx(i), Fy(i)
-! 
-! 		ENDIF	
-		
 		!Scale The Pressure
-		Press = (Press + Press_sub)/(2.0d0*Box*Box)
+		Press = (Natom*Temp_Target+Press/6.0D0)/(Box*Box)
 
 		!WRITE (*,*) '33333333 Press LJ',Press
 

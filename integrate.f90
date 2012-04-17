@@ -72,7 +72,7 @@
 			
 		END DO
 		
-		Press = Press + 2.0d0*Ukin*Dble(Natom)/(Box*Box*Dble(2*Natom-2))
+! 		Press = Press + 2.0d0*Ukin*Dble(Natom)/(Box*Box*Dble(2*Natom-2))
 
 		MvelSend = Mvel
 		CALL MPI_ALLREDUCE(MvelSend, Mvel, 1, MPI_DOUBLE_PRECISION,&
