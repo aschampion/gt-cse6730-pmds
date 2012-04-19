@@ -61,4 +61,5 @@
    		INTEGER	::	At(Maxatom), Natom, Nbond, Nstep,Cstep,&
     		LL(Maxatom), hoc(Maxcell,Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
                 bondlist(2, MaxBonds),Estep,NAstart,NAend
+		INTEGER, ALLOCATABLE :: atoms_procs(:)
 	END MODULE Globals

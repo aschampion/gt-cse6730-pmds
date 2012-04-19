@@ -39,7 +39,7 @@
 		IMPLICIT NONE
   		
   		INTEGER :: num_timesteps, i, nprocs, rank, ierr, atomsp
-                INTEGER, ALLOCABLE :: atoms_procs(:)
+                !INTEGER, ALLOCATABLE :: atoms_procs(:)
   		CHARACTER(*), INTENT(IN) :: pair_style
 		DOUBLE PRECISION :: Xsend(Maxatom)
 
@@ -120,8 +120,8 @@
 		DOUBLE PRECISION :: Xsend(NAend-NAstart+1)
 		Xsend = Vx(NAstart:NAend)
 		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Vx, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
+				   Vx, atoms_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 		Xsend = Vy(NAstart:NAend)
 		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Vy, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
+				   Vy, atoms_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 	END SUBROUTINE broadcast_velocity
