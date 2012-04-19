@@ -6,7 +6,7 @@
 		!Integrate The Equations Of Motion And calculate The Total Impulse
  
       	INTEGER	:: I
-      	REAL(KIND=8) :: Xxn(Natom),Yyn(Natom),Zzn(Natom)
+      	REAL(KIND=8) :: Xxn(Natom),Yyn(Natom),Zzn(Natom),Mvel
 
 	DO i = NAstart,NAend
       		Xxn(i) = 2.0D0*Xx(i)-Xp(i)+Fx(i)*dt*dt
@@ -28,6 +28,8 @@
 		ENDIF
 		
 		Ukin = 0.0D0
+		
+		Mvel = 0.0D0
  
 		!cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 		!     Scale Velocities And Put Particles Back In The Box      !
@@ -39,6 +41,8 @@
 		
 			Xxn(i) = Xp(i) + 2.0D0*Vx(i)*dt
 			Yyn(i) = Yp(i) + 2.0D0*Vy(i)*dt
+			
+			IF(SQRT(Vx(i)**2+Vy(i)**2) .GT. Mvel) Mvel = SQRT(Vx(i)**2+Vy(i)**2)
 	
 			Xp(i) = Xx(i)
 			Xx(i) = Xxn(i)
@@ -65,11 +69,10 @@
 			
 		END DO
 		
-		Press = Press + 2.0d0*Ukin*Dble(Natom)/(Box*Box*Dble(2*Natom-2))
-
-		IF(MOD(Nstep,100) .EQ. 0) THEN
-		   WRITE (*,*) 'Press', Press
-		ENDIF
+		MMov = MMov + Mvel
+		
+		!WRITE (*,*) Mvel*dT		
+		!WRITE (*,*) 'Ukin', Ukin/Natom
 		
 		!WRITE (*,*) dT
 		!DO i=1,Natom

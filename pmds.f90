@@ -30,7 +30,6 @@
   		
   		INTEGER :: num_timesteps, i, nprocs, rank, ierr, atomsp
   		CHARACTER(*), INTENT(IN) :: pair_style
-  		REAL(KIND=8) :: Xo(Natom),Yo(Natom)
 		DOUBLE PRECISION :: Xsend(Maxatom)
 
 		CALL MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
@@ -40,13 +39,13 @@
 		NAend = MIN(Natom, atomsp*(rank + 1))
   
   		Nstep = 0
+  		
+  		OPEN(FILE = "Stats.dat",UNIT=35)
+  		
+  		WRITE (35,*) "Timestep","Ukin","Pot","Total","Pressure"
   
-  		DO i=NAstart,NAend
-  			Xo(i) = Xx(i)
-  		END DO
-    
   		DO WHILE(Nstep .LT. num_timesteps)
-    		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I8)') 'Running timestep: ', Nstep+1
+    		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I8)') 'Running timestep: ', Nstep
     		IF(rank .EQ. 0 .AND. MOD(Nstep,10) .EQ. 0) THEN
       			WRITE(99, '(F13.3 F13.3)') (Xx(i), Yy(i), i=1,Natom)
       			FLUSH(99)
@@ -54,41 +53,50 @@
     		SELECT CASE(pair_style)
       			CASE('soft')
         			A_soft = 19.0*Nstep/num_timesteps + 1.0
-        			CALL force_soft()
+        			CALL force_soft_neighbor
         			IF(MOD(Nstep,100) .EQ. 0) THEN
                                         WRITE(*,'(A I4)') 'Calculating soft force'
                                         WRITE (*,*) 'Potential Soft',Upot/Natom
                                         WRITE (*,*) 'Ukin Soft',     Ukin/Natom
                                         WRITE (*,*) 'Tot Soft',     Ukin/Natom + Upot/Natom
+                                        WRITE (*,*) 'Pressure', Press
                                 END IF
-
       			CASE('lj')
-        			CALL force()
+        			CALL force_neighbor
         			IF(MOD(Nstep,100) .EQ. 0) THEN
-                                        WRITE(*,'(A I4)') 'Calculating LJ force'
-                                        WRITE (*,*) 'Potential LJ',Upot/Natom
-                                        WRITE (*,*) 'Ukin LJ',     Ukin/Natom
-                                        WRITE (*,*) 'Tot LJ',     Ukin/Natom + Upot/Natom
-                                END IF	
+                                        WRITE(*,'(A I4)') 'Calculating lj force'
+                                        WRITE (*,*) 'Potential Soft',Upot/Natom
+                                        WRITE (*,*) 'Ukin Soft',     Ukin/Natom
+                                        WRITE (*,*) 'Tot Soft',     Ukin/Natom + Upot/Natom
+                                        WRITE (*,*) 'Pressure',Press
+                                END IF
+                    WRITE (35,*) i,Ukin/Natom,Upot/Natom,(Ukin+Upot)/Natom,Press
                END SELECT
     
     		CALL integrate
+    		
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
 		
-		Xsend = Xx(NAstart:NAend)
+		Xsend(1:(NAend - NAstart + 1)) = Xx(NAstart:NAend)
 		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
 				   Xx, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
-		Xsend = Yy(NAstart:NAend)
+		Xsend(1:(NAend - NAstart + 1)) = Yy(NAstart:NAend)
 		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
 				   Yy, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 
     		Nstep = Nstep + 1
 	  	END DO
+	  	CLOSE(35)
+	  	
+	  	OPEN(FILE = 'FinalRes.dat',UNIT=27)
+	  	WRITE (27,*) "AtomID","Type","Vx","Vy","Fx","Fy"
+	  	DO i=1,Natom
+	  		WRITE (27,*) i,AT(i),Vx(i),Vy(i),SQRT(Vx(i)**2+Vy(i)**2),Fx(i),Fy(i)
+	  	END DO
+	  	CLOSE(27)
+	  	
+	  	
   
-  		DO i=1,Natom
-			WRITE (*,*) Xx(i),Xo(i)
-  		END DO
-  		
 	END SUBROUTINE run_simulation
 
 	SUBROUTINE broadcast_velocity

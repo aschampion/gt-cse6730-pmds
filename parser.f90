@@ -5,7 +5,7 @@
   		CHARACTER(*), INTENT(IN) :: filename
   		CHARACTER(LEN=1024) :: line, instr, args
   		CHARACTER(LEN=256) :: s1, s2, pair_style
-  		INTEGER :: i1, i2,I,J
+  		INTEGER :: i1, i2
   		REAL(KIND=8) :: v1, v2, v3
 
   		OPEN(UNIT=10, FILE='in.micelle')
@@ -14,7 +14,7 @@
     		READ(10, '(A)',END=99) line		
     
     		instr_end = 2
-    		DO WHILE (line(instr_end:instr_end) .NE. char(9))
+    		DO WHILE (instr_end .LT. 1024 .AND. line(instr_end:instr_end) .NE. char(9))
       			instr_end = instr_end + 1
     		END DO
 
@@ -44,11 +44,6 @@
             				Rcut(i2, i1) = v3
             				sigma_matrix(i2, i1) = v2
             				epsilon_matrix(i2, i1) = v1
-                                        DO I=1, 4
-                                            DO J=1,4
-                                             WRITE(300,*) I, J, Ecut(I,J)
-                                            END DO
-  					END DO
             				WRITE (*,*) "Reading LJ data"
           				CASE ('soft')
             				!Type ID 1, Type ID 2, A, Radius Cutoff
@@ -92,12 +87,31 @@
 
   		USE Globals
   		CHARACTER(*), INTENT(IN) :: filename
-  		CHARACTER(LEN=1024) :: line
+  		CHARACTER(LEN=1024) :: line, s1, s2
   		CHARACTER(LEN=80) :: state = ''
   		INTEGER :: i1, i2, i3
   		REAL(KIND=8) :: v1, v2, v3
 
   		OPEN(UNIT=20,FILE=filename)
+
+		DO I3 = 1,2
+			READ(20, '(A)', END=199) line
+		END DO
+
+		READ(20, '(A)', END=199) line
+		READ(line, *), v1, s1
+		Natom = v1
+		READ(20, '(A)', END=199) line
+		READ(line, *), v1, s1
+		Nbond = v1
+
+		DO I3 = 1,10
+			READ(20, '(A)', END=199) line
+		END DO
+
+		READ(20, '(A)', END=199) line
+		READ(line, *), v1, v2,  s1, s2
+		Box = v2
 
   		DO WHILE(.TRUE.)
     		READ(20, '(A)', END=199) line
@@ -105,11 +119,9 @@
     		SELECT CASE (line)
       			CASE (' Atoms')
         			state = 'Atoms'
-        			Natom = 0
         			WRITE (*,*) "Reading atom data"
       			CASE (' Bonds')
         			state = 'Bonds'
-        			Nbond = 0
         			WRITE (*,*) "Reading bond data"
       			case ('')
       			CASE DEFAULT

@@ -13,12 +13,14 @@
   		Ukin = 0.0d0
   		dT = 0.005D0
   		Estep = 100
-  		Box = 35.85686D0
+  		Cstep = 5
+  		! Box = 35.85686D0
+  		Rskin = 0.3D0
+  		MMov = Rskin
 
   		CALL ITIME(seed)
 
   		CALL SRAND(seed(3))
-
 		
 		!Generate velocity based on uniform distribution
   		DO I = 1, Natom
@@ -34,8 +36,7 @@
     		Yp(I) = Yy(I) - dT*Vy(I)           
     		!WRITE (*,*) i,Xx(i),Yy(i),dT*Vx(i),dT*Vy(i)    
 		END DO
-
-  !Call Neighbour
+	
                 ! Calculate Ecut for different atom types
                  DO I =1 , MaxNumtypes
                        DO J = 1, MaxNumtypes

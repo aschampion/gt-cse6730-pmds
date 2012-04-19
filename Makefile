@@ -3,7 +3,7 @@ FC = openmpif90
 FFLAGS =-O
 #FFLAGS =-fno-align-comments -O
 
-OBJS   = globals.o force.o force_soft.o initial.o integrate.o neighbour.o parser.o norm_vel.o
+OBJS   = globals.o force.o force_soft.o force_soft_neighbor.o force_neighbor.o initial.o integrate.o neighbour.o parser.o norm_vel.o
 
 globals.o : globals.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
@@ -11,7 +11,13 @@ globals.o : globals.f90
 force.o : force.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
 
+force_neighbor.o : force_neighbor.f90
+	$(FC) $(FFLAGS) -o $@ -c $<
+
 force_soft.o : force_soft.f90
+	$(FC) $(FFLAGS) -o $@ -c $<
+
+force_soft_neighbor.o : force_soft_neighbor.f90
 	$(FC) $(FFLAGS) -o $@ -c $<
 
 initial.o : initial.f90
