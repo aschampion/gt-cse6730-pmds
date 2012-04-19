@@ -1,14 +1,18 @@
 	PROGRAM pmds
 		USE mpi
+                USE globals
   		
   		CHARACTER(LEN=255) :: input_file, dump_file
 		CHARACTER(LEN=1) :: pstring
-		INTEGER :: ierr, rank
+		INTEGER :: ierr, rank, nprocs
+                DOUBLE PRECISION :: start_time
+                start_time = MPI_WTIME()
 
   		CALL GETARG(1, input_file)
 
 		CALL MPI_INIT(ierr)
 		CALL MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
+		CALL MPI_COMM_SIZE(MPI_COMM_WORLD, nprocs, ierr)
 		WRITE(UNIT=PSTRING, FMT='(I1)') rank
 		dump_file = 'out.dump.' // pstring
   		OPEN(UNIT=99, FILE=dump_file)
@@ -19,6 +23,12 @@
   		CLOSE(99)
 
 		CALL MPI_FINALIZE(ierr)
+
+                IF (rank .EQ. 0) THEN
+                  OPEN(UNIT=42, FILE='times', ACCESS='APPEND')
+                  WRITE(42,*) Natom, nprocs, MPI_WTIME() - start_time
+                  CLOSE(42)
+                END IF
   		
 	END PROGRAM pmds
 
@@ -29,6 +39,7 @@
 		IMPLICIT NONE
   		
   		INTEGER :: num_timesteps, i, nprocs, rank, ierr, atomsp
+                INTEGER, ALLOCABLE :: atoms_procs(:)
   		CHARACTER(*), INTENT(IN) :: pair_style
 		DOUBLE PRECISION :: Xsend(Maxatom)
 
@@ -37,6 +48,9 @@
 		atomsp = CEILING(REAL(Natom)/nprocs)
 		NAstart = atomsp*rank + 1;
 		NAend = MIN(Natom, atomsp*(rank + 1))
+                ALLOCATE(atoms_procs(nprocs))
+                atoms_procs(1:(nprocs-1)) = atomsp
+                atoms_procs(nprocs) = Natom - atomsp*(nprocs-1) + 1
   
   		Nstep = 0
   		
@@ -79,10 +93,10 @@
 		
 		Xsend(1:(NAend - NAstart + 1)) = Xx(NAstart:NAend)
 		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Xx, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
+				   Xx, atoms_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 		Xsend(1:(NAend - NAstart + 1)) = Yy(NAstart:NAend)
 		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Yy, NAend-NAstart+1, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
+				   Yy, atoms_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 
     		Nstep = Nstep + 1
 	  	END DO
@@ -95,7 +109,7 @@
 	  	END DO
 	  	CLOSE(27)
 	  	
-	  	
+	  	DEALLOCATE(atoms_procs)
   
 	END SUBROUTINE run_simulation
 
