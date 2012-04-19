@@ -3,12 +3,15 @@
   		
   		CHARACTER(LEN=255) :: input_file, dump_file
 		CHARACTER(LEN=1) :: pstring
-		INTEGER :: ierr, rank
+		INTEGER :: ierr, rank, nprocs
+                DOUBLE PRECISION :: start_time
+                start_time = MPI_WTIME()
 
   		CALL GETARG(1, input_file)
 
 		CALL MPI_INIT(ierr)
 		CALL MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
+		CALL MPI_COMM_SIZE(MPI_COMM_WORLD, nprocs, ierr)
 		WRITE(UNIT=pstring, FMT='(I1)') rank
 		dump_file = 'out.dump.' // pstring
   		OPEN(UNIT=99, FILE=dump_file)
@@ -18,6 +21,12 @@
   		CLOSE(99)
 
 		CALL MPI_FINALIZE(ierr)
+
+                IF (rank .EQ. 0) THEN
+                  OPEN(UNIT=42, FILE='times', ACCESS='APPEND')
+                  WRITE(42,*) Natom, nprocs, MPI_WTIME() - start_time
+                  CLOSE(42)
+                END IF
   		
 	END PROGRAM pmds
 
@@ -41,6 +50,13 @@
 		atomsp = CEILING(REAL(Natom)/nprocs)
 		NAstart = atomsp*rank + 1;
 		NAend = MIN(Natom, atomsp*(rank + 1))
+                ALLOCATE(atoms_procs(nprocs))
+                atoms_procs(1:(nprocs-1)) = atomsp
+                atoms_procs(nprocs) = Natom - atomsp*(nprocs-1) + 1
+                ALLOCATE(disp_procs(nprocs))
+		DO i=1,nprocs
+		  disp_procs(i) = (i-1)*atomsp
+		END DO
   
   		Nstep = 0
   
@@ -140,9 +156,9 @@
 		INTEGER :: ierr
 		DOUBLE PRECISION :: Xsend(NAend-NAstart+1)
 		Xsend = Vx(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Vx, NAend-NAstart+1, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHERV(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Vx, atoms_procs, disp_procs, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
 		Xsend = Vy(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Vy, NAend-NAstart+1, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHERV(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Vy, atoms_procs, disp_procs, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
 	END SUBROUTINE broadcast_velocity

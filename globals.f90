@@ -42,7 +42,7 @@
 
     	INTEGER,PARAMETER :: Maxatom=100000
     	INTEGER,PARAMETER :: MaxNumtypes=10
-    	INTEGER,PARAMETER :: MaxBonds=1000
+    	INTEGER,PARAMETER :: MaxBonds=10000
     	INTEGER,PARAMETER :: Maxcell=1500
     	INTEGER,PARAMETER :: Maxneigh=50
     	REAL(KIND=8),PARAMETER :: Pi = 3.14159265
@@ -59,4 +59,5 @@
    		INTEGER	::	At(Maxatom), Natom, Nbond, Nstep,&
     		LL(Maxatom), hoc(Maxcell,Maxcell),nlist(Maxatom),list(Maxatom,Maxneigh),&
                 bondlist(2, MaxBonds),Estep,NAstart,NAend
+                INTEGER, ALLOCATABLE :: atoms_procs(:), disp_procs(:)
 	END MODULE Globals
