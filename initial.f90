@@ -13,7 +13,7 @@
   		Ukin = 0.0d0
   		dT = 0.005D0
   		Estep = 100
-  		Box = 35.85686D0
+  		!Box = 35.85686D0
 		Rskin = 0.3D0
 		MMov = Rskin
 

@@ -109,10 +109,10 @@
 ! 		ENDDO
 ! 		ENDIF
 
-		Fsend = Fx(1:Natom)
+		Fsend(1:Natom) = Fx(1:Natom)
 		CALL MPI_ALLREDUCE(Fsend, Fx, Natom, MPI_DOUBLE_PRECISION,&
 				   MPI_SUM, MPI_COMM_WORLD, ierr)
-		Fsend = Fy(1:Natom)
+		Fsend(1:Natom) = Fy(1:Natom)
 		CALL MPI_ALLREDUCE(Fsend, Fy, Natom, MPI_DOUBLE_PRECISION,&
 				   MPI_SUM, MPI_COMM_WORLD, ierr)
 
@@ -148,6 +148,8 @@
 ! 			WRITE (*,*) Xx(i),Xo(i)
 !   		END DO
   		
+		DEALLOCATE(atoms_procs)
+		DEALLOCATE(disp_procs)
 	END SUBROUTINE run_simulation
 
 	SUBROUTINE broadcast_velocity
@@ -155,10 +157,10 @@
 		USE globals
 		INTEGER :: ierr
 		DOUBLE PRECISION :: Xsend(NAend-NAstart+1)
-		Xsend = Vx(NAstart:NAend)
+		Xsend(1:(NAend - NAstart + 1)) = Vx(NAstart:NAend)
 		CALL MPI_ALLGATHERV(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
 				   Vx, atoms_procs, disp_procs, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
-		Xsend = Vy(NAstart:NAend)
+		Xsend(1:(NAend - NAstart + 1)) = Vy(NAstart:NAend)
 		CALL MPI_ALLGATHERV(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
 				   Vy, atoms_procs, disp_procs, MPI_DOUBLE, MPI_COMM_WORLD, ierr)
 	END SUBROUTINE broadcast_velocity

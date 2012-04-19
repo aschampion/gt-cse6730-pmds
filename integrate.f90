@@ -11,7 +11,7 @@
       	REAL(KIND=8) :: Xxn(Natom),Yyn(Natom),Zzn(Natom)
 	DOUBLE PRECISION :: MvelSend
 
-	DO i = NAstart,NAend
+	DO i = 1,Natom
       		Xxn(i) = 2.0D0*Xx(i)-Xp(i)+Fx(i)*dt*dt
       		Yyn(i) = 2.0D0*Yy(i)-Yp(i)+Fy(i)*dt*dt
       		
@@ -38,7 +38,7 @@
 		!     Scale Velocities And Put Particles Back In The Box      !
 		!     Beware: The Old Positions Are Also Put Back In The Box  !
 		!cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-		DO i = NAstart,NAend
+		DO i = 1,Natom
 		
 			Ukin = Ukin + 0.5D0*(Vx(i)**2+Vy(i)**2)
 		

@@ -43,8 +43,8 @@
     	INTEGER,PARAMETER :: Maxatom=100000
     	INTEGER,PARAMETER :: MaxNumtypes=10
     	INTEGER,PARAMETER :: MaxBonds=10000
-    	INTEGER,PARAMETER :: Maxcell=1500
-    	INTEGER,PARAMETER :: Maxneigh=50
+    	INTEGER,PARAMETER :: Maxcell=300
+    	INTEGER,PARAMETER :: Maxneigh=500
     	REAL(KIND=8),PARAMETER :: Pi = 3.14159265
     
     	REAL(KIND=8) :: Fx(Maxatom),Fy(Maxatom),Xx(Maxatom),Yy(Maxatom),&
