@@ -51,6 +51,10 @@
                 ALLOCATE(atoms_procs(nprocs))
                 atoms_procs(1:(nprocs-1)) = atomsp
                 atoms_procs(nprocs) = Natom - atomsp*(nprocs-1) + 1
+                ALLOCATE(disp_procs(nprocs))
+		DO i=1,nprocs
+		  disp_procs(i) = (i-1)*atomsp
+		END DO
   
   		Nstep = 0
   		
@@ -92,11 +96,11 @@
     		IF(MOD(Nstep,100) .EQ. 0) WRITE(*,'(A I4)') 'Integrating'
 		
 		Xsend(1:(NAend - NAstart + 1)) = Xx(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Xx, atoms_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHERV(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Xx, atoms_procs, disp_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 		Xsend(1:(NAend - NAstart + 1)) = Yy(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Yy, atoms_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHERV(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Yy, atoms_procs, disp_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 
     		Nstep = Nstep + 1
 	  	END DO
@@ -110,6 +114,7 @@
 	  	CLOSE(27)
 	  	
 	  	DEALLOCATE(atoms_procs)
+		DEALLOCATE(disp_procs)
   
 	END SUBROUTINE run_simulation
 
@@ -119,9 +124,9 @@
 		INTEGER :: ierr
 		DOUBLE PRECISION :: Xsend(NAend-NAstart+1)
 		Xsend = Vx(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Vx, atoms_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHERV(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Vx, atoms_procs, disp_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 		Xsend = Vy(NAstart:NAend)
-		CALL MPI_ALLGATHER(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
-				   Vy, atoms_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
+		CALL MPI_ALLGATHERV(Xsend, NAend-NAstart+1, MPI_DOUBLE_PRECISION,&
+				   Vy, atoms_procs, disp_procs, MPI_DOUBLE_PRECISION, MPI_COMM_WORLD, ierr)
 	END SUBROUTINE broadcast_velocity
