@@ -1,3 +1,5 @@
 *.o
 globals.mod
 pmds
+*.dat
+*.dump
