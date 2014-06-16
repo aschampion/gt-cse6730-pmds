@@ -254,12 +254,12 @@ private void readFile() {
     FileInputStream dumpstream = new FileInputStream(dumpfile);
     FileChannel dsChannel = dumpstream.getChannel();
     ByteBuffer dsBuffer = ByteBuffer.allocateDirect(8*2*natoms);
+    dsBuffer.order(ByteOrder.LITTLE_ENDIAN);
     int bytesRead;
     int t = 0;
     while (t < ntimesteps && (bytesRead = dsChannel.read(dsBuffer)) != -1) {
       dsBuffer.rewind();
       dsBuffer.limit(bytesRead);
-      dsBuffer.order(java.nio.ByteOrder.LITTLE_ENDIAN);
       for (int i = 0; i < natoms; i++) {
         x[t][i] = (float) dsBuffer.getDouble();
         y[t][i] = (float) dsBuffer.getDouble();
