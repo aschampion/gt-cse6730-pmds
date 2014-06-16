@@ -1,6 +1,6 @@
-# FC     = gfortran-mp-4.8
-FC = gfortran
-FFLAGS =-O
+FC     = gfortran-mp-4.8
+#FC = gfortran
+FFLAGS =-O -Wall
 #FFLAGS =-fno-align-comments -O
 
 OBJS   = globals.o force.o force_soft.o force_soft_neighbor.o force_neighbor.o initial.o integrate.o neighbour.o parser.o norm_vel.o

@@ -1,17 +1,15 @@
 import controlP5.*;
 import processing.opengl.*;
-//import processing.video.*;
 import java.io.File;
 import java.io.FileInputStream;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.channels.FileChannel;
 import java.util.Properties;
 import java.util.StringTokenizer;
 
-//MovieMaker mm;
-
 ControlP5 cp5;
 
-BufferedReader reader;
-String line;
 int natoms = 1;
 int nbonds = 1;
 int ntimesteps = 1;
@@ -23,9 +21,6 @@ float atomsize = 0.1;
 
 int framesPerStep = 1;
 int framesSinceStep = 0;
-
-File datafile;
-File dumpfile;
     
 float[][] x = null;
 float[][] y = null;
@@ -47,9 +42,6 @@ void setup() {
   cp5.addButton("resetPositions").setPosition(180, 40).setSize(50, 20).setCaptionLabel("RESET");
   cp5.addSlider("timestep").setPosition(30, 80).setRange(0, ntimesteps).setSize(200, 20).setCaptionLabel("TIMESTEP");
   cp5.addSlider("framesPerStep").setPosition(30, 120).setRange(1, 20).setSize(200, 20);
-  
-  //mm = new MovieMaker(this, width, height, "drawing.mov",
-  //                     30, MovieMaker.H263, MovieMaker.HIGH);
 }
 
 public void draw() {
@@ -118,9 +110,6 @@ public void draw() {
   
   popMatrix();
   popMatrix();
-  
-  //mm.addFrame();
-  //cp5.draw();
 }
 
 public void keyPressed() {
@@ -146,9 +135,6 @@ public void keyPressed() {
       break;
     case '=':
       atomsize += 0.1;
-      break;
-    case ' ':
-      //mm.finish();
       break;
   }
 }
@@ -186,12 +172,14 @@ private void readFile() {
     File f = new File(sketchPath, "visualizer.properties");
     options.load(new FileInputStream(f));        
     String directory = options.getProperty("directory");
-    datafile = new File(sketchPath, directory + options.getProperty("datafile"));
-    dumpfile = new File(sketchPath, directory + options.getProperty("dumpfile"));
-    
+    File datafile = new File(sketchPath, directory + options.getProperty("datafile"));
+    File dumpfile = new File(sketchPath, directory + options.getProperty("dumpfile"));
+    File dumpformatfile = new File(sketchPath, directory + options.getProperty("dumpformatfile"));
+      
+    BufferedReader reader;
+    String line;
     
     reader = createReader(datafile);
-    
     reader.readLine();
     reader.readLine();
     line = reader.readLine();
@@ -248,44 +236,41 @@ private void readFile() {
     
     reader.close();
     
-    reader = createReader(dumpfile);
+    // Read parameters from dump format file
+    reader = createReader(dumpformatfile);
+    reader.readLine(); // Skip text header
     line = reader.readLine();
+    reader.close();
     
-    natoms = Integer.parseInt(line.trim());
-    
-    ntimesteps = 0;
-    
-    while (reader.readLine() != null) ntimesteps++;
-    ntimesteps /= natoms;
+    st = new StringTokenizer(line); 
+    natoms = Integer.parseInt(st.nextToken());
+    st.nextToken();
+    ntimesteps = Integer.parseInt(st.nextToken());
     
     x = new float[ntimesteps][natoms];
     y = new float[ntimesteps][natoms];
     
-    reader.close();
-    reader = createReader(dumpfile);
-    reader.readLine();
-    
-    for (int t = 0; t < ntimesteps; t++) {
+    // Read positions from dump file
+    FileInputStream dumpstream = new FileInputStream(dumpfile);
+    FileChannel dsChannel = dumpstream.getChannel();
+    ByteBuffer dsBuffer = ByteBuffer.allocateDirect(8*2*natoms);
+    int bytesRead;
+    int t = 0;
+    while (t < ntimesteps && (bytesRead = dsChannel.read(dsBuffer)) != -1) {
+      dsBuffer.rewind();
+      dsBuffer.limit(bytesRead);
+      dsBuffer.order(java.nio.ByteOrder.LITTLE_ENDIAN);
       for (int i = 0; i < natoms; i++) {
-        line = reader.readLine();
-      
-        if (line != null) {
-          st = new StringTokenizer(line);
-          
-          if (st.countTokens() != 2) {
-            println("Wrong number of tokens in line: " + line);
-          } else {
-            x[t][i] = Float.parseFloat(st.nextToken());
-            y[t][i] = Float.parseFloat(st.nextToken());
-          }
-        }
+        x[t][i] = (float) dsBuffer.getDouble();
+        y[t][i] = (float) dsBuffer.getDouble();
       }
+      t++;
+      dsBuffer.clear( );
     }
     
-    reader.close();
+    dumpstream.close();
   } catch (IOException e) {
     e.printStackTrace();
-    line = null;
   }
   
   println("Atoms: " + natoms + " Bonds: " + nbonds + " Steps: " + ntimesteps + " Box: " + boxwidth);
