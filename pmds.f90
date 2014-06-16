@@ -25,7 +25,7 @@ SUBROUTINE run_simulation(num_timesteps, pair_style)
   INQUIRE(IOLENGTH=reclen) Xx(1)
   OPEN(UNIT=99, FILE='out.dump.fmt')
   WRITE(UNIT=99,FMT=*) 'Natoms ','Positionbytes ','Timesteps '
-  WRITE(UNIT=99,FMT='(I8 I8 I8)') Natom, reclen, num_timesteps
+  WRITE(UNIT=99,FMT='(I8 I8 I8)') Natom, reclen, num_timesteps/10
   CLOSE(UNIT=99)
 
   OPEN(UNIT=99, FILE='out.dump', STATUS='REPLACE', ACCESS='STREAM')

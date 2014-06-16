@@ -40,7 +40,7 @@ void setup() {
   cp5.addToggle("play").setPosition(30, 40).setSize(80, 20).setMode(ControlP5.SWITCH).setCaptionLabel("PLAY/PAUSE");
   cp5.addButton("readPositions").setPosition(120, 40).setSize(50, 20).setCaptionLabel("NEXT");
   cp5.addButton("resetPositions").setPosition(180, 40).setSize(50, 20).setCaptionLabel("RESET");
-  cp5.addSlider("timestep").setPosition(30, 80).setRange(0, ntimesteps).setSize(200, 20).setCaptionLabel("TIMESTEP");
+  cp5.addSlider("tstep").setPosition(30, 80).setRange(0, ntimesteps).setSize(200, 20).setCaptionLabel("TIMESTEP");
   cp5.addSlider("framesPerStep").setPosition(30, 120).setRange(1, 20).setSize(200, 20);
 }
 
@@ -57,7 +57,7 @@ public void draw() {
   colorMode(RGB, 255);
   background(30);
   
-  cp5.controller("timestep").setValue(tstep);
+  cp5.controller("tstep").changeValue(tstep);
   
   pushMatrix();
   translate(300, 0);
