@@ -8,7 +8,7 @@ SUBROUTINE input_parser(filename)
   INTEGER :: i1, i2
   REAL(KIND=8) :: v1, v2, v3
 
-  OPEN(UNIT=10, FILE='in.micelle')
+  OPEN(UNIT=10, FILE=filename)
 
   DO WHILE(.TRUE.)
     READ(10, '(A)',END=99) line   
@@ -99,10 +99,10 @@ SUBROUTINE data_parser(filename)
 
   READ(20, '(A)', END=199) line
   READ(line, *), v1, s1
-  Natom = v1
+  Natom = INT(v1)
   READ(20, '(A)', END=199) line
   READ(line, *), v1, s1
-  Nbond = v1
+  Nbond = INT(v1)
 
   DO I3 = 1,10
     READ(20, '(A)', END=199) line

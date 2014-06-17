@@ -17,10 +17,10 @@ To try it yourself with an MPI-enabled `gfortran`:
 git clone git@github.com:aschampion/gt-cse6730-pmds.git
 cd gt-cse6730-pmds
 make all
-./pmds # Note that this will take some time and produce a ~100MB dump file
+./pmds in.micelle # Note that this will take some time and produce a ~100MB dump file
 ```
 
-With the simulation results in `out.dump`, you can now open the Processing visualization in `pmds_visualizer/pmds_visualizer.pde`. Note that the visualizer requires the [controlP5](http://www.sojamo.de/libraries/controlP5/) Processing library (tested with 2.0.4), and the paths in `pmds_visualizer/visualizer.properties` should resolve to the micelle simulation description file in the repository and `out.dump` file you generated above.
+With the simulation results in `out.dump`, you can now open the [Processing](http://www.processing.org/) visualization in `pmds_visualizer/pmds_visualizer.pde` (tested with 2.0b8). Note that the visualizer requires the [controlP5](http://www.sojamo.de/libraries/controlP5/) Processing library (tested with 2.0.4), and the paths in `pmds_visualizer/visualizer.properties` should resolve to the `data.micelle` file in the repository and `out.dump` and `out.dump.fmt` files you generated above.
 
 ## License
 

@@ -3,7 +3,7 @@ SUBROUTINE Force_soft
   USE Globals
   IMPLICIT NONE       
 
-  INTEGER:: I,J,k, Type1, Type2, atom1, atom2
+  INTEGER:: I,J,k, atom1, atom2
   REAL(KIND=8):: Dx, Dy, Ff, R_square, Rr, sqR_square,&
   Part1, Part2
 

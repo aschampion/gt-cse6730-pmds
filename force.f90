@@ -5,7 +5,7 @@ SUBROUTINE Force
     
   INTEGER :: I,J,K,Type1, Type2, atom1, atom2
   REAL(KIND=8):: Dx, Dy, Ff, R_square, R_square_i, R_six_i, Rcutsq, atom_cout,&
-  sigma_square, R_cut,Rcutsq_bond, eps, sigma, sqR_square, Press_sub    
+  sigma_square, R_cut, eps, sigma, sqR_square, Press_sub    
 
   !Initialize the Forces, Potential Energy and Pressure to 0 
   DO I = 1,Natom

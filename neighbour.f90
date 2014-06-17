@@ -3,14 +3,14 @@ SUBROUTINE Neighbour
   USE Globals
   IMPLICIT NONE
   
-  INTEGER :: numcell,celli,cellj,cellID,i,j,oi,oj,ocelli,ocellj,s,k
+  INTEGER :: numcell,celli,cellj,i,j,oi,oj,ocelli,ocellj
   DOUBLE PRECISION:: Lc,xr,yr,rr
   
   !Bin the atoms in the cells
   Lc = MAXVAL(Rcut)
   Lc = MAX(Lc,Rcut_bond,Rcut_soft)+Rskin
   Lc = Box/INT(Box/Lc)
-  numcell = Box/Lc
+  numcell = INT(Box/Lc)
   DO i=1,numcell
     DO j=1,numcell
       hoc(i,j) = 0

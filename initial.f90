@@ -6,7 +6,7 @@ SUBROUTINE Initial
   ! paramters that will be used
 
   INTEGER:: I,J, seed(3)
-  REAL(KIND=8):: Accx, Accy, Adjust
+  REAL(KIND=8):: Accx, Accy 
 
   Accx = 0.0d0
   Accy = 0.0d0

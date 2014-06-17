@@ -6,7 +6,7 @@ SUBROUTINE Integrate
   !Integrate The Equations Of Motion And calculate The Total Impulse
 
   INTEGER :: I
-  REAL(KIND=8) :: Xxn(Natom),Yyn(Natom),Zzn(Natom),Mvel
+  REAL(KIND=8) :: Xxn(Natom),Yyn(Natom),Mvel
 
   DO i=1,Natom
     Xxn(i) = 2.0D0*Xx(i)-Xp(i)+Fx(i)*dt*dt
