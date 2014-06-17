@@ -22,7 +22,7 @@ make all
 
 With the simulation results in `out.dump`, you can now open the [Processing](http://www.processing.org/) visualization in `pmds_visualizer/pmds_visualizer.pde` (tested with 2.0b8). Note that the visualizer requires the [controlP5](http://www.sojamo.de/libraries/controlP5/) Processing library (tested with 2.0.4), and the paths in `pmds_visualizer/visualizer.properties` should resolve to the `data.micelle` file in the repository and `out.dump` and `out.dump.fmt` files you generated above.
 
-Details of the simulation and an analysis of strong- and weak-scaling properties of the serial version and two MPI decompositions are available in the [original project report](http://github.com/aschampion/gt-cse6730-pmds/doc/report.pdf).
+Details of the simulation and an analysis of strong- and weak-scaling properties of the serial version and two MPI decompositions are available in the [original project report](http://rawgit.com/aschampion/gt-cse6730-pmds/master/doc/report.pdf).
 
 ## License
 
